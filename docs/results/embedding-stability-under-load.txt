@@ -1,0 +1,26 @@
+Embedding stability while another client was generating with qwen3:8b (16k context) on the
+same Ollama 0.40.16 server, 2026-11-12. 120 signatures from samples/, nomic-embed-text.
+
+This is the console output of an ad-hoc run of the same comparison that
+scripts/embedding_stability.py performs (it was not yet written to a file at the time):
+
+re-embedding 12 zero vector(s), attempt 1
+re-embedding 4 zero vector(s), attempt 2
+re-embedding 9 zero vector(s), attempt 1
+re-embedding 4 zero vector(s), attempt 2
+re-embedding 8 zero vector(s), attempt 1
+re-embedding 1 zero vector(s), attempt 2
+re-embedding 3 zero vector(s), attempt 1
+re-embedding 10 zero vector(s), attempt 1
+re-embedding 4 zero vector(s), attempt 2
+re-embedding 2 zero vector(s), attempt 3
+re-embedding 7 zero vector(s), attempt 1
+32 vs 32 max dist 0.7788 mean 0.0204 n>0.01: 20
+1 vs 1 max dist 0.0000 mean 0.0000 n>0.01: 0
+32 vs 1 max dist 0.7788 mean 0.0186 n>0.01: 16
+
+Reading: batched requests (32 inputs) returned all-zero rows and rows whose embedding of the
+same text differed by a cosine distance of up to 0.78 between two runs. Single-input requests
+were repeatable. The same comparison on an idle server (embedding-stability-idle.json) shows
+no difference above 0.004. A probe in the same session found zero rows even with batch
+size 1 (2 of 64 inputs), so batch size 1 reduces but does not remove the problem.

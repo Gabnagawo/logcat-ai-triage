@@ -280,7 +280,7 @@ def test_ollama_embedder_re_requests_only_zero_rows() -> None:
             return httpx.Response(200, json={"embeddings": [[0.0, 0.0], [1.0, 0.0]]})
         return httpx.Response(200, json={"embeddings": [[0.0, 2.0]]})
 
-    embedder = OllamaEmbedder(client=_client(handler), sleep=_no_sleep)
+    embedder = OllamaEmbedder(client=_client(handler), batch_size=2, sleep=_no_sleep)
     assert embedder.embed(["a", "b"]).tolist() == [[0.0, 1.0], [1.0, 0.0]]
     assert inputs[1] == ["clustering: a"]
 
@@ -289,7 +289,7 @@ def test_ollama_embedder_rejects_malformed_response() -> None:
     def handler(request: httpx.Request) -> httpx.Response:
         return httpx.Response(200, json={"embeddings": [[1.0, 0.0]]})  # one row for two inputs
 
-    embedder = OllamaEmbedder(client=_client(handler), max_retries=0, sleep=_no_sleep)
+    embedder = OllamaEmbedder(client=_client(handler), batch_size=2, max_retries=0, sleep=_no_sleep)
     with pytest.raises(EmbeddingError, match="malformed"):
         embedder.embed(["a", "b"])
 

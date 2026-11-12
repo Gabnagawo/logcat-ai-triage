@@ -56,7 +56,13 @@ class TfidfEmbedder:
 
 
 class OllamaEmbedder:
-    """Embeddings from Ollama's ``/api/embed`` endpoint, batched and retried."""
+    """Embeddings from Ollama's ``/api/embed`` endpoint, with timeouts and retries.
+
+    ``batch_size`` defaults to 1. On the shared Ollama 0.40 server used for the results,
+    32-input batches sent while another client was generating returned some all-zero rows and
+    some rows that differed between two runs by a cosine distance of up to 0.78, while
+    single-input requests were repeatable (docs/results/embedding-stability-*.{txt,json}).
+    """
 
     def __init__(
         self,
@@ -65,7 +71,7 @@ class OllamaEmbedder:
         *,
         timeout: float = 120.0,
         max_retries: int = 2,
-        batch_size: int = 32,
+        batch_size: int = 1,
         client: httpx.Client | None = None,
         sleep: Callable[[float], None] = time.sleep,
     ) -> None:
