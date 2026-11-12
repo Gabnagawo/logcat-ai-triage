@@ -1,0 +1,752 @@
+[
+  {
+    "embedder": "tfidf",
+    "threshold": 0.005,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.4326,
+      "nmi": 0.7975,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.6632,
+      "clusters_found": 33,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.01,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.437,
+      "nmi": 0.8002,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.667,
+      "clusters_found": 32,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.015,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.437,
+      "nmi": 0.8002,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.667,
+      "clusters_found": 32,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.02,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.477,
+      "nmi": 0.8148,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.6875,
+      "clusters_found": 29,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.025,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.4991,
+      "nmi": 0.8245,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.7013,
+      "clusters_found": 27,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.03,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.5598,
+      "nmi": 0.8404,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.7247,
+      "clusters_found": 25,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.05,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.6294,
+      "nmi": 0.8658,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.7633,
+      "clusters_found": 21,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.1,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.7531,
+      "nmi": 0.9043,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.8254,
+      "clusters_found": 17,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.2,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.8692,
+      "nmi": 0.9509,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9065,
+      "clusters_found": 13,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.3,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.8928,
+      "nmi": 0.9634,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9294,
+      "clusters_found": 12,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.4,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.99,
+      "nmi": 0.9911,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9823,
+      "clusters_found": 11,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.45,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.99,
+      "nmi": 0.9911,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9823,
+      "clusters_found": 11,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.5,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.99,
+      "nmi": 0.9911,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9823,
+      "clusters_found": 11,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.6,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.7725,
+      "nmi": 0.9458,
+      "purity": 0.8583,
+      "homogeneity": 0.8972,
+      "completeness": 1.0,
+      "clusters_found": 9,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "tfidf",
+    "threshold": 0.7,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.7725,
+      "nmi": 0.9458,
+      "purity": 0.8583,
+      "homogeneity": 0.8972,
+      "completeness": 1.0,
+      "clusters_found": 9,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.005,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.7581,
+      "nmi": 0.906,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.8282,
+      "clusters_found": 17,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.01,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.8623,
+      "nmi": 0.9445,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.8948,
+      "clusters_found": 14,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.015,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.9696,
+      "nmi": 0.9779,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9568,
+      "clusters_found": 12,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.02,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.9696,
+      "nmi": 0.9779,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9568,
+      "clusters_found": 12,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.025,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.9696,
+      "nmi": 0.9779,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9568,
+      "clusters_found": 12,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.03,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.9696,
+      "nmi": 0.9779,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9568,
+      "clusters_found": 12,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.05,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.7431,
+      "nmi": 0.9238,
+      "purity": 0.8583,
+      "homogeneity": 0.8972,
+      "completeness": 0.9521,
+      "clusters_found": 11,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.1,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.7725,
+      "nmi": 0.9458,
+      "purity": 0.8583,
+      "homogeneity": 0.8972,
+      "completeness": 1.0,
+      "clusters_found": 9,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.2,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.4588,
+      "nmi": 0.8248,
+      "purity": 0.6833,
+      "homogeneity": 0.7018,
+      "completeness": 1.0,
+      "clusters_found": 7,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.3,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.1878,
+      "nmi": 0.5727,
+      "purity": 0.4167,
+      "homogeneity": 0.4013,
+      "completeness": 1.0,
+      "clusters_found": 4,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.4,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.1878,
+      "nmi": 0.5727,
+      "purity": 0.4167,
+      "homogeneity": 0.4013,
+      "completeness": 1.0,
+      "clusters_found": 4,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.45,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.1878,
+      "nmi": 0.5727,
+      "purity": 0.4167,
+      "homogeneity": 0.4013,
+      "completeness": 1.0,
+      "clusters_found": 4,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.5,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.1878,
+      "nmi": 0.5727,
+      "purity": 0.4167,
+      "homogeneity": 0.4013,
+      "completeness": 1.0,
+      "clusters_found": 4,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.6,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.1878,
+      "nmi": 0.5727,
+      "purity": 0.4167,
+      "homogeneity": 0.4013,
+      "completeness": 1.0,
+      "clusters_found": 4,
+      "true_families": 10
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.7,
+    "files": [
+      "device-900.logcat",
+      "device-901.logcat",
+      "device-902.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.1878,
+      "nmi": 0.5727,
+      "purity": 0.4167,
+      "homogeneity": 0.4013,
+      "completeness": 1.0,
+      "clusters_found": 4,
+      "true_families": 10
+    }
+  }
+]

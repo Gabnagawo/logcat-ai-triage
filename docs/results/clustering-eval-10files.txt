@@ -1,0 +1,3 @@
+tfidf                      thr=0.45  ARI=0.996 NMI=0.994 purity=1.000 clusters=11/10 extraction P=1.000 R=1.000 (400/400) embed=0.037s
+ollama:nomic-embed-text    thr=0.02  ARI=0.980 NMI=0.983 purity=1.000 clusters=13/10 extraction P=1.000 R=1.000 (400/400) embed=28.706s
+wrote docs\results\clustering-eval-10files.json

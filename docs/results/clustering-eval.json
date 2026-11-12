@@ -1,0 +1,121 @@
+[
+  {
+    "embedder": "tfidf",
+    "threshold": 0.45,
+    "files": [
+      "device-001.logcat",
+      "device-002.logcat",
+      "device-003.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.994,
+      "nmi": 0.993,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.986,
+      "clusters_found": 11,
+      "true_families": 10
+    },
+    "embed_seconds": 0.02,
+    "confusion": {
+      "anr_notes_service": {
+        "1": 6
+      },
+      "anr_player_main": {
+        "0": 9
+      },
+      "ise_player_fragment": {
+        "6": 14
+      },
+      "ise_player_released": {
+        "3": 11
+      },
+      "native_sigsegv_player": {
+        "9": 4,
+        "10": 2
+      },
+      "network_main_weather": {
+        "4": 14
+      },
+      "npe_note_editor": {
+        "2": 17
+      },
+      "npe_notes_list": {
+        "7": 18
+      },
+      "oom_weather_bitmap": {
+        "5": 10
+      },
+      "sqlite_notes_logged": {
+        "8": 15
+      }
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.02,
+    "files": [
+      "device-001.logcat",
+      "device-002.logcat",
+      "device-003.logcat"
+    ],
+    "extraction": {
+      "labeled": 120,
+      "extracted": 120,
+      "matched": 120,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.966,
+      "nmi": 0.9794,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9596,
+      "clusters_found": 12,
+      "true_families": 10
+    },
+    "embed_seconds": 9.986,
+    "confusion": {
+      "anr_notes_service": {
+        "1": 6
+      },
+      "anr_player_main": {
+        "0": 9
+      },
+      "ise_player_fragment": {
+        "6": 14
+      },
+      "ise_player_released": {
+        "3": 11
+      },
+      "native_sigsegv_player": {
+        "10": 4,
+        "11": 2
+      },
+      "network_main_weather": {
+        "5": 14
+      },
+      "npe_note_editor": {
+        "2": 17
+      },
+      "npe_notes_list": {
+        "4": 18
+      },
+      "oom_weather_bitmap": {
+        "7": 10
+      },
+      "sqlite_notes_logged": {
+        "8": 12,
+        "9": 3
+      }
+    }
+  }
+]

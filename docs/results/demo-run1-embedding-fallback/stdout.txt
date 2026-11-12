@@ -1,0 +1,24 @@
+WARNING logcat_triage.llm.retry: attempt 1 failed (Ollama returned empty, zero or non-finite embeddings); retrying
+WARNING logcat_triage.llm.retry: attempt 2 failed (Ollama returned empty, zero or non-finite embeddings); retrying
+WARNING logcat_triage.embeddings: Ollama embeddings unavailable: Ollama returned empty, zero or non-finite embeddings; falling back to TF-IDF
+WARNING logcat_triage.llm.retry: attempt 1 failed (timed out); retrying
+120 failures {'anr': 15, 'crash': 84, 'logged_exception': 15, 'native_crash': 6} -> 11 clusters (tfidf, threshold 0.45) -> 10 reports
+embedder fallback: Ollama embeddings unavailable: Ollama returned empty, zero or non-finite embeddings
+LLM ollama:qwen3:8b: 10 reports, mean 82.06s, median 74.69s, max 175.17s, fallbacks 0
+  BUG-1 [high] x18 NotesList: NullPointerException
+  BUG-2 [high] x17 NoteEditor: NullPointerException
+  BUG-3 [high] x15 Database: UNIQUE constraint failed on note.uuid
+  BUG-4 [high] x14 Network: NetworkOnMainThreadException
+  BUG-5 [high] x14 Fragment: PlaybackControlsFragment not attached to context
+  BUG-6 [high] x11 Player: IllegalStateException on play() after release()
+  BUG-7 [high] x10 Radar: OutOfMemoryError
+  BUG-8 [high] x9 ANR: PlaybackActivity Input Dispatch Timeout
+  BUG-9 [high] x6 ANR: SyncService Stuck in onStartCommand
+  BUG-10 [high] x4 Native Crash: SIGSEGV in DecoderThread
+wrote docs\results\demo\triage.md
+wrote docs\results\demo\triage.html
+wrote docs\results\demo\triage.json
+
+real	14m7.669s
+user	0m0.015s
+sys	0m0.015s

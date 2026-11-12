@@ -1,0 +1,136 @@
+[
+  {
+    "embedder": "tfidf",
+    "threshold": 0.45,
+    "files": [
+      "device-100.logcat",
+      "device-101.logcat",
+      "device-102.logcat",
+      "device-103.logcat",
+      "device-104.logcat",
+      "device-105.logcat",
+      "device-106.logcat",
+      "device-107.logcat",
+      "device-108.logcat",
+      "device-109.logcat"
+    ],
+    "extraction": {
+      "labeled": 400,
+      "extracted": 400,
+      "matched": 400,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.9956,
+      "nmi": 0.9943,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9887,
+      "clusters_found": 11,
+      "true_families": 10
+    },
+    "embed_seconds": 0.037,
+    "confusion": {
+      "anr_notes_service": {
+        "1": 21
+      },
+      "anr_player_main": {
+        "0": 38
+      },
+      "ise_player_fragment": {
+        "6": 56
+      },
+      "ise_player_released": {
+        "3": 36
+      },
+      "native_sigsegv_player": {
+        "10": 17,
+        "9": 4
+      },
+      "network_main_weather": {
+        "4": 45
+      },
+      "npe_note_editor": {
+        "2": 68
+      },
+      "npe_notes_list": {
+        "7": 44
+      },
+      "oom_weather_bitmap": {
+        "5": 34
+      },
+      "sqlite_notes_logged": {
+        "8": 37
+      }
+    }
+  },
+  {
+    "embedder": "ollama:nomic-embed-text",
+    "threshold": 0.02,
+    "files": [
+      "device-100.logcat",
+      "device-101.logcat",
+      "device-102.logcat",
+      "device-103.logcat",
+      "device-104.logcat",
+      "device-105.logcat",
+      "device-106.logcat",
+      "device-107.logcat",
+      "device-108.logcat",
+      "device-109.logcat"
+    ],
+    "extraction": {
+      "labeled": 400,
+      "extracted": 400,
+      "matched": 400,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "clustering": {
+      "ari": 0.9802,
+      "nmi": 0.9826,
+      "purity": 1.0,
+      "homogeneity": 1.0,
+      "completeness": 0.9658,
+      "clusters_found": 13,
+      "true_families": 10
+    },
+    "embed_seconds": 28.706,
+    "confusion": {
+      "anr_notes_service": {
+        "1": 21
+      },
+      "anr_player_main": {
+        "0": 38
+      },
+      "ise_player_fragment": {
+        "6": 56
+      },
+      "ise_player_released": {
+        "3": 36
+      },
+      "native_sigsegv_player": {
+        "10": 17,
+        "12": 1,
+        "11": 3
+      },
+      "network_main_weather": {
+        "5": 45
+      },
+      "npe_note_editor": {
+        "2": 68
+      },
+      "npe_notes_list": {
+        "4": 44
+      },
+      "oom_weather_bitmap": {
+        "7": 34
+      },
+      "sqlite_notes_logged": {
+        "8": 29,
+        "9": 8
+      }
+    }
+  }
+]

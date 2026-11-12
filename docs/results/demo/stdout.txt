@@ -1,0 +1,19 @@
+120 failures {'anr': 15, 'crash': 84, 'logged_exception': 15, 'native_crash': 6} -> 12 clusters (ollama:nomic-embed-text, threshold 0.02) -> 10 reports
+LLM ollama:qwen3:8b: 10 reports, mean 18.71s, median 16.88s, max 37.52s, fallbacks 0
+  BUG-1 [high] x18 NotesList: NullPointerException
+  BUG-2 [high] x17 NoteEditor: NullPointerException
+  BUG-3 [high] x14 Network: NetworkOnMainThreadException
+  BUG-4 [high] x14 Fragment: PlaybackControlsFragment not attached to context
+  BUG-5 [high] x12 Database: UNIQUE constraint failed on note.uuid
+  BUG-6 [high] x11 Player: IllegalStateException on play() after release()
+  BUG-7 [high] x10 Radar: OutOfMemoryError
+  BUG-8 [high] x9 ANR: PlaybackActivity Input Dispatch Timeout
+  BUG-9 [high] x6 ANR: SyncService Stuck in onStartCommand
+  BUG-10 [high] x4 Decoder: SIGSEGV in DecoderThread
+wrote docs\results\demo\triage.md
+wrote docs\results\demo\triage.html
+wrote docs\results\demo\triage.json
+
+real	3m20.710s
+user	0m0.000s
+sys	0m0.015s

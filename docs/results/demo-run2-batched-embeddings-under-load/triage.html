@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Logcat triage report</title><style>
+:root{--bg:#f7f7f5;--card:#fff;--text:#1d1d1f;--muted:#5f6368;--line:#e2e2de;
+--code:#f1f1ee;--critical:#b42318;--high:#c4320a;--medium:#a15c07;--low:#3b6e3b}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--card:#1e1e1e;--text:#ececec;
+--muted:#a0a0a0;--line:#2f2f2f;--code:#262626;--critical:#ff8a80;--high:#ffab70;
+--medium:#f5c46b;--low:#9bd29b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:960px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:1.6rem;margin:0 0 4px}h2{font-size:1.15rem;margin:0}
+.muted{color:var(--muted)}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:20px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.stat b{display:block;font-size:1.4rem}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+border-radius:10px;overflow:hidden;margin:12px 0 28px;font-size:.92rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted)}
+.table-wrap{overflow-x:auto}
+article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;
+margin:0 0 18px}
+.head{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.pill{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+border:1px solid currentColor;border-radius:999px;padding:1px 9px}
+.critical{color:var(--critical)}.high{color:var(--high)}.medium{color:var(--medium)}.low{color:var(--low)}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:14px 0}
+dt{color:var(--muted)}dd{margin:0}
+pre{background:var(--code);border-radius:8px;padding:12px;overflow-x:auto;font-size:.82rem;
+line-height:1.45;margin:6px 0 12px}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+h3{font-size:.95rem;margin:16px 0 4px}
+ol{margin:4px 0 0;padding-left:22px}
+details summary{cursor:pointer;color:var(--muted);margin-top:10px}
+footer{font-size:.82rem;color:var(--muted);margin-top:12px}
+</style></head>
+<body><main>
+<h1>Logcat triage report</h1>
+<p class="muted">2026-11-12T13:10:49+00:00 &middot; device-001.logcat, device-002.logcat, device-003.logcat &middot; 4445 lines</p>
+<section class="summary">
+  <div class="stat"><b>120</b>failures extracted</div>
+  <div class="stat"><b>24</b>clusters</div>
+  <div class="stat"><b>10</b>bug reports</div>
+  <div class="stat"><b>ollama:nomic-embed-text</b>embedder (threshold 0.02)</div>
+</section>
+<p class="muted">By kind: anr 15, crash 84, logged_exception 15, native_crash 6 &middot; report writer: ollama:qwen3:8b</p>
+
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Kind</th><th>Exception / signal</th>
+<th>Count</th><th>Packages</th></tr></thead><tbody><tr><td>1</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>16</td><td>org.example.notes</td></tr><tr><td>2</td><td>crash</td><td><code>android.os.NetworkOnMainThreadException</code></td><td>14</td><td>org.example.weather</td></tr><tr><td>3</td><td>crash</td><td><code>java.lang.IllegalStateException</code></td><td>14</td><td>org.example.player</td></tr><tr><td>4</td><td>logged_exception</td><td><code>android.database.sqlite.SQLiteConstraintException</code></td><td>12</td><td>org.example.notes</td></tr><tr><td>5</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>12</td><td>org.example.notes</td></tr><tr><td>6</td><td>crash</td><td><code>java.lang.IllegalStateException</code></td><td>10</td><td>org.example.player</td></tr><tr><td>7</td><td>anr</td><td><code>ANR</code></td><td>9</td><td>org.example.player</td></tr><tr><td>8</td><td>crash</td><td><code>java.lang.OutOfMemoryError</code></td><td>9</td><td>org.example.weather</td></tr><tr><td>9</td><td>anr</td><td><code>ANR</code></td><td>6</td><td>org.example.notes</td></tr><tr><td>10</td><td>native_crash</td><td><code>SIGSEGV</code></td><td>3</td><td>org.example.player</td></tr><tr><td>11</td><td>logged_exception</td><td><code>java.lang.RuntimeException</code></td><td>2</td><td>org.example.notes</td></tr><tr><td>12</td><td>native_crash</td><td><code>SIGSEGV</code></td><td>1</td><td>org.example.player</td></tr><tr><td>13</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>1</td><td>org.example.notes</td></tr><tr><td>14</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>1</td><td>org.example.notes</td></tr><tr><td>15</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>1</td><td>org.example.notes</td></tr><tr><td>16</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>1</td><td>org.example.notes</td></tr><tr><td>17</td><td>crash</td><td><code>java.lang.OutOfMemoryError</code></td><td>1</td><td>org.example.weather</td></tr><tr><td>18</td><td>native_crash</td><td><code>SIGSEGV</code></td><td>1</td><td>org.example.player</td></tr><tr><td>19</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>1</td><td>org.example.notes</td></tr><tr><td>20</td><td>logged_exception</td><td><code>java.lang.RuntimeException</code></td><td>1</td><td>org.example.notes</td></tr><tr><td>21</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>1</td><td>org.example.notes</td></tr><tr><td>22</td><td>crash</td><td><code>java.lang.IllegalStateException</code></td><td>1</td><td>org.example.player</td></tr><tr><td>23</td><td>native_crash</td><td><code>SIGSEGV</code></td><td>1</td><td>org.example.player</td></tr><tr><td>24</td><td>crash</td><td><code>java.lang.NullPointerException</code></td><td>1</td><td>org.example.notes</td></tr></tbody></table></div>
+
+<article id="bug-1">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-1: NotesList: NullPointerException</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>16</dd>
+    <dt>Packages</dt><dd>org.example.notes</dd>
+    <dt>Kind</dt><dd>crash &middot; <code>java.lang.NullPointerException</code></dd>
+    <dt>Seen</dt><dd>01-29 03:20:16.118 &rarr; 05-02 21:37:27.157</dd>
+    <dt>Severity</dt><dd>Crash in core user flow with multiple occurrences.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Launch NotesListActivity</li><li>Observe notes list</li><li>NoteListAdapter attempts to bind a view holder</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>java.lang.NullPointerException: Attempt to invoke virtual method &#x27;long org.example.notes.model.Note.getUpdatedAt()&#x27; on a null object reference
+   at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt)
+   at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt)</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>A null Note object is being passed to the NotesListAdapter&#x27;s onBindViewHolder method, leading to a NullPointerException when attempting to call getUpdatedAt() on it.</p>
+  <details><summary>Raw sample (device-003.logcat:84)</summary><pre><code>05-02 21:34:40.960  3279  3279 E AndroidRuntime: FATAL EXCEPTION: main
+05-02 21:34:41.000  3279  3279 E AndroidRuntime: Process: org.example.notes, PID: 3279
+05-02 21:34:41.029  3279  3279 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method &#x27;long org.example.notes.model.Note.getUpdatedAt()&#x27; on a null object reference
+05-02 21:34:41.051  3279  3279 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:63)
+05-02 21:34:41.052  3279  3279 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:20)
+05-02 21:34:41.078  3279  3279 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.onBindViewHolder(RecyclerView.java:7263)
+05-02 21:34:41.085  3279  3279 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.bindViewHolder(RecyclerView.java:7347)
+05-02 21:34:41.105  3279  3279 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Recycler.tryBindViewHolderByDeadline(RecyclerView.java:6239)
+05-02 21:34:41.111  3279  3279 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:942)
+05-02 21:34:41.125  3279  3279 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+05-02 21:34:41.129  3279  3279 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+05-02 21:34:41.139  3279  3279 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+05-02 21:34:41.140  3279  3279 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7998)
+05-02 21:34:41.159  3279  3279 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+05-02 21:34:41.174  3279  3279 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+05-02 21:34:41.207  3279  3279 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:950)</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 49.3 s</footer>
+</article>
+<article id="bug-2">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-2: Network: NetworkOnMainThreadException</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>14</dd>
+    <dt>Packages</dt><dd>org.example.weather</dd>
+    <dt>Kind</dt><dd>crash &middot; <code>android.os.NetworkOnMainThreadException</code></dd>
+    <dt>Seen</dt><dd>01-29 03:20:19.131 &rarr; 05-02 21:37:55.756</dd>
+    <dt>Severity</dt><dd>Crash occurred 14 times across 3 log files in a core user flow.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Launch ForecastActivity</li><li>User clicks refresh button</li><li>ForecastClient fetches data</li><li>Network request executed on main thread</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>android.os.NetworkOnMainThreadException
+org.example.weather.forecast.ForecastClient.fetchNow
+org.example.weather.ui.ForecastActivity.onRefreshClicked</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>The ForecastClient is performing network operations on the main thread, which is prohibited by Android&#x27;s StrictMode.</p>
+  <details><summary>Raw sample (device-001.logcat:143)</summary><pre><code>03-10 20:43:41.798  5988  5988 E AndroidRuntime: FATAL EXCEPTION: main
+03-10 20:43:41.815  5988  5988 E AndroidRuntime: Process: org.example.weather, PID: 5988
+03-10 20:43:41.886  5988  5988 E AndroidRuntime: android.os.NetworkOnMainThreadException
+03-10 20:43:41.898  5988  5988 E AndroidRuntime: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1605)
+03-10 20:43:41.900  5988  5988 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+03-10 20:43:41.928  5988  5988 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+03-10 20:43:41.931  5988  5988 E AndroidRuntime: 	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+03-10 20:43:41.944  5988  5988 E AndroidRuntime: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:50)
+03-10 20:43:41.984  5988  5988 E AndroidRuntime: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+03-10 20:43:42.019  5988  5988 E AndroidRuntime: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+03-10 20:43:42.045  5988  5988 E AndroidRuntime: 	at org.example.weather.forecast.ForecastClient.fetchNow(ForecastClient.kt:54)
+03-10 20:43:42.053  5988  5988 E AndroidRuntime: 	at org.example.weather.ui.ForecastActivity.onRefreshClicked(ForecastActivity.kt:107)
+03-10 20:43:42.057  5988  5988 E AndroidRuntime: 	at android.view.View.performClick(View.java:7659)
+03-10 20:43:42.093  5988  5988 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7636)
+03-10 20:43:42.124  5988  5988 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:942)
+03-10 20:43:42.188  5988  5988 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+03-10 20:43:42.215  5988  5988 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+03-10 20:43:42.241  5988  5988 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:294)
+03-10 20:43:42.254  5988  5988 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8828)</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 68.4 s</footer>
+</article>
+<article id="bug-3">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-3: Fragment: PlaybackControlsFragment not attached to context</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>14</dd>
+    <dt>Packages</dt><dd>org.example.player</dd>
+    <dt>Kind</dt><dd>crash &middot; <code>java.lang.IllegalStateException</code></dd>
+    <dt>Seen</dt><dd>01-29 03:20:43.735 &rarr; 05-02 21:38:10.872</dd>
+    <dt>Severity</dt><dd>Crash in a core user flow with 14 occurrences across 3 logs.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Launch PlaybackActivity</li><li>Queue changes occur in background</li><li>PlaybackActivity is paused or destroyed</li><li>QueueObserver triggers updateQueueBadge</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>java.lang.IllegalStateException: Fragment PlaybackControlsFragment{&lt;hex&gt;} (&lt;uuid&gt;) not attached to a context
+org.example.player.ui.PlaybackControlsFragment.updateQueueBadge
+org.example.player.queue.QueueObserver$onChanged$1.run</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>PlaybackControlsFragment is being accessed after it has been detached from the activity, likely due to the fragment being destroyed or paused while the queue observer triggers an update.</p>
+  <details><summary>Raw sample (device-001.logcat:451)</summary><pre><code>03-10 20:44:08.827  7291  7291 E AndroidRuntime: FATAL EXCEPTION: main
+03-10 20:44:08.835  7291  7291 E AndroidRuntime: Process: org.example.player, PID: 7291
+03-10 20:44:08.863  7291  7291 E AndroidRuntime: java.lang.IllegalStateException: Fragment PlaybackControlsFragment{a716db4} (718e3334-06ac-42b2-be47-e17ccee674ba) not attached to a context.
+03-10 20:44:08.867  7291  7291 E AndroidRuntime: 	at androidx.fragment.app.Fragment.requireContext(Fragment.java:989)
+03-10 20:44:08.889  7291  7291 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.updateQueueBadge(PlaybackControlsFragment.kt:209)
+03-10 20:44:08.926  7291  7291 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.access$updateQueueBadge(PlaybackControlsFragment.kt:44)
+03-10 20:44:08.940  7291  7291 E AndroidRuntime: 	at org.example.player.queue.QueueObserver$onChanged$1.run(QueueObserver.kt:33)
+03-10 20:44:08.946  7291  7291 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+03-10 20:44:08.972  7291  7291 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+03-10 20:44:08.984  7291  7291 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+03-10 20:44:09.000  7291  7291 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+03-10 20:44:09.032  7291  7291 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7889)
+03-10 20:44:09.059  7291  7291 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-10 20:44:09.073  7291  7291 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 36.7 s</footer>
+</article>
+<article id="bug-4">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-4: Database: UNIQUE constraint failed on note.uuid</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>12</dd>
+    <dt>Packages</dt><dd>org.example.notes</dd>
+    <dt>Kind</dt><dd>logged_exception &middot; <code>android.database.sqlite.SQLiteConstraintException</code></dd>
+    <dt>Seen</dt><dd>01-29 03:20:08.899 &rarr; 05-02 21:38:17.331</dd>
+    <dt>Severity</dt><dd>A SQLiteConstraintException occurred 12 times, indicating data loss or corruption in a core user flow.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Open NotesListActivity</li><li>Navigate to NoteEditorActivity</li><li>Edit note and click save</li><li>Observe failure to save note</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>SQLiteConstraintException: UNIQUE constraint failed: notes.uuid
+org.example.notes.data.NoteDao_Impl.insert
+org.example.notes.data.NotesRepository.save
+org.example.notes.editor.NoteEditorViewModel$save$1.invokeSuspend</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>The application is attempting to insert a note with a UUID that already exists in the database, likely due to a duplicate UUID generation or a failed save operation that resulted in a duplicate entry.</p>
+  <details><summary>Raw sample (device-001.logcat:43)</summary><pre><code>03-10 20:43:26.838  5801  5880 E NotesRepository: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: notes.uuid (code 1555 SQLITE_CONSTRAINT_UNIQUE)
+03-10 20:43:26.860  5801  5880 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+03-10 20:43:26.897  5801  5880 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+03-10 20:43:26.922  5801  5880 E NotesRepository: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:818)
+03-10 20:43:26.958  5801  5880 E NotesRepository: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:90)
+03-10 20:43:26.995  5801  5880 E NotesRepository: 	at org.example.notes.data.NoteDao_Impl.insert(NoteDao_Impl.java:120)
+03-10 20:43:27.020  5801  5880 E NotesRepository: 	at org.example.notes.data.NotesRepository.save(NotesRepository.kt:80)
+03-10 20:43:27.046  5801  5880 E NotesRepository: 	at org.example.notes.editor.NoteEditorViewModel$save$1.invokeSuspend(NoteEditorViewModel.kt:79)
+03-10 20:43:27.086  5801  5880 E NotesRepository: 	... 13 more</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 23.0 s</footer>
+</article>
+<article id="bug-5">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-5: NoteEditor: NullPointerException</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>12</dd>
+    <dt>Packages</dt><dd>org.example.notes</dd>
+    <dt>Kind</dt><dd>crash &middot; <code>java.lang.NullPointerException</code></dd>
+    <dt>Seen</dt><dd>01-29 03:20:12.712 &rarr; 05-02 21:36:29.869</dd>
+    <dt>Severity</dt><dd>Crash occurs in a core user flow with multiple occurrences.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Open NotesListActivity</li><li>Launch NoteEditorActivity by selecting a note</li><li>Attempt to open a note with ID 3570</li><li>NoteEditorFragment is initialized</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>java.lang.NullPointerException: Attempt to invoke virtual method &#x27;java.lang.String org.example.notes.model.Note.getTitle()&#x27; on a null object reference
+org.example.notes.editor.NoteEditorFragment.bindNote(NoteEditorFragment.kt)
+org.example.notes.editor.NoteEditorFragment.onViewCreated(NoteEditorFragment.kt)</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>The NoteEditorFragment is attempting to bind a null Note object, likely because the note with ID 3570 was deleted or not found in the repository, leading to a NullPointerException.</p>
+  <details><summary>Raw sample (device-001.logcat:848)</summary><pre><code>03-10 20:45:28.957  8966  8966 E AndroidRuntime: FATAL EXCEPTION: main
+03-10 20:45:28.964  8966  8966 E AndroidRuntime: Process: org.example.notes, PID: 8966
+03-10 20:45:28.982  8966  8966 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method &#x27;java.lang.String org.example.notes.model.Note.getTitle()&#x27; on a null object reference
+03-10 20:45:29.033  8966  8966 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.bindNote(NoteEditorFragment.kt:149)
+03-10 20:45:29.071  8966  8966 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.onViewCreated(NoteEditorFragment.kt:74)
+03-10 20:45:29.108  8966  8966 E AndroidRuntime: 	at androidx.fragment.app.Fragment.performViewCreated(Fragment.java:3127)
+03-10 20:45:29.147  8966  8966 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+03-10 20:45:29.174  8966  8966 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+03-10 20:45:29.204  8966  8966 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+03-10 20:45:29.218  8966  8966 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+03-10 20:45:29.253  8966  8966 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8042)
+03-10 20:45:29.257  8966  8966 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+03-10 20:45:29.258  8966  8966 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+03-10 20:45:29.287  8966  8966 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:926)</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 71.5 s</footer>
+</article>
+<article id="bug-6">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-6: Player: IllegalStateException on play() after release</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>10</dd>
+    <dt>Packages</dt><dd>org.example.player</dd>
+    <dt>Kind</dt><dd>crash &middot; <code>java.lang.IllegalStateException</code></dd>
+    <dt>Seen</dt><dd>01-29 03:20:47.231 &rarr; 05-02 21:38:14.922</dd>
+    <dt>Severity</dt><dd>Crash occurs in a core user flow with multiple occurrences.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>User starts PlaybackActivity</li><li>PlaybackService is started with onStartCommand</li><li>PlayerEngine is released from onTaskRemoved</li><li>User attempts to play media again</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>java.lang.IllegalStateException: Cannot call play() after release()
+org.example.player.engine.PlayerEngine.checkNotReleased
+org.example.player.engine.PlayerEngine.play
+org.example.player.service.PlaybackService.onStartCommand</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>PlayerEngine is being released prematurely in onTaskRemoved, and subsequent play() calls are being made without checking if the engine is still active.</p>
+  <details><summary>Raw sample (device-003.logcat:1379)</summary><pre><code>05-02 21:38:14.922  8748  8748 E AndroidRuntime: FATAL EXCEPTION: main
+05-02 21:38:14.942  8748  8748 E AndroidRuntime: Process: org.example.player, PID: 8748
+05-02 21:38:14.955  8748  8748 E AndroidRuntime: java.lang.IllegalStateException: Cannot call play() after release()
+05-02 21:38:14.980  8748  8748 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.checkNotReleased(PlayerEngine.kt:316)
+05-02 21:38:14.991  8748  8748 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.play(PlayerEngine.kt:133)
+05-02 21:38:15.008  8748  8748 E AndroidRuntime: 	at org.example.player.service.PlaybackService.onStartCommand(PlaybackService.kt:88)
+05-02 21:38:15.010  8748  8748 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4984)
+05-02 21:38:15.028  8748  8748 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+05-02 21:38:15.050  8748  8748 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+05-02 21:38:15.060  8748  8748 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8143)
+05-02 21:38:15.084  8748  8748 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 15.7 s</footer>
+</article>
+<article id="bug-7">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-7: ANR: PlaybackActivity Input Dispatch Timeout</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>9</dd>
+    <dt>Packages</dt><dd>org.example.player</dd>
+    <dt>Kind</dt><dd>anr &middot; <code>ANR</code></dd>
+    <dt>Seen</dt><dd>01-29 03:21:47.680 &rarr; 05-02 21:37:09.162</dd>
+    <dt>Severity</dt><dd>ANR occurs frequently (9 times) in a core user flow with clear user impact.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Launch PlaybackActivity via intent</li><li>Start syncing data from API</li><li>Import a large playlist with many tracks</li><li>Perform user interaction while import is ongoing</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>Input dispatching timed out (server) is not responding. Waited &lt;n&gt; for MotionEvent
+org.example.player.PlaybackActivity
+D/PlaylistImporter: importing 520 tracks on main
+I/Choreographer: Skipped 593 frames! The application may be doing too much work on its main thread.</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>The main thread is blocked by the PlaylistImporter performing heavy work during data import, leading to input dispatch timeout in PlaybackActivity.</p>
+  <details><summary>Raw sample (device-001.logcat:118)</summary><pre><code>03-10 20:43:37.716  1467  1517 E ActivityManager: ANR in org.example.player (org.example.player/.PlaybackActivity)
+03-10 20:43:37.753  1467  1517 E ActivityManager: PID: 5934
+03-10 20:43:37.779  1467  1517 E ActivityManager: Reason: Input dispatching timed out (18074ae org.example.player/org.example.player.PlaybackActivity (server) is not responding. Waited 5092ms for MotionEvent)
+03-10 20:43:37.794  1467  1517 E ActivityManager: Parent: org.example.player/.PlaybackActivity
+03-10 20:43:37.830  1467  1517 E ActivityManager: ErrorId: adfd295b-542d-4460-8020-e36083e6a37a
+03-10 20:43:37.869  1467  1517 E ActivityManager: Frozen: false
+03-10 20:43:37.881  1467  1517 E ActivityManager: Load: 3.57 / 8.59 / 3.82
+03-10 20:43:37.909  1467  1517 E ActivityManager: CPU usage from 822ms to 11626ms ago:
+03-10 20:43:37.911  1467  1517 E ActivityManager:   68% 5934/org.example.player: 88% user + 9% kernel
+03-10 20:43:37.929  1467  1517 E ActivityManager:   17% 1467/system_server: 5% user + 9% kernel</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 16.2 s</footer>
+</article>
+<article id="bug-8">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-8: Radar: OutOfMemoryError</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>9</dd>
+    <dt>Packages</dt><dd>org.example.weather</dd>
+    <dt>Kind</dt><dd>crash &middot; <code>java.lang.OutOfMemoryError</code></dd>
+    <dt>Seen</dt><dd>01-29 03:20:53.313 &rarr; 05-02 21:37:31.243</dd>
+    <dt>Severity</dt><dd>Crash occurs frequently (9 times) during radar tile loading, impacting user experience.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Open ForecastActivity</li><li>Navigate to RadarActivity</li><li>Trigger prefetch of radar tiles at zoom level 6</li><li>Load 204 radar tiles in background</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>java.lang.OutOfMemoryError
+org.example.weather.radar.RadarTileLoader.decodeTile
+org.example.weather.radar.RadarTileLoader.loadTile
+org.example.weather.radar.RadarTileLoader$prefetch$1.run</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>The RadarTileLoader is attempting to decode large radar tiles without proper memory management, leading to an OutOfMemoryError when allocating memory for bitmap decoding.</p>
+  <details><summary>Raw sample (device-002.logcat:542)</summary><pre><code>01-29 03:20:53.313  6481  6507 E AndroidRuntime: FATAL EXCEPTION: RadarLoader-8
+01-29 03:20:53.345  6481  6507 E AndroidRuntime: Process: org.example.weather, PID: 6481
+01-29 03:20:53.348  6481  6507 E AndroidRuntime: java.lang.OutOfMemoryError: Failed to allocate a 33554444 byte allocation with 11600471 free bytes and 3MB until OOM, target footprint 268435456, growth limit 268435456
+01-29 03:20:53.380  6481  6507 E AndroidRuntime: 	at android.graphics.BitmapFactory.nativeDecodeStream(Native Method)
+01-29 03:20:53.398  6481  6507 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStreamInternal(BitmapFactory.java:790)
+01-29 03:20:53.400  6481  6507 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStream(BitmapFactory.java:736)
+01-29 03:20:53.402  6481  6507 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.decodeTile(RadarTileLoader.kt:94)
+01-29 03:20:53.404  6481  6507 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.loadTile(RadarTileLoader.kt:61)
+01-29 03:20:53.439  6481  6507 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader$prefetch$1.run(RadarTileLoader.kt:45)
+01-29 03:20:53.446  6481  6507 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+01-29 03:20:53.460  6481  6507 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+01-29 03:20:53.462  6481  6507 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 70.6 s</footer>
+</article>
+<article id="bug-9">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-9: ANR: SyncService Stuck in onStartCommand</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>6</dd>
+    <dt>Packages</dt><dd>org.example.notes</dd>
+    <dt>Kind</dt><dd>anr &middot; <code>ANR</code></dd>
+    <dt>Seen</dt><dd>01-29 03:21:31.208 &rarr; 05-02 21:37:51.541</dd>
+    <dt>Severity</dt><dd>ANR occurs 6 times across 3 logs, impacting user experience during sync.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Open NotesListActivity</li><li>Navigate to NoteEditorActivity</li><li>SyncService is triggered for full resync</li><li>Process org.example.notes crashes and restarts</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>ANR: Application not responding</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>SyncService may be blocking the main thread during onStartCommand, leading to ANR. The crash of the main process could be related to resource contention or unhandled exceptions during sync.</p>
+  <details><summary>Raw sample (device-001.logcat:736)</summary><pre><code>03-10 20:44:59.410  1467  1510 E ActivityManager: ANR in org.example.notes
+03-10 20:44:59.439  1467  1510 E ActivityManager: PID: 8426
+03-10 20:44:59.443  1467  1510 E ActivityManager: Reason: executing service org.example.notes/.sync.SyncService
+03-10 20:44:59.464  1467  1510 E ActivityManager: ErrorId: 49292801-8f86-4b06-960b-dfae30c91182
+03-10 20:44:59.468  1467  1510 E ActivityManager: Frozen: false
+03-10 20:44:59.484  1467  1510 E ActivityManager: Load: 5.73 / 4.19 / 6.93
+03-10 20:44:59.524  1467  1510 E ActivityManager: CPU usage from 26ms to 19996ms ago:
+03-10 20:44:59.527  1467  1510 E ActivityManager:   71% 8426/org.example.notes: 50% user + 11% kernel</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 69.5 s</footer>
+</article>
+<article id="bug-10">
+  <div class="head"><span class="pill high">high</span>
+  <h2>BUG-10: Native Crash: SIGSEGV in DecoderThread</h2></div>
+  <dl>
+    <dt>Occurrences</dt><dd>3</dd>
+    <dt>Packages</dt><dd>org.example.player</dd>
+    <dt>Kind</dt><dd>native_crash &middot; <code>SIGSEGV</code></dd>
+    <dt>Seen</dt><dd>01-29 03:22:29.558 &rarr; 05-02 21:36:34.716</dd>
+    <dt>Severity</dt><dd>Native crash in a core user flow with 3 occurrences.</dd>
+  </dl>
+  <h3>Steps to reproduce <span class="muted">(inferred from log context, not verified on a device)</span></h3>
+  <ol><li>Launch PlaybackActivity</li><li>Start video playback</li><li>Perform user interaction requiring input dispatch</li><li>Background media codec configuration occurs</li></ol>
+  <h3>Stack trace (summary)</h3>
+  <pre><code>SIGSEGV, code &lt;n&gt; (SEGV_MAPERR), fault addr &lt;addr&gt; in tid &lt;pid&gt; (DecoderThread-&lt;n&gt;)
+pc /data/app/org.example.player/lib/arm64/libplayercore.so (decode_frame)
+pc /data/app/org.example.player/lib/arm64/libplayercore.so (VideoDecoder::submit(Packet const&amp;))
+pc /data/app/org.example.player/lib/arm64/libplayercore.so (decoder_loop)</code></pre>
+  <h3>Root-cause hypothesis</h3>
+  <p>A null or invalid packet is being submitted to the video decoder, leading to a SIGSEGV in decode_frame. The crash occurs in DecoderThread-2 during media playback, possibly due to an invalid memory address or corrupted data.</p>
+  <details><summary>Raw sample (device-002.logcat:1197)</summary><pre><code>01-29 03:22:29.558  8814  8997 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x2fbcac883 in tid 8997 (DecoderThread-2), pid 8814 (org.example.player)
+01-29 03:22:29.578  9366  9366 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+01-29 03:22:29.610  9366  9366 F DEBUG   : Build fingerprint: &#x27;example/sdk_gphone64/emu64a:15/AE3A.242678/9229152:userdebug/dev-keys&#x27;
+01-29 03:22:29.640  9366  9366 F DEBUG   : Revision: &#x27;2&#x27;
+01-29 03:22:29.648  9366  9366 F DEBUG   : ABI: &#x27;arm64&#x27;
+01-29 03:22:29.650  9366  9366 F DEBUG   : pid: 8814, tid: 8997, name: DecoderThread-2  &gt;&gt;&gt; org.example.player &lt;&lt;&lt;
+01-29 03:22:29.696  9366  9366 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x2fbcac883
+01-29 03:22:29.718  9366  9366 F DEBUG   :     x0  d44f368f843dd4fc  x1  9b3edfd7e37ce436
+01-29 03:22:29.749  9366  9366 F DEBUG   : backtrace:
+01-29 03:22:29.762  9366  9366 F DEBUG   :       #00 pc 0000000006f5d76e  /data/app/~~6f5a05216fd57546==/org.example.player-9f29f470bb53b710==/lib/arm64/libplayercore.so (decode_frame+222) (BuildId: e9161d3532edcd96)
+01-29 03:22:29.798  9366  9366 F DEBUG   :       #01 pc 00000000232ff04d  /data/app/~~6f5a05216fd57546==/org.example.player-9f29f470bb53b710==/lib/arm64/libplayercore.so (VideoDecoder::submit(Packet const&amp;)+99) (BuildId: e9161d3532edcd96)
+01-29 03:22:29.803  9366  9366 F DEBUG   :       #02 pc 000000004074014b  /data/app/~~6f5a05216fd57546==/org.example.player-9f29f470bb53b710==/lib/arm64/libplayercore.so (decoder_loop+177) (BuildId: e9161d3532edcd96)
+01-29 03:22:29.824  9366  9366 F DEBUG   :       #03 pc 00000000cb8aa7ab  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+196)
+01-29 03:22:29.846  9366  9366 F DEBUG   :       #04 pc 00000000f4f57a9c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68)</code></pre></details>
+  <footer>Generated by ollama:qwen3:8b in 77.8 s</footer>
+</article>
+</main></body></html>
