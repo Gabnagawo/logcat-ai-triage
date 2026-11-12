@@ -94,6 +94,16 @@ class OllamaEmbedder:
             )
             check_response(response, "Ollama")
             vectors: list[list[float]] = response.json()["embeddings"]
+            # Seen in practice on a busy shared server: HTTP 200 with all-zero vectors.
+            # They would break cosine distance, so treat them like a transient error.
+            array = np.asarray(vectors, dtype=np.float64)
+            if (
+                array.ndim != 2
+                or array.shape[0] != len(batch)
+                or not np.isfinite(array).all()
+                or (np.linalg.norm(array, axis=1) == 0).any()
+            ):
+                raise RetryableHTTPError("Ollama returned empty, zero or non-finite embeddings")
             return vectors
 
         try:
