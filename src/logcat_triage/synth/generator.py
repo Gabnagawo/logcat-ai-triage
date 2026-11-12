@@ -20,6 +20,9 @@ DEFAULT_WEIGHTS: dict[str, float] = {
     "anr_player_main": 2,
     "oom_weather_bitmap": 2,
     "native_sigsegv_player": 1,
+    "npe_notes_list": 3,
+    "ise_player_released": 2,
+    "anr_notes_service": 1,
 }
 
 LABELS_SUFFIX = ".labels.json"

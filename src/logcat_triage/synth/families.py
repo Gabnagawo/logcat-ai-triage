@@ -1,6 +1,9 @@
-"""Seven failure families for three fictional apps.
+"""Ten bugs from seven failure families (NPE, IllegalStateException, OOM, ANR, SQLite,
+native SIGSEGV, NetworkOnMainThread) in three fictional apps.
 
-Each family is one underlying bug. Every occurrence varies the details a real device varies:
+NPE, IllegalStateException and ANR each have two unrelated bugs, so clustering has to
+separate failures that share an exception type, an app and most framework frames. Each
+ground-truth family is one underlying bug. Every occurrence varies the details a real device varies:
 line numbers (different app/OS builds), PIDs/TIDs, thread names, message parameters, call
 paths into the faulty method, memory addresses and how much framework stack is printed.
 """
@@ -179,16 +182,17 @@ def sqlite_notes_logged(ctx: SynthContext) -> None:
     ctx.emit(
         pid, pid, "D", "NoteEditor", f"onSaveClicked id={note_id} chars={rng.randint(1, 9000)}"
     )
-    caller = rng.choice(
-        [
-            f"\tat org.example.notes.editor.NoteEditorViewModel$save$1.invokeSuspend(NoteEditorViewModel.kt:{_ln(ctx, 70, 84)})",
-            f"\tat org.example.notes.sync.SyncWorker.pushPending(SyncWorker.kt:{_ln(ctx, 55, 66)})",
-        ]
+    from_sync = rng.random() < 0.5
+    caller = (
+        f"\tat org.example.notes.sync.SyncWorker.pushPending(SyncWorker.kt:{_ln(ctx, 55, 66)})"
+        if from_sync
+        else f"\tat org.example.notes.editor.NoteEditorViewModel$save$1.invokeSuspend(NoteEditorViewModel.kt:{_ln(ctx, 70, 84)})"
     )
-    messages = [
-        f"Failed to save note id={note_id}",
+    sqlite_header = (
         "android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: "
-        f"notes.uuid (code {rng.choice([2067, 1555])} SQLITE_CONSTRAINT_UNIQUE)",
+        f"notes.uuid (code {rng.choice([2067, 1555])} SQLITE_CONSTRAINT_UNIQUE)"
+    )
+    sqlite_frames = [
         "\tat android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)",
         f"\tat android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:{rng.choice([938, 961])})",
         f"\tat android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:{rng.choice([790, 818])})",
@@ -197,8 +201,22 @@ def sqlite_notes_logged(ctx: SynthContext) -> None:
         f"\tat org.example.notes.data.NotesRepository.save(NotesRepository.kt:{_ln(ctx, 77, 95)})",
         caller,
     ]
-    if rng.random() < 0.5:
-        messages.append(f"\t... {rng.randint(6, 14)} more")
+    if from_sync and rng.random() < 0.5:
+        # The sync path wraps the database error: same bug, different top-level exception.
+        messages = [
+            f"Failed to save note id={note_id}",
+            f"java.lang.RuntimeException: sync push failed for batch {rng.randint(1, 900)}",
+            f"\tat org.example.notes.sync.SyncWorker.pushPending(SyncWorker.kt:{_ln(ctx, 67, 72)})",
+            f"\tat org.example.notes.sync.SyncWorker.doWork(SyncWorker.kt:{_ln(ctx, 30, 41)})",
+            f"\tat androidx.work.Worker$2.run(Worker.java:{rng.choice([82, 86])})",
+            f"Caused by: {sqlite_header}",
+            *sqlite_frames[:-1],
+            f"\t... {rng.randint(6, 14)} more",
+        ]
+    else:
+        messages = [f"Failed to save note id={note_id}", sqlite_header, *sqlite_frames]
+        if rng.random() < 0.5:
+            messages.append(f"\t... {rng.randint(6, 14)} more")
     first = ctx.emit_block(pid, tid, "E", "NotesRepository", messages)
     ctx.label(first + 1, "sqlite_notes_logged", "logged_exception", NOTES)
 
@@ -295,6 +313,78 @@ def network_main_weather(ctx: SynthContext) -> None:
     _fatal(ctx, WEATHER, "main", body, "network_main_weather")
 
 
+# ---- 8. A second, unrelated NPE in the same notes app ----------------------------------------
+def npe_notes_list(ctx: SynthContext) -> None:
+    rng = ctx.rng
+    pid = ctx.app_pid(NOTES)
+    ctx.start_activity(NOTES, ".NotesListActivity")
+    ctx.emit(
+        pid,
+        pid,
+        "D",
+        "NotesListAdapter",
+        f"submitList size={rng.randint(0, 400)} filter={rng.choice(['all', 'pinned', 'archived'])}",
+    )
+    body = [
+        "java.lang.NullPointerException: Attempt to invoke virtual method "
+        "'long org.example.notes.model.Note.getUpdatedAt()' on a null object reference",
+        f"\tat org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:{_ln(ctx, 48, 63)})",
+        f"\tat org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:{_ln(ctx, 20, 24)})",
+        f"\tat androidx.recyclerview.widget.RecyclerView$Adapter.onBindViewHolder(RecyclerView.java:{_ln(ctx, 7254, 7300)})",
+        f"\tat androidx.recyclerview.widget.RecyclerView$Adapter.bindViewHolder(RecyclerView.java:{_ln(ctx, 7337, 7380)})",
+        f"\tat androidx.recyclerview.widget.RecyclerView$Recycler.tryBindViewHolderByDeadline(RecyclerView.java:{_ln(ctx, 6194, 6240)})",
+        *_looper_tail(ctx),
+    ]
+    _fatal(ctx, NOTES, "main", body, "npe_notes_list")
+
+
+# ---- 9. A second, unrelated IllegalStateException in the player -----------------------------
+def ise_player_released(ctx: SynthContext) -> None:
+    rng = ctx.rng
+    pid = ctx.app_pid(PLAYER)
+    ctx.emit(
+        pid, pid, "D", "PlaybackService", f"onStartCommand action=PLAY startId={rng.randint(1, 40)}"
+    )
+    ctx.emit(pid, pid, "D", "PlayerEngine", "release() called from onTaskRemoved")
+    body = [
+        "java.lang.IllegalStateException: Cannot call play() after release()",
+        f"\tat org.example.player.engine.PlayerEngine.checkNotReleased(PlayerEngine.kt:{_ln(ctx, 310, 322)})",
+        f"\tat org.example.player.engine.PlayerEngine.play(PlayerEngine.kt:{_ln(ctx, 120, 133)})",
+        f"\tat org.example.player.service.PlaybackService.onStartCommand(PlaybackService.kt:{_ln(ctx, 77, 90)})",
+        f"\tat android.app.ActivityThread.handleServiceArgs(ActivityThread.java:{_ln(ctx, 4890, 5020)})",
+        *_looper_tail(ctx)[2:],
+    ]
+    _fatal(ctx, PLAYER, "main", body, "ise_player_released")
+
+
+# ---- 10. A second ANR: a service timeout in the notes app -----------------------------------
+def anr_notes_service(ctx: SynthContext) -> None:
+    rng = ctx.rng
+    pid = ctx.app_pid(NOTES)
+    ctx.emit(
+        pid, pid, "D", "SyncService", f"onStartCommand full resync accounts={rng.randint(1, 3)}"
+    )
+    ctx.tick(15000, 21000)
+    sys_tid = ctx.system_pid + rng.randint(20, 90)
+    error_id = (
+        f"{rng.getrandbits(32):08x}-{rng.getrandbits(16):04x}-4{rng.getrandbits(12):03x}-"
+        f"9{rng.getrandbits(12):03x}-{rng.getrandbits(48):012x}"
+    )
+    messages = [
+        f"ANR in {NOTES}",
+        f"PID: {pid}",
+        f"Reason: executing service {NOTES}/.sync.SyncService",
+        f"ErrorId: {error_id}",
+        "Frozen: false",
+        f"Load: {rng.uniform(1, 9):.2f} / {rng.uniform(1, 9):.2f} / {rng.uniform(1, 9):.2f}",
+        f"CPU usage from {rng.randint(0, 900)}ms to {rng.randint(19000, 22000)}ms ago:",
+        f"  {rng.randint(30, 90)}% {pid}/{NOTES}: {rng.randint(20, 80)}% user + {rng.randint(1, 20)}% kernel",
+    ]
+    line = ctx.emit_block(ctx.system_pid, sys_tid, "E", "ActivityManager", messages)
+    ctx.label(line, "anr_notes_service", "anr", NOTES)
+    ctx.kill(NOTES)
+
+
 FAMILIES: dict[str, Callable[[SynthContext], None]] = {
     "npe_note_editor": npe_note_editor,
     "ise_player_fragment": ise_player_fragment,
@@ -303,4 +393,7 @@ FAMILIES: dict[str, Callable[[SynthContext], None]] = {
     "sqlite_notes_logged": sqlite_notes_logged,
     "native_sigsegv_player": native_sigsegv_player,
     "network_main_weather": network_main_weather,
+    "npe_notes_list": npe_notes_list,
+    "ise_player_released": ise_player_released,
+    "anr_notes_service": anr_notes_service,
 }
