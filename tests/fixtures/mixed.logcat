@@ -1,0 +1,42 @@
+--------- beginning of main
+03-01 10:00:00.000  1000  1010 I ActivityManager: Start proc 4321:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+03-01 10:00:00.100  1000  1010 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.editor.NoteEditorActivity} from uid 2000
+03-01 10:00:00.200  4321  4321 D NoteEditor: openNote id=42 fromWidget=false
+03-01 10:00:00.300  4321  4321 E AndroidRuntime: FATAL EXCEPTION: main
+03-01 10:00:00.300  4321  4321 E AndroidRuntime: Process: org.example.notes, PID: 4321
+03-01 10:00:00.300  4321  4321 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String org.example.notes.model.Note.getTitle()' on a null object reference
+03-01 10:00:00.300  4321  4321 E AndroidRuntime:     at org.example.notes.editor.NoteEditorFragment.bindNote(NoteEditorFragment.kt:142)
+03-01 10:00:00.301  1000  1020 I WifiService: getWifiEnabledState uid=10101
+03-01 10:00:00.301  4321  4321 E AndroidRuntime:     at org.example.notes.editor.NoteEditorFragment.onViewCreated(NoteEditorFragment.kt:61)
+03-01 10:00:00.301  4321  4321 E AndroidRuntime:     at android.os.Handler.dispatchMessage(Handler.java:106)
+03-01 10:00:00.301  4321  4321 E AndroidRuntime:     at android.os.Looper.loop(Looper.java:288)
+03-01 10:00:00.500  4321  4321 I Process : Sending signal. PID: 4321 SIG: 9
+03-01 10:00:05.000  1000  1030 E ActivityManager: ANR in org.example.player (org.example.player/.PlaybackActivity)
+03-01 10:00:05.000  1000  1030 E ActivityManager: PID: 5555
+03-01 10:00:05.000  1000  1030 E ActivityManager: Reason: Input dispatching timed out (abc1234 org.example.player/org.example.player.PlaybackActivity (server) is not responding. Waited 5001ms for MotionEvent)
+03-01 10:00:05.000  1000  1030 E ActivityManager: Load: 3.21 / 2.80 / 2.10
+03-01 10:00:05.000  1000  1030 E ActivityManager: CPU usage from 0ms to 9000ms ago:
+03-01 10:00:05.000  1000  1030 E ActivityManager:   91% 5555/org.example.player: 80% user + 11% kernel
+03-01 10:00:05.100  1000  1030 I ActivityManager: Start proc 6000:org.example.player/u0a102 for service {org.example.player/org.example.player.PlaybackService}
+03-01 10:00:05.900  6000  6000 I MediaCodecWrapper: configure codec=video/avc 1920x1080
+03-01 10:00:06.000  6000  6020 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0 in tid 6020 (DecoderThread), pid 6000 (org.example.player)
+03-01 10:00:06.100  6100  6100 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-01 10:00:06.100  6100  6100 F DEBUG   : Build fingerprint: 'example/sdk/emu:14/AE3A/1:userdebug/dev-keys'
+03-01 10:00:06.100  6100  6100 F DEBUG   : pid: 6000, tid: 6020, name: DecoderThread  >>> org.example.player <<<
+03-01 10:00:06.100  6100  6100 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0000000000000000
+03-01 10:00:06.100  6100  6100 F DEBUG   : Abort message: 'decoder state corrupted'
+03-01 10:00:06.100  6100  6100 F DEBUG   : backtrace:
+03-01 10:00:06.100  6100  6100 F DEBUG   :       #00 pc 000000000004a2b4  /data/app/~~Ab12==/org.example.player-Cd34==/lib/arm64/libplayercore.so (decode_frame+132) (BuildId: 0123456789abcdef)
+03-01 10:00:06.100  6100  6100 F DEBUG   :       #01 pc 000000000004b000  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64)
+W/System.err( 7000): java.io.FileNotFoundException: /cache/a.json (No such file)
+E/NotesRepository( 4400): Failed to save note id=7
+E/NotesRepository( 4400): java.lang.RuntimeException: sync push failed
+E/NotesRepository( 4400):     at org.example.notes.sync.SyncWorker.pushPending(SyncWorker.kt:70)
+E/NotesRepository( 4400): Caused by: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: notes.uuid (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+E/NotesRepository( 4400):     at org.example.notes.data.NotesRepository.save(NotesRepository.kt:80)
+E/NotesRepository( 4400):     ... 6 more
+03-01 10:00:09.000  6200  6200 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+03-01 10:00:09.000  6200  6200 F DEBUG   : pid: 6300, tid: 6301, name: RenderThread  >>> org.example.weather <<<
+03-01 10:00:09.000  6200  6200 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+03-01 10:00:09.000  6200  6200 F DEBUG   :       #00 pc 0000000000089abc  /apex/com.android.runtime/lib64/bionic/libc.so (abort+164)
+03-01 10:00:10.000  1000  1010 I ActivityManager: Process org.example.weather (pid 6300) has died
