@@ -248,6 +248,28 @@ def test_ollama_embedder_failure_and_fallback() -> None:
         embed_with_fallback(["x"], embedder, allow_fallback=False)
 
 
+def test_ollama_embedder_retries_zero_vectors_then_fails() -> None:
+    calls = {"n": 0}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        calls["n"] += 1
+        body = json.loads(request.content)
+        if calls["n"] == 1:
+            return httpx.Response(200, json={"embeddings": [[0.0, 0.0] for _ in body["input"]]})
+        return httpx.Response(200, json={"embeddings": [[1.0, 0.0] for _ in body["input"]]})
+
+    embedder = OllamaEmbedder(client=_client(handler), max_retries=1, sleep=_no_sleep)
+    assert embedder.embed(["a"]).tolist() == [[1.0, 0.0]]
+    assert calls["n"] == 2
+
+    def always_zero(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, json={"embeddings": [[0.0, 0.0]]})
+
+    broken = OllamaEmbedder(client=_client(always_zero), max_retries=1, sleep=_no_sleep)
+    with pytest.raises(EmbeddingError, match="zero"):
+        broken.embed(["a"])
+
+
 def test_build_embedder() -> None:
     settings = Settings(_env_file=None, embed_model="nomic-embed-text")
     assert isinstance(build_embedder("tfidf", settings), TfidfEmbedder)
