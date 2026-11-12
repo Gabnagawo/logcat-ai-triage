@@ -81,30 +81,23 @@ class OllamaEmbedder:
     def _prefix(self, text: str) -> str:
         return f"{_NOMIC_PREFIX}{text}" if "nomic" in self.model else text
 
-    def _embed_batch(self, batch: list[str]) -> list[list[float]]:
+    def _request(self, batch: list[str]) -> np.ndarray:
+        """One ``/api/embed`` call with transport retries; validates shape and finiteness."""
         payload: dict[str, Any] = {
             "model": self.model,
             "input": [self._prefix(t) for t in batch],
             "truncate": True,
         }
 
-        def _call() -> list[list[float]]:
+        def _call() -> np.ndarray:
             response = self._client.post(
                 f"{self.host}/api/embed", json=payload, timeout=self.timeout
             )
             check_response(response, "Ollama")
-            vectors: list[list[float]] = response.json()["embeddings"]
-            # Seen in practice on a busy shared server: HTTP 200 with all-zero vectors.
-            # They would break cosine distance, so treat them like a transient error.
-            array = np.asarray(vectors, dtype=np.float64)
-            if (
-                array.ndim != 2
-                or array.shape[0] != len(batch)
-                or not np.isfinite(array).all()
-                or (np.linalg.norm(array, axis=1) == 0).any()
-            ):
-                raise RetryableHTTPError("Ollama returned empty, zero or non-finite embeddings")
-            return vectors
+            array = np.asarray(response.json()["embeddings"], dtype=np.float64)
+            if array.ndim != 2 or array.shape[0] != len(batch) or not np.isfinite(array).all():
+                raise RetryableHTTPError("Ollama returned malformed or non-finite embeddings")
+            return array
 
         try:
             return call_with_retries(
@@ -116,13 +109,30 @@ class OllamaEmbedder:
         except (httpx.TransportError, RetryableHTTPError, LLMError, KeyError) as exc:
             raise EmbeddingError(f"Ollama embeddings unavailable: {exc}") from exc
 
+    def _embed_batch(self, batch: list[str]) -> np.ndarray:
+        # Observed on a busy shared Ollama (0.40.x): HTTP 200 where a random subset of rows
+        # are all zeros. Zero vectors break cosine distance, so re-request just those rows.
+        vectors = self._request(batch)
+        for attempt in range(1, self.max_retries + 2):
+            bad = np.flatnonzero(np.linalg.norm(vectors, axis=1) == 0)
+            if bad.size == 0:
+                return vectors
+            log.warning("re-embedding %d zero vector(s), attempt %d", bad.size, attempt)
+            self._sleep(float(attempt))
+            vectors[bad] = self._request([batch[i] for i in bad])
+        bad = np.flatnonzero(np.linalg.norm(vectors, axis=1) == 0)
+        if bad.size:
+            raise EmbeddingError(f"Ollama returned zero vectors for {bad.size} input(s)")
+        return vectors
+
     def embed(self, texts: list[str]) -> np.ndarray:
         if not texts:
             return np.zeros((0, 0))
-        rows: list[list[float]] = []
-        for start in range(0, len(texts), self.batch_size):
-            rows.extend(self._embed_batch(texts[start : start + self.batch_size]))
-        matrix: np.ndarray = normalize(np.asarray(rows, dtype=np.float64))
+        parts = [
+            self._embed_batch(texts[start : start + self.batch_size])
+            for start in range(0, len(texts), self.batch_size)
+        ]
+        matrix: np.ndarray = normalize(np.vstack(parts))
         return matrix
 
 
