@@ -89,12 +89,13 @@ class BugReport(ReportDraft):
     exception_type: str | None = None
     occurrence_count: int
     affected_packages: list[str]
-    steps_label: str = "Inferred from log context (not verified on a device)"
+    steps_label: str = "inferred from log context, not verified on a device"
     first_seen: str | None = None
     last_seen: str | None = None
     sample_event_ids: list[str] = Field(default_factory=list)
     generated_by: str = Field(description="'<provider>:<model>' or 'heuristic'")
     latency_s: float | None = None
+    completion_tokens: int | None = None
     fallback_reason: str | None = None
 
 
@@ -113,6 +114,9 @@ class TriageSummary(BaseModel):
     clusters: int
     reports_generated: int
     llm: str | None = None
+    llm_latency: dict[str, float] | None = Field(
+        default=None, description="Report-writing latency stats in seconds (LLM reports only)"
+    )
 
 
 class TriageResult(BaseModel):
