@@ -58,6 +58,8 @@ extend-exclude = ["docs/results"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B", "SIM", "C4", "PT", "RUF", "N", "PTH"]
+# The formatter wraps code; the remaining long lines are regexes and log templates.
+ignore = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
