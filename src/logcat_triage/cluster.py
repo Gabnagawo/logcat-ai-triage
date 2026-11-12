@@ -14,7 +14,7 @@ from sklearn.cluster import AgglomerativeClustering
 
 from logcat_triage.models import Cluster, FailureEvent
 
-# Chosen on a held-out development seed (seeds 900-902, see docs/results/threshold-sweep.json),
+# Chosen on separate development seeds 900-902 (see docs/results/threshold-sweep.json),
 # never on the committed samples that the README results are computed on.
 DEFAULT_THRESHOLDS: dict[str, float] = {"tfidf": 0.45, "ollama": 0.02}
 
