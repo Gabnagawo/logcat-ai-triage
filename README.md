@@ -211,7 +211,10 @@ Unit tests: 109 passed, coverage 99% (`uv run pytest`); live Ollama smoke tests:
 - **Global thresholds.** The distance thresholds were tuned once on separate development seeds. Other apps or log styles may need `--threshold`; `logcat-triage sweep` helps when labeled data exists.
 - **ANRs carry little signal in logcat.** Only the ANR header, reason and CPU summary are used; the main-thread stack lives in `/data/anr/traces.txt`, which is not collected.
 - **Steps to reproduce are inferred**, not replayed. The LLM sees only the log lines around the failure, so steps can be incomplete or wrong; every report says so.
-- **Latency depends on the machine** and on other workloads sharing the Ollama server.
+- **Latency depends on the machine** and on other workloads sharing the Ollama server (18.7 s vs 82.1 s mean per report in the two measured runs).
+- **Embeddings from a busy shared Ollama can be wrong without being zero.** Zero vectors are detected and re-requested, but a corrupted non-zero vector is not; single-input requests reduced the problem in the measured runs. TF-IDF (`--embedder tfidf`) is deterministic and scored higher on this data.
+- **LLM severity is poorly calibrated** (`qwen3:8b` rated every cluster `high`); treat it as a suggestion.
+- **Docker and the real ADB transport were not exercised here.** No Android device was connected, so `SubprocessTransport` is covered only by unit tests with a mocked `subprocess.run`.
 - The Dockerfile is linted in CI (hadolint) but the image has not been built in this environment.
 
 ## Roadmap
