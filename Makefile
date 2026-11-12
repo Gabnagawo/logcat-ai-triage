@@ -1,4 +1,4 @@
-.PHONY: install lint format typecheck test test-live demo demo-offline eval sweep samples docker-build clean
+.PHONY: install lint format typecheck test test-live demo demo-offline eval eval-large sweep stability samples docker-build clean
 
 install:
 	uv sync
@@ -31,6 +31,15 @@ demo-offline:
 # Clustering quality on the committed samples for both embedders.
 eval:
 	uv run logcat-triage evaluate samples -e tfidf -e ollama -o docs/results/clustering-eval.json
+
+# Larger held-out set: 10 files, 400 failures (seeds 100-109, not committed).
+eval-large:
+	uv run logcat-triage synth --out-dir data/eval --seed 100 --seed 101 --seed 102 --seed 103 		--seed 104 --seed 105 --seed 106 --seed 107 --seed 108 --seed 109
+	uv run logcat-triage evaluate data/eval -e tfidf -e ollama -o docs/results/clustering-eval-10files.json
+
+# Does Ollama return the same vector for the same text? (batch 32 vs batch 1)
+stability:
+	uv run python scripts/embedding_stability.py samples -o docs/results/embedding-stability-idle.json
 
 # Threshold selection on held-out development seeds (never on samples/).
 sweep:
