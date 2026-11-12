@@ -62,10 +62,11 @@ class OllamaProvider:
             "stream": False,
             "think": False,
             "keep_alive": "5m",
+            # No num_ctx override: a different context size forces Ollama to reload the model,
+            # which would evict it for anyone else sharing the server. Prompts stay < 2k tokens.
             "options": {
                 "temperature": self.temperature,
                 "num_predict": self.max_tokens,
-                "num_ctx": 8192,
             },
         }
         if json_schema is not None:
