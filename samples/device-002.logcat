@@ -1,0 +1,1459 @@
+--------- beginning of main
+01-29 03:20:04.018   686   764 W ActivityManager: Slow operation: 1780ms so far, now at startProcess: done
+01-29 03:20:04.039   686   798 I ActivityManager: Background concurrent copying GC freed 451(23956KB) AllocSpace objects
+01-29 03:20:04.077   686   704 I WifiService: getWifiEnabledState uid=10234
+01-29 03:20:04.100   686   733 I chatty  : uid=1000(system) Binder:686_7305 identical 7305 lines
+01-29 03:20:04.140   686   800 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:04.173   686   785 W ActivityManager: Slow operation: 2318ms so far, now at startProcess: done
+01-29 03:20:04.180   686   806 I chatty  : uid=1000(system) Binder:686_1236 identical 1236 lines
+01-29 03:20:04.186   686   704 V AlarmManager: Triggering alarm #4357: 3 when=2952 type=ELAPSED_WAKEUP
+01-29 03:20:04.202   686   695 D ConnectivityService: requestNetwork for uid/pid:10060/686 activeRequest: null
+01-29 03:20:04.205   686   691 I WifiService: getWifiEnabledState uid=10365
+01-29 03:20:04.239   686   783 W ActivityManager: Slow operation: 2722ms so far, now at startProcess: done
+01-29 03:20:04.248   686   786 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:04.264   686   694 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:04.265   686   778 D BatteryService: Processing new values: level=15, temperature=391
+01-29 03:20:04.279   686   691 I WifiService: getWifiEnabledState uid=10132
+01-29 03:20:04.317   686   753 I ActivityManager: Background concurrent copying GC freed 7610(29844KB) AllocSpace objects
+01-29 03:20:04.341   686   693 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:04.370   686   775 W ActivityManager: Slow operation: 430ms so far, now at startProcess: done
+01-29 03:20:04.402   686   739 I ActivityManager: Background concurrent copying GC freed 7962(30465KB) AllocSpace objects
+01-29 03:20:04.433   686   798 D PowerManagerService: acquireWakeLockInternal: lock=0785c4f, flags=0x1, tag="*alarm*"
+01-29 03:20:04.473   686   738 W ActivityManager: Slow operation: 2258ms so far, now at startProcess: done
+01-29 03:20:04.510   686   738 D BatteryService: Processing new values: level=64, temperature=374
+01-29 03:20:04.550   686   736 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:04.555   686   742 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:04.581   686   749 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:04.585   686   723 I ActivityManager: Start proc 4111:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:20:04.596  4111  4111 I Zygote  : Process: zygote64 forked child
+01-29 03:20:04.621   686   769 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:20:04.939   686   743 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +499ms
+01-29 03:20:04.969  4111  4111 D NotesListAdapter: submitList size=144 filter=archived
+01-29 03:20:05.004  4111  4111 D AndroidRuntime: Shutting down VM
+01-29 03:20:05.024  4111  4111 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:05.029  4111  4111 E AndroidRuntime: Process: org.example.notes, PID: 4111
+01-29 03:20:05.050  4111  4111 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'long org.example.notes.model.Note.getUpdatedAt()' on a null object reference
+01-29 03:20:05.070  4111  4111 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:48)
+01-29 03:20:05.096  4111  4111 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:22)
+01-29 03:20:05.102  4111  4111 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.onBindViewHolder(RecyclerView.java:7256)
+01-29 03:20:05.116  4111  4111 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.bindViewHolder(RecyclerView.java:7371)
+01-29 03:20:05.150  4111  4111 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Recycler.tryBindViewHolderByDeadline(RecyclerView.java:6218)
+01-29 03:20:05.160  4111  4111 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+01-29 03:20:05.166  4111  4111 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+01-29 03:20:05.181  4111  4111 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:20:05.217  4111  4111 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:20:05.235  4111  4111 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8431)
+01-29 03:20:05.243  4111  4111 I Process : Sending signal. PID: 4111 SIG: 9
+01-29 03:20:05.268   686   720 I ActivityManager: Process org.example.notes (pid 4111) has died: fg  TOP 
+01-29 03:20:08.468   686   732 I chatty  : uid=1000(system) Binder:686_1269 identical 1269 lines
+01-29 03:20:08.504   686   728 W ActivityManager: Slow operation: 3097ms so far, now at startProcess: done
+01-29 03:20:08.523   686   735 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:08.548   686   766 V AlarmManager: Triggering alarm #1192: 3 when=731 type=ELAPSED_WAKEUP
+01-29 03:20:08.587   686   690 I WifiService: getWifiEnabledState uid=10135
+01-29 03:20:08.597   686   756 D PowerManagerService: acquireWakeLockInternal: lock=33bebf7, flags=0x1, tag="*alarm*"
+01-29 03:20:08.625   686   730 D ConnectivityService: requestNetwork for uid/pid:10172/686 activeRequest: null
+01-29 03:20:08.656   686   786 I InputDispatcher: Focus entering window (channel 1dcd5cd)
+01-29 03:20:08.683   686   766 I InputDispatcher: Focus entering window (channel 82ab618)
+01-29 03:20:08.684   686   754 D PowerManagerService: acquireWakeLockInternal: lock=1e52e8e, flags=0x1, tag="*alarm*"
+01-29 03:20:08.715   686   700 W ActivityManager: Slow operation: 1766ms so far, now at startProcess: done
+01-29 03:20:08.749   686   695 D BatteryService: Processing new values: level=8, temperature=275
+01-29 03:20:08.789   686   774 I chatty  : uid=1000(system) Binder:686_8660 identical 8660 lines
+01-29 03:20:08.811   686   754 I ActivityManager: Start proc 4224:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:20:08.851  4224  4224 I Zygote  : Process: zygote64 forked child
+01-29 03:20:08.862  4224  4224 D NoteEditor: onSaveClicked id=4297 chars=8309
+01-29 03:20:08.890  4224  4284 E NotesRepository: Failed to save note id=4297
+01-29 03:20:08.899  4224  4284 E NotesRepository: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: notes.uuid (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+01-29 03:20:08.919  4224  4284 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+01-29 03:20:08.955  4224  4284 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:938)
+01-29 03:20:08.973  4224  4284 E NotesRepository: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+01-29 03:20:09.005  4224  4284 E NotesRepository: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:90)
+01-29 03:20:09.020  4224  4284 E NotesRepository: 	at org.example.notes.data.NoteDao_Impl.insert(NoteDao_Impl.java:132)
+01-29 03:20:09.029  4224  4284 E NotesRepository: 	at org.example.notes.data.NotesRepository.save(NotesRepository.kt:86)
+01-29 03:20:09.036  4224  4284 E NotesRepository: 	at org.example.notes.editor.NoteEditorViewModel$save$1.invokeSuspend(NoteEditorViewModel.kt:83)
+01-29 03:20:09.040   686   783 V AlarmManager: Triggering alarm #3311: 3 when=176 type=ELAPSED_WAKEUP
+01-29 03:20:09.055  4224  4284 E NotesRepository: 	... 8 more
+01-29 03:20:11.849   686   704 D ConnectivityService: requestNetwork for uid/pid:10097/686 activeRequest: null
+01-29 03:20:11.866   686   801 D PowerManagerService: acquireWakeLockInternal: lock=a2eeb01, flags=0x1, tag="*alarm*"
+01-29 03:20:11.906   686   762 D PowerManagerService: acquireWakeLockInternal: lock=dfdd2e7, flags=0x1, tag="*alarm*"
+01-29 03:20:11.937   686   730 I ActivityManager: Start proc 4454:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:20:11.974  4454  4454 I Zygote  : Process: zygote64 forked child
+01-29 03:20:11.994   686   749 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:20:12.149   686   727 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +936ms
+01-29 03:20:12.178  4224  4259 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:20:12.184  4454  4454 I Choreographer: Skipped 9410 frames!  The application may be doing too much work
+01-29 03:20:12.198   686   706 D BatteryService: Processing new values: level=30, temperature=398
+01-29 03:20:12.212   686   772 W ActivityManager: Slow operation: 3393ms so far, now at startProcess: done
+01-29 03:20:12.245  4224  4224 W System.err: java.io.FileNotFoundException: /cache/tmp-1484.json (No such file)
+01-29 03:20:12.255  4454  4502 D OpenGLRenderer: Davey! duration=187ms; Flags=0, FrameTimelineVsyncId=3625
+01-29 03:20:12.291   686   769 D ConnectivityService: requestNetwork for uid/pid:10094/686 activeRequest: null
+01-29 03:20:12.319  4454  4461 D OpenGLRenderer: Davey! duration=3312ms; Flags=0, FrameTimelineVsyncId=9981
+01-29 03:20:12.322   686   731 I ActivityManager: Background concurrent copying GC freed 8759(3422KB) AllocSpace objects
+01-29 03:20:12.358  4454  4454 I art     : Background young concurrent copying GC freed 660(16263KB) AllocSpace objects
+01-29 03:20:12.359   686   719 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.editor.NoteEditorActivity} from uid 2000
+01-29 03:20:12.664   686   716 I ActivityTaskManager: Displayed org.example.notes/.editor.NoteEditorActivity: +1204ms
+01-29 03:20:12.679  4224  4224 D NoteEditor: openNote id=1556 fromWidget=False
+01-29 03:20:12.683  4224  4224 W NotesRepository: note 1556 not found in cache, deleted remotely?
+01-29 03:20:12.712  4224  4224 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:12.723  4224  4224 E AndroidRuntime: Process: org.example.notes, PID: 4224
+01-29 03:20:12.732  4224  4224 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String org.example.notes.model.Note.getTitle()' on a null object reference
+01-29 03:20:12.742  4224  4224 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.bindNote(NoteEditorFragment.kt:154)
+01-29 03:20:12.745   686   768 I WifiService: getWifiEnabledState uid=10372
+01-29 03:20:12.771  4224  4224 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.onViewCreated(NoteEditorFragment.kt:72)
+01-29 03:20:12.773  4224  4224 E AndroidRuntime: 	at androidx.fragment.app.Fragment.performViewCreated(Fragment.java:3107)
+01-29 03:20:12.775  4224  4224 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+01-29 03:20:12.811  4224  4224 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+01-29 03:20:12.828  4224  4224 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:20:12.844  4224  4224 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:20:12.874  4224  4224 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8174)
+01-29 03:20:12.914  4224  4224 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:20:12.930  4224  4224 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:574)
+01-29 03:20:12.965  4224  4224 I Process : Sending signal. PID: 4224 SIG: 9
+01-29 03:20:12.995   686   726 I ActivityManager: Process org.example.notes (pid 4224) has died: fg  TOP 
+01-29 03:20:15.579  4454  4454 D SyncWorker: retrying after IOException, attempt 4
+01-29 03:20:15.596   686   731 V AlarmManager: Triggering alarm #2714: 3 when=728 type=ELAPSED_WAKEUP
+01-29 03:20:15.604   686   804 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:15.606  4454  4501 W System  : A resource failed to call close.
+01-29 03:20:15.621  4454  4454 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=e00688bf-7b6f-4a38-ae81-341d93394f4f ]
+01-29 03:20:15.645   686   708 I chatty  : uid=1000(system) Binder:686_5473 identical 5473 lines
+01-29 03:20:15.678   686   801 I WifiService: getWifiEnabledState uid=10382
+01-29 03:20:15.687   686   738 I ActivityManager: Background concurrent copying GC freed 7750(23809KB) AllocSpace objects
+01-29 03:20:15.692  4454  4467 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=0921fa87-922e-45d7-a78f-1f2761649ba4 ]
+01-29 03:20:15.706   686   705 I WifiService: getWifiEnabledState uid=10186
+01-29 03:20:15.726  4454  4454 I art     : Background young concurrent copying GC freed 7603(13080KB) AllocSpace objects
+01-29 03:20:15.766   686   700 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:15.798  4454  4467 D SyncWorker: retrying after IOException, attempt 1
+01-29 03:20:15.808   686   732 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:15.817   686   774 I ActivityManager: Start proc 4610:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:20:15.823  4610  4610 I Zygote  : Process: zygote64 forked child
+01-29 03:20:15.860   686   735 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:20:16.069   686   748 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +364ms
+01-29 03:20:16.083  4610  4610 D NotesListAdapter: submitList size=341 filter=pinned
+01-29 03:20:16.108  4610  4610 D AndroidRuntime: Shutting down VM
+01-29 03:20:16.118  4610  4610 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:16.145  4610  4610 E AndroidRuntime: Process: org.example.notes, PID: 4610
+01-29 03:20:16.160  4610  4610 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'long org.example.notes.model.Note.getUpdatedAt()' on a null object reference
+01-29 03:20:16.200  4610  4610 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:61)
+01-29 03:20:16.208  4610  4610 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:20)
+01-29 03:20:16.245  4610  4610 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.onBindViewHolder(RecyclerView.java:7275)
+01-29 03:20:16.257  4610  4610 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.bindViewHolder(RecyclerView.java:7364)
+01-29 03:20:16.297  4610  4610 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Recycler.tryBindViewHolderByDeadline(RecyclerView.java:6225)
+01-29 03:20:16.302  4610  4610 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+01-29 03:20:16.323  4610  4610 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+01-29 03:20:16.339  4610  4610 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+01-29 03:20:16.369  4610  4610 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+01-29 03:20:16.399  4610  4610 I Process : Sending signal. PID: 4610 SIG: 9
+01-29 03:20:16.420   686   719 I ActivityManager: Process org.example.notes (pid 4610) has died: fg  TOP 
+01-29 03:20:18.532  4454  4454 I Choreographer: Skipped 4246 frames!  The application may be doing too much work
+01-29 03:20:18.553  4454  4484 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:20:18.572   686   721 I WifiService: getWifiEnabledState uid=10341
+01-29 03:20:18.610   686   724 D PowerManagerService: acquireWakeLockInternal: lock=5265506, flags=0x1, tag="*alarm*"
+01-29 03:20:18.638   686   801 D ConnectivityService: requestNetwork for uid/pid:10290/686 activeRequest: null
+01-29 03:20:18.641  4454  4454 W System.err: java.io.FileNotFoundException: /cache/tmp-2665.json (No such file)
+01-29 03:20:18.677  4454  4454 D SyncWorker: retrying after IOException, attempt 5
+01-29 03:20:18.699  4454  4454 I art     : Background young concurrent copying GC freed 6560(33657KB) AllocSpace objects
+01-29 03:20:18.703   686   763 I ActivityManager: Start proc 4707:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:20:18.717  4707  4707 I Zygote  : Process: zygote64 forked child
+01-29 03:20:18.734   686   753 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.ForecastActivity} from uid 2000
+01-29 03:20:19.058   686   739 I ActivityTaskManager: Displayed org.example.weather/.ForecastActivity: +1209ms
+01-29 03:20:19.059  4707  4707 D ForecastActivity: onRefreshClicked city=Lisbon lastSync=329s
+01-29 03:20:19.096  4707  4707 D AndroidRuntime: Shutting down VM
+01-29 03:20:19.131  4707  4707 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:19.162  4707  4707 E AndroidRuntime: Process: org.example.weather, PID: 4707
+01-29 03:20:19.202  4707  4707 E AndroidRuntime: android.os.NetworkOnMainThreadException
+01-29 03:20:19.224  4707  4707 E AndroidRuntime: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1668)
+01-29 03:20:19.225  4707  4707 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:117)
+01-29 03:20:19.227  4707  4707 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+01-29 03:20:19.261  4707  4707 E AndroidRuntime: 	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+01-29 03:20:19.301  4454  4454 D OpenGLRenderer: Davey! duration=1601ms; Flags=0, FrameTimelineVsyncId=9602
+01-29 03:20:19.329  4707  4707 E AndroidRuntime: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:50)
+01-29 03:20:19.332  4707  4707 E AndroidRuntime: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+01-29 03:20:19.339  4707  4707 E AndroidRuntime: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+01-29 03:20:19.355  4707  4707 E AndroidRuntime: 	at org.example.weather.forecast.ForecastClient.fetchNow(ForecastClient.kt:56)
+01-29 03:20:19.364   686   774 D BatteryService: Processing new values: level=20, temperature=389
+01-29 03:20:19.401  4707  4707 E AndroidRuntime: 	at org.example.weather.ui.ForecastActivity.onRefresh(ForecastActivity.kt:123)
+01-29 03:20:19.417  4707  4707 E AndroidRuntime: 	at androidx.swiperefreshlayout.widget.SwipeRefreshLayout.finishSpinner(SwipeRefreshLayout.java:962)
+01-29 03:20:19.441  4707  4707 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:942)
+01-29 03:20:19.453  4707  4707 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+01-29 03:20:19.478  4707  4707 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:20:19.484  4707  4707 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:20:19.521  4707  4707 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8113)
+01-29 03:20:19.545  4707  4707 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:20:19.565  4707  4707 I Process : Sending signal. PID: 4707 SIG: 9
+01-29 03:20:19.585   686   711 I ActivityManager: Process org.example.weather (pid 4707) has died: fg  TOP 
+01-29 03:20:20.558   686   764 I WifiService: getWifiEnabledState uid=10196
+01-29 03:20:20.571   686   746 D ConnectivityService: requestNetwork for uid/pid:10123/686 activeRequest: null
+01-29 03:20:20.604  4454  4454 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:20:20.606   686   718 D BatteryService: Processing new values: level=19, temperature=339
+01-29 03:20:20.608  4454  4454 D OkHttp  : <-- 200 https://api.example.org/v1/sync (3182ms, 34141-byte body)
+01-29 03:20:20.616   686   700 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:20.648  4454  4454 D OpenGLRenderer: Davey! duration=2567ms; Flags=0, FrameTimelineVsyncId=4538
+01-29 03:20:20.652  4454  4475 D SyncWorker: retrying after IOException, attempt 2
+01-29 03:20:20.663   686   738 V AlarmManager: Triggering alarm #4405: 3 when=3087 type=ELAPSED_WAKEUP
+01-29 03:20:20.666   686   798 D BatteryService: Processing new values: level=73, temperature=272
+01-29 03:20:20.701   686   738 I ActivityManager: Start proc 4729:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:20:20.713  4729  4729 I Zygote  : Process: zygote64 forked child
+01-29 03:20:20.745   686   726 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:20:21.039   686   716 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +1067ms
+01-29 03:20:21.073   686   740 D ConnectivityService: requestNetwork for uid/pid:10052/686 activeRequest: null
+01-29 03:20:21.084   686   784 I InputDispatcher: Focus entering window (channel a6664e2)
+01-29 03:20:21.110   686   765 W ActivityManager: Slow operation: 128ms so far, now at startProcess: done
+01-29 03:20:21.142  4454  4454 D OpenGLRenderer: Davey! duration=238ms; Flags=0, FrameTimelineVsyncId=2306
+01-29 03:20:21.160  4454  4454 I Choreographer: Skipped 6826 frames!  The application may be doing too much work
+01-29 03:20:21.197   686   729 D BatteryService: Processing new values: level=5, temperature=393
+01-29 03:20:21.209  4454  4454 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:20:21.237   686   719 I WifiService: getWifiEnabledState uid=10312
+01-29 03:20:21.255   686   737 D ConnectivityService: requestNetwork for uid/pid:10126/686 activeRequest: null
+01-29 03:20:21.272   686   689 I InputDispatcher: Focus entering window (channel e335e28)
+01-29 03:20:21.289   686   791 W ActivityManager: Slow operation: 3395ms so far, now at startProcess: done
+01-29 03:20:21.296  4729  4729 I Choreographer: Skipped 3263 frames!  The application may be doing too much work
+01-29 03:20:21.304   686   758 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.editor.NoteEditorActivity} from uid 2000
+01-29 03:20:21.596   686   745 I ActivityTaskManager: Displayed org.example.notes/.editor.NoteEditorActivity: +463ms
+01-29 03:20:21.622  4729  4729 D NoteEditor: openNote id=2036 fromWidget=True
+01-29 03:20:21.625  4729  4729 W NotesRepository: note 2036 not found in cache, deleted remotely?
+01-29 03:20:21.640  4729  4729 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:21.668  4729  4729 E AndroidRuntime: Process: org.example.notes, PID: 4729
+01-29 03:20:21.700  4729  4729 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String org.example.notes.model.Note.getTitle()' on a null object reference
+01-29 03:20:21.714  4729  4729 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.bindNote(NoteEditorFragment.kt:144)
+01-29 03:20:21.739  4729  4729 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.onNoteLoaded(NoteEditorFragment.kt:120)
+01-29 03:20:21.752   686   727 W ActivityManager: Slow operation: 356ms so far, now at startProcess: done
+01-29 03:20:21.757  4729  4729 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorViewModel$load$1.invokeSuspend(NoteEditorViewModel.kt:41)
+01-29 03:20:21.774  4729  4729 E AndroidRuntime: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+01-29 03:20:21.796  4729  4729 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+01-29 03:20:21.806  4729  4729 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+01-29 03:20:21.821  4729  4729 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+01-29 03:20:21.855  4729  4729 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:294)
+01-29 03:20:21.886  4729  4729 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8620)
+01-29 03:20:21.919  4729  4729 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:20:21.929  4729  4729 I Process : Sending signal. PID: 4729 SIG: 9
+01-29 03:20:21.958   686   764 I ActivityManager: Process org.example.notes (pid 4729) has died: fg  TOP 
+01-29 03:20:22.394   686   710 D PowerManagerService: acquireWakeLockInternal: lock=71b7095, flags=0x1, tag="*alarm*"
+01-29 03:20:22.410  4454  4491 W System.err: java.io.FileNotFoundException: /cache/tmp-3556.json (No such file)
+01-29 03:20:22.430   686   688 D ConnectivityService: requestNetwork for uid/pid:10053/686 activeRequest: null
+01-29 03:20:22.438   686   706 I chatty  : uid=1000(system) Binder:686_9543 identical 9543 lines
+01-29 03:20:22.454   686   715 I chatty  : uid=1000(system) Binder:686_1283 identical 1283 lines
+01-29 03:20:22.472   686   770 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:22.488   686   783 I InputDispatcher: Focus entering window (channel 8681d0f)
+01-29 03:20:22.526   686   742 I NetworkScheduler: Scheduling job uid=10208 for network change
+01-29 03:20:22.538  4454  4480 W System.err: java.io.FileNotFoundException: /cache/tmp-9732.json (No such file)
+01-29 03:20:22.552  4454  4454 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:20:22.588  4454  4454 D SyncWorker: retrying after IOException, attempt 1
+01-29 03:20:22.623  4454  4454 D OpenGLRenderer: Davey! duration=178ms; Flags=0, FrameTimelineVsyncId=3426
+01-29 03:20:22.657  4454  4470 W System.err: java.io.FileNotFoundException: /cache/tmp-2146.json (No such file)
+01-29 03:20:22.697   686   791 I WifiService: getWifiEnabledState uid=10091
+01-29 03:20:22.726   686   718 D ConnectivityService: requestNetwork for uid/pid:10358/686 activeRequest: null
+01-29 03:20:22.728   686   703 W ActivityManager: Slow operation: 288ms so far, now at startProcess: done
+01-29 03:20:22.747  4454  4508 W System  : A resource failed to call close.
+01-29 03:20:22.750   686   726 I ActivityManager: Start proc 5034:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:20:22.775  5034  5034 I Zygote  : Process: zygote64 forked child
+01-29 03:20:22.781   686   750 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:20:23.030   686   769 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +1119ms
+01-29 03:20:23.034  5034  5034 D NotesListAdapter: submitList size=388 filter=archived
+01-29 03:20:23.054  5034  5034 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:23.068  5034  5034 E AndroidRuntime: Process: org.example.notes, PID: 5034
+01-29 03:20:23.090  5034  5034 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'long org.example.notes.model.Note.getUpdatedAt()' on a null object reference
+01-29 03:20:23.126  5034  5034 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:55)
+01-29 03:20:23.128  4454  4454 W System  : A resource failed to call close.
+01-29 03:20:23.155  5034  5034 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:23)
+01-29 03:20:23.180  5034  5034 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.onBindViewHolder(RecyclerView.java:7300)
+01-29 03:20:23.188  5034  5034 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.bindViewHolder(RecyclerView.java:7353)
+01-29 03:20:23.211  5034  5034 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Recycler.tryBindViewHolderByDeadline(RecyclerView.java:6238)
+01-29 03:20:23.228  5034  5034 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+01-29 03:20:23.231  5034  5034 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+01-29 03:20:23.250  5034  5034 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+01-29 03:20:23.281  5034  5034 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:20:23.289  5034  5034 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8734)
+01-29 03:20:23.325  5034  5034 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:20:23.359  5034  5034 I Process : Sending signal. PID: 5034 SIG: 9
+01-29 03:20:23.361   686   754 I ActivityManager: Process org.example.notes (pid 5034) has died: fg  TOP 
+01-29 03:20:27.189   686   688 D BatteryService: Processing new values: level=7, temperature=302
+01-29 03:20:27.193   686   713 I WifiService: getWifiEnabledState uid=10161
+01-29 03:20:27.195   686   720 V AlarmManager: Triggering alarm #6224: 3 when=72 type=ELAPSED_WAKEUP
+01-29 03:20:27.230  4454  4454 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=b1d7fedf-cb6b-4985-a530-275e450aad68 ]
+01-29 03:20:27.239   686   726 D PowerManagerService: acquireWakeLockInternal: lock=8ea7117, flags=0x1, tag="*alarm*"
+01-29 03:20:27.259  4454  4454 W System  : A resource failed to call close.
+01-29 03:20:27.281  4454  4495 D SyncWorker: retrying after IOException, attempt 4
+01-29 03:20:27.321   686   729 D PowerManagerService: acquireWakeLockInternal: lock=3df1a19, flags=0x1, tag="*alarm*"
+01-29 03:20:27.322   686   713 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:27.347  4454  4454 I Choreographer: Skipped 3999 frames!  The application may be doing too much work
+01-29 03:20:27.351   686   715 D PowerManagerService: acquireWakeLockInternal: lock=9056744, flags=0x1, tag="*alarm*"
+01-29 03:20:27.364   686   799 D ConnectivityService: requestNetwork for uid/pid:10204/686 activeRequest: null
+01-29 03:20:27.377  4454  4454 D OpenGLRenderer: Davey! duration=1718ms; Flags=0, FrameTimelineVsyncId=3025
+01-29 03:20:27.396   686   799 I InputDispatcher: Focus entering window (channel 79704a2)
+01-29 03:20:27.400   686   758 I ActivityManager: Start proc 5237:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:20:27.427  5237  5237 I Zygote  : Process: zygote64 forked child
+01-29 03:20:27.460  5237  5237 D NoteEditor: onSaveClicked id=1616 chars=6464
+01-29 03:20:27.468  5237  5300 E NotesRepository: Failed to save note id=1616
+01-29 03:20:27.477  5237  5300 E NotesRepository: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: notes.uuid (code 1555 SQLITE_CONSTRAINT_UNIQUE)
+01-29 03:20:27.488  5237  5300 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+01-29 03:20:27.517  5237  5300 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:938)
+01-29 03:20:27.525  5237  5300 E NotesRepository: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:818)
+01-29 03:20:27.546  5237  5300 E NotesRepository: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+01-29 03:20:27.584   686   720 I NetworkScheduler: Scheduling job uid=10149 for network change
+01-29 03:20:27.624  5237  5300 E NotesRepository: 	at org.example.notes.data.NoteDao_Impl.insert(NoteDao_Impl.java:143)
+01-29 03:20:27.654  4454  4454 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:20:27.680  5237  5300 E NotesRepository: 	at org.example.notes.data.NotesRepository.save(NotesRepository.kt:95)
+01-29 03:20:27.704  5237  5300 E NotesRepository: 	at org.example.notes.sync.SyncWorker.pushPending(SyncWorker.kt:57)
+01-29 03:20:32.374  5237  5238 I Choreographer: Skipped 1125 frames!  The application may be doing too much work
+01-29 03:20:32.387  4454  4514 D SyncWorker: retrying after IOException, attempt 2
+01-29 03:20:32.403  5237  5289 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=69c176e3-7c5f-41d7-aec7-183c08d5a436 ]
+01-29 03:20:32.422   686   718 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:32.451   686   719 I ActivityManager: Background concurrent copying GC freed 7790(39237KB) AllocSpace objects
+01-29 03:20:32.476   686   730 D ConnectivityService: requestNetwork for uid/pid:10354/686 activeRequest: null
+01-29 03:20:32.492   686   797 I WifiService: getWifiEnabledState uid=10318
+01-29 03:20:32.510  4454  4505 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (1244ms, 33978-byte body)
+01-29 03:20:32.537   686   801 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:32.547   686   720 D ConnectivityService: requestNetwork for uid/pid:10315/686 activeRequest: null
+01-29 03:20:32.578   686   758 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:20:32.958   686   753 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +1276ms
+01-29 03:20:32.981  4454  4454 D OpenGLRenderer: Davey! duration=3433ms; Flags=0, FrameTimelineVsyncId=6762
+01-29 03:20:33.000   686   783 I InputDispatcher: Focus entering window (channel 51c63b4)
+01-29 03:20:33.037  5237  5237 I art     : Background young concurrent copying GC freed 8594(14152KB) AllocSpace objects
+01-29 03:20:33.057   686   780 I WifiService: getWifiEnabledState uid=10239
+01-29 03:20:33.076   686   711 I chatty  : uid=1000(system) Binder:686_9548 identical 9548 lines
+01-29 03:20:33.110   686   761 V AlarmManager: Triggering alarm #5924: 3 when=1319 type=ELAPSED_WAKEUP
+01-29 03:20:33.121  5237  5237 I art     : Background young concurrent copying GC freed 6284(38957KB) AllocSpace objects
+01-29 03:20:33.145  4454  4489 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:20:33.155   686   773 I ActivityManager: Background concurrent copying GC freed 4162(13406KB) AllocSpace objects
+01-29 03:20:33.185  5237  5237 D NoteEditor: onSaveClicked id=2497 chars=3706
+01-29 03:20:33.190  5237  5267 E NotesRepository: Failed to save note id=2497
+01-29 03:20:33.195  5237  5267 E NotesRepository: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: notes.uuid (code 1555 SQLITE_CONSTRAINT_UNIQUE)
+01-29 03:20:33.206  5237  5267 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+01-29 03:20:33.232  5237  5267 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:938)
+01-29 03:20:33.243  5237  5267 E NotesRepository: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:818)
+01-29 03:20:33.273  5237  5267 E NotesRepository: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:90)
+01-29 03:20:33.301  5237  5267 E NotesRepository: 	at org.example.notes.data.NoteDao_Impl.insert(NoteDao_Impl.java:133)
+01-29 03:20:33.337  5237  5267 E NotesRepository: 	at org.example.notes.data.NotesRepository.save(NotesRepository.kt:90)
+01-29 03:20:33.356  5237  5267 E NotesRepository: 	at org.example.notes.editor.NoteEditorViewModel$save$1.invokeSuspend(NoteEditorViewModel.kt:83)
+01-29 03:20:34.450   686   760 D BatteryService: Processing new values: level=63, temperature=386
+01-29 03:20:34.463   686   730 I ActivityManager: Background concurrent copying GC freed 4742(26508KB) AllocSpace objects
+01-29 03:20:34.500  4454  4454 W System.err: java.io.FileNotFoundException: /cache/tmp-9501.json (No such file)
+01-29 03:20:34.526  5237  5252 W System  : A resource failed to call close.
+01-29 03:20:34.547   686   744 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:20:34.756   686   766 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +387ms
+01-29 03:20:34.775   686   734 D ConnectivityService: requestNetwork for uid/pid:10220/686 activeRequest: null
+01-29 03:20:34.789   686   779 D PowerManagerService: acquireWakeLockInternal: lock=86d1cb9, flags=0x1, tag="*alarm*"
+01-29 03:20:34.796  5237  5254 D OpenGLRenderer: Davey! duration=491ms; Flags=0, FrameTimelineVsyncId=4824
+01-29 03:20:34.822  5237  5242 W System.err: java.io.FileNotFoundException: /cache/tmp-4609.json (No such file)
+01-29 03:20:34.859  5237  5237 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:20:34.878   686   751 V AlarmManager: Triggering alarm #5736: 3 when=1759 type=ELAPSED_WAKEUP
+01-29 03:20:34.886   686   724 I ActivityManager: Background concurrent copying GC freed 7765(24994KB) AllocSpace objects
+01-29 03:20:34.890   686   738 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:34.898  4454  4454 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (421ms, 23043-byte body)
+01-29 03:20:34.928  5237  5237 I art     : Background young concurrent copying GC freed 9391(19142KB) AllocSpace objects
+01-29 03:20:34.930   686   749 I ActivityManager: Background concurrent copying GC freed 1610(11764KB) AllocSpace objects
+01-29 03:20:34.938   686   747 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:34.941   686   714 I ActivityManager: Start proc 5339:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:20:34.975  5339  5339 I Zygote  : Process: zygote64 forked child
+01-29 03:20:34.983   686   742 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.radar.RadarActivity} from uid 2000
+01-29 03:20:35.376   686   740 I ActivityTaskManager: Displayed org.example.weather/.radar.RadarActivity: +1316ms
+01-29 03:20:35.377  5339  5339 D RadarTileLoader: prefetch zoom=12 tiles=48
+01-29 03:20:35.382  5339  5339 I art     : Clamp target GC heap from 298MB to 256MB
+01-29 03:20:35.397  5339  5339 I art     : Clamp target GC heap from 292MB to 256MB
+01-29 03:20:35.415  5339  5374 E AndroidRuntime: FATAL EXCEPTION: RadarLoader-2
+01-29 03:20:35.423  5339  5374 E AndroidRuntime: Process: org.example.weather, PID: 5339
+01-29 03:20:35.442  5339  5374 E AndroidRuntime: java.lang.OutOfMemoryError: Failed to allocate a 33554444 byte allocation with 22947120 free bytes and 30MB until OOM, target footprint 268435456, growth limit 268435456
+01-29 03:20:35.453  5339  5374 E AndroidRuntime: 	at android.graphics.BitmapFactory.nativeDecodeStream(Native Method)
+01-29 03:20:35.474  5237  5237 I art     : Background young concurrent copying GC freed 132(12647KB) AllocSpace objects
+01-29 03:20:35.498  5339  5374 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStreamInternal(BitmapFactory.java:790)
+01-29 03:20:35.523  5339  5374 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStream(BitmapFactory.java:736)
+01-29 03:20:35.532  5339  5374 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.decodeTile(RadarTileLoader.kt:90)
+01-29 03:20:35.553  5339  5374 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.loadTile(RadarTileLoader.kt:67)
+01-29 03:20:35.585  5339  5374 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader$prefetch$1.run(RadarTileLoader.kt:44)
+01-29 03:20:35.605  5339  5374 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+01-29 03:20:35.628  5339  5374 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+01-29 03:20:35.660  5339  5374 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
+01-29 03:20:35.684  5339  5339 I Process : Sending signal. PID: 5339 SIG: 9
+01-29 03:20:35.716   686   774 I ActivityManager: Process org.example.weather (pid 5339) has died: fg  TOP 
+01-29 03:20:39.163   686   737 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:39.190  5237  5237 W System  : A resource failed to call close.
+01-29 03:20:39.217   686   794 D ConnectivityService: requestNetwork for uid/pid:10344/686 activeRequest: null
+01-29 03:20:39.231  4454  4454 D OpenGLRenderer: Davey! duration=1840ms; Flags=0, FrameTimelineVsyncId=8270
+01-29 03:20:39.263  4454  4454 W System.err: java.io.FileNotFoundException: /cache/tmp-8218.json (No such file)
+01-29 03:20:39.283  4454  4454 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (2405ms, 1357-byte body)
+01-29 03:20:39.291   686   691 I WifiService: getWifiEnabledState uid=10271
+01-29 03:20:39.311  4454  4454 I Choreographer: Skipped 1697 frames!  The application may be doing too much work
+01-29 03:20:39.340  5237  5253 D OpenGLRenderer: Davey! duration=1025ms; Flags=0, FrameTimelineVsyncId=909
+01-29 03:20:39.354   686   779 D ConnectivityService: requestNetwork for uid/pid:10251/686 activeRequest: null
+01-29 03:20:39.355  4454  4454 W System  : A resource failed to call close.
+01-29 03:20:39.392   686   751 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:39.394  5237  5237 I Choreographer: Skipped 2159 frames!  The application may be doing too much work
+01-29 03:20:39.411   686   805 I NetworkScheduler: Scheduling job uid=10131 for network change
+01-29 03:20:39.417   686   699 W ActivityManager: Slow operation: 2648ms so far, now at startProcess: done
+01-29 03:20:39.418   686   688 D BatteryService: Processing new values: level=55, temperature=308
+01-29 03:20:39.448   686   751 V AlarmManager: Triggering alarm #6667: 3 when=1285 type=ELAPSED_WAKEUP
+01-29 03:20:39.452  4454  4454 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=8f044d8d-0f9e-4266-a86f-40e9c9b0ced1 ]
+01-29 03:20:39.481   686   714 I ActivityManager: Start proc 5682:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:20:39.501  5682  5682 I Zygote  : Process: zygote64 forked child
+01-29 03:20:39.531   686   760 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.ForecastActivity} from uid 2000
+01-29 03:20:39.754   686   717 I ActivityTaskManager: Displayed org.example.weather/.ForecastActivity: +817ms
+01-29 03:20:39.785  5682  5682 D ForecastActivity: onRefreshClicked city=Berlin lastSync=394s
+01-29 03:20:39.798  5682  5682 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:39.836  5682  5682 E AndroidRuntime: Process: org.example.weather, PID: 5682
+01-29 03:20:39.853  5682  5682 E AndroidRuntime: android.os.NetworkOnMainThreadException
+01-29 03:20:39.875  5682  5682 E AndroidRuntime: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1605)
+01-29 03:20:39.908  5682  5682 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+01-29 03:20:39.913  5682  5682 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+01-29 03:20:39.939  5682  5682 E AndroidRuntime: 	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+01-29 03:20:39.969  5682  5682 E AndroidRuntime: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:50)
+01-29 03:20:40.009  5682  5682 E AndroidRuntime: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:171)
+01-29 03:20:40.025  5682  5682 E AndroidRuntime: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:160)
+01-29 03:20:40.056  5682  5682 E AndroidRuntime: 	at org.example.weather.forecast.ForecastClient.fetchNow(ForecastClient.kt:44)
+01-29 03:20:40.079  5682  5682 E AndroidRuntime: 	at org.example.weather.ui.ForecastActivity.onRefreshClicked(ForecastActivity.kt:108)
+01-29 03:20:40.119  5682  5682 E AndroidRuntime: 	at android.view.View.performClick(View.java:7448)
+01-29 03:20:40.122  4454  4480 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=3b597ff0-b400-44ec-a6e7-b663005f8604 ]
+01-29 03:20:40.148  5682  5682 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7869)
+01-29 03:20:40.181  5682  5682 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+01-29 03:20:40.210   686   690 I NetworkScheduler: Scheduling job uid=10261 for network change
+01-29 03:20:40.244  5682  5682 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+01-29 03:20:40.279  5682  5682 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+01-29 03:20:40.302  5682  5682 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:20:40.311  5682  5682 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8803)
+01-29 03:20:40.313  5682  5682 I Process : Sending signal. PID: 5682 SIG: 9
+01-29 03:20:40.322   686   718 I ActivityManager: Process org.example.weather (pid 5682) has died: fg  TOP 
+01-29 03:20:41.131   686   788 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:41.161   686   707 I WifiService: getWifiEnabledState uid=10377
+01-29 03:20:41.182   686   782 I NetworkScheduler: Scheduling job uid=10068 for network change
+01-29 03:20:41.185   686   763 D ConnectivityService: requestNetwork for uid/pid:10337/686 activeRequest: null
+01-29 03:20:41.192  4454  4479 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=71fd2638-b2d0-4fc7-a8e2-1ca838d51f45 ]
+01-29 03:20:41.222  5237  5275 D OkHttp  : <-- 200 https://tiles.example.com/radar/7/42/63.png (1934ms, 16819-byte body)
+01-29 03:20:41.258   686   763 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:20:41.542   686   707 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +1070ms
+01-29 03:20:41.560  5237  5245 W System  : A resource failed to call close.
+01-29 03:20:41.573   686   775 V AlarmManager: Triggering alarm #3215: 3 when=937 type=ELAPSED_WAKEUP
+01-29 03:20:41.577   686   715 I InputDispatcher: Focus entering window (channel 0caec6f)
+01-29 03:20:41.590   686   752 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:41.604   686   762 I ActivityManager: Background concurrent copying GC freed 7607(3127KB) AllocSpace objects
+01-29 03:20:41.626  5237  5237 D OpenGLRenderer: Davey! duration=1218ms; Flags=0, FrameTimelineVsyncId=8693
+01-29 03:20:41.634   686   707 I ActivityManager: Background concurrent copying GC freed 9121(22895KB) AllocSpace objects
+01-29 03:20:41.647   686   690 D ConnectivityService: requestNetwork for uid/pid:10338/686 activeRequest: null
+01-29 03:20:41.651   686   754 I InputDispatcher: Focus entering window (channel ca5f937)
+01-29 03:20:41.659   686   708 I ActivityManager: Background concurrent copying GC freed 8880(39587KB) AllocSpace objects
+01-29 03:20:41.684   686   727 I WifiService: getWifiEnabledState uid=10073
+01-29 03:20:41.700   686   723 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.editor.NoteEditorActivity} from uid 2000
+01-29 03:20:41.930   686   741 I ActivityTaskManager: Displayed org.example.notes/.editor.NoteEditorActivity: +1047ms
+01-29 03:20:41.954  5237  5237 D NoteEditor: openNote id=595 fromWidget=True
+01-29 03:20:41.962  5237  5237 W NotesRepository: note 595 not found in cache, deleted remotely?
+01-29 03:20:41.994  5237  5237 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:42.029  5237  5237 E AndroidRuntime: Process: org.example.notes, PID: 5237
+01-29 03:20:42.050  5237  5237 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String org.example.notes.model.Note.getTitle()' on a null object reference
+01-29 03:20:42.076  5237  5237 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.bindNote(NoteEditorFragment.kt:146)
+01-29 03:20:42.084  5237  5237 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.onNoteLoaded(NoteEditorFragment.kt:118)
+01-29 03:20:42.090  5237  5237 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorViewModel$load$1.invokeSuspend(NoteEditorViewModel.kt:43)
+01-29 03:20:42.092  4454  4454 W System  : A resource failed to call close.
+01-29 03:20:42.108  5237  5237 E AndroidRuntime: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+01-29 03:20:42.132  5237  5237 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+01-29 03:20:42.140  5237  5237 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+01-29 03:20:42.162  5237  5237 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+01-29 03:20:42.187  5237  5237 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:20:42.207  5237  5237 I Process : Sending signal. PID: 5237 SIG: 9
+01-29 03:20:42.231   686   723 I ActivityManager: Process org.example.notes (pid 5237) has died: fg  TOP 
+01-29 03:20:42.934   686   762 I chatty  : uid=1000(system) Binder:686_8813 identical 8813 lines
+01-29 03:20:42.970  4454  4454 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:20:42.978  4454  4454 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:20:42.998   686   745 D PowerManagerService: acquireWakeLockInternal: lock=02ee3fe, flags=0x1, tag="*alarm*"
+01-29 03:20:43.013  4454  4455 W System  : A resource failed to call close.
+01-29 03:20:43.014  4454  4454 D SyncWorker: retrying after IOException, attempt 5
+01-29 03:20:43.044  4454  4481 D OpenGLRenderer: Davey! duration=1854ms; Flags=0, FrameTimelineVsyncId=8080
+01-29 03:20:43.072  4454  4454 D OpenGLRenderer: Davey! duration=889ms; Flags=0, FrameTimelineVsyncId=65
+01-29 03:20:43.104   686   779 I WifiService: getWifiEnabledState uid=10125
+01-29 03:20:43.107  4454  4454 I art     : Background young concurrent copying GC freed 5598(20111KB) AllocSpace objects
+01-29 03:20:43.144  4454  4472 W System.err: java.io.FileNotFoundException: /cache/tmp-8238.json (No such file)
+01-29 03:20:43.177   686   770 I ActivityManager: Start proc 5955:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:20:43.185  5955  5955 I Zygote  : Process: zygote64 forked child
+01-29 03:20:43.212   686   774 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:20:43.450   686   717 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +322ms
+01-29 03:20:43.475  5955  5956 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=8c10998e-6b4f-4f8d-a9be-1e13c1d86075 ]
+01-29 03:20:43.510   686   774 I chatty  : uid=1000(system) Binder:686_5517 identical 5517 lines
+01-29 03:20:43.527   686   718 I chatty  : uid=1000(system) Binder:686_1142 identical 1142 lines
+01-29 03:20:43.541   686   724 I chatty  : uid=1000(system) Binder:686_441 identical 441 lines
+01-29 03:20:43.551   686   719 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:20:43.696   686   722 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +657ms
+01-29 03:20:43.710  4454  4454 D QueueObserver: queue changed size=52
+01-29 03:20:43.720  4454  4454 D PlaybackActivity: onPause isFinishing=true
+01-29 03:20:43.735  4454  4454 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:43.767  4454  4454 E AndroidRuntime: Process: org.example.player, PID: 4454
+01-29 03:20:43.801  4454  4454 E AndroidRuntime: java.lang.IllegalStateException: Fragment PlaybackControlsFragment{b6a0664} (009914e6-826d-4428-b406-85e759cfc8c5) not attached to a context.
+01-29 03:20:43.841  4454  4454 E AndroidRuntime: 	at androidx.fragment.app.Fragment.requireContext(Fragment.java:978)
+01-29 03:20:43.864  4454  4454 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.updateQueueBadge(PlaybackControlsFragment.kt:213)
+01-29 03:20:43.883  4454  4454 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.access$updateQueueBadge(PlaybackControlsFragment.kt:43)
+01-29 03:20:43.901  4454  4454 E AndroidRuntime: 	at org.example.player.queue.QueueObserver$onChanged$1.run(QueueObserver.kt:32)
+01-29 03:20:43.909  4454  4454 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:942)
+01-29 03:20:43.923  4454  4454 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+01-29 03:20:43.933  4454  4454 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+01-29 03:20:43.950  4454  4454 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:294)
+01-29 03:20:43.989  4454  4454 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8198)
+01-29 03:20:44.024  4454  4454 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:20:44.026  4454  4454 I Process : Sending signal. PID: 4454 SIG: 9
+01-29 03:20:44.031   686   724 I ActivityManager: Process org.example.player (pid 4454) has died: fg  TOP 
+01-29 03:20:46.994   686   696 I chatty  : uid=1000(system) Binder:686_2265 identical 2265 lines
+01-29 03:20:46.998  5955  5965 W System.err: java.io.FileNotFoundException: /cache/tmp-7104.json (No such file)
+01-29 03:20:47.001   686   749 I InputDispatcher: Focus entering window (channel 6f9c138)
+01-29 03:20:47.040   686   693 I WifiService: getWifiEnabledState uid=10342
+01-29 03:20:47.072   686   728 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:47.078  5955  5973 D OpenGLRenderer: Davey! duration=1637ms; Flags=0, FrameTimelineVsyncId=1725
+01-29 03:20:47.093   686   704 D BatteryService: Processing new values: level=28, temperature=256
+01-29 03:20:47.102   686   798 I NetworkScheduler: Scheduling job uid=10136 for network change
+01-29 03:20:47.135  5955  5955 I art     : Background young concurrent copying GC freed 3316(23479KB) AllocSpace objects
+01-29 03:20:47.152   686   716 I NetworkScheduler: Scheduling job uid=10171 for network change
+01-29 03:20:47.179   686   720 I ActivityManager: Start proc 6251:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:20:47.194  6251  6251 I Zygote  : Process: zygote64 forked child
+01-29 03:20:47.198  6251  6251 D PlaybackService: onStartCommand action=PLAY startId=22
+01-29 03:20:47.209  6251  6251 D PlayerEngine: release() called from onTaskRemoved
+01-29 03:20:47.231  6251  6251 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:20:47.258  6251  6251 E AndroidRuntime: Process: org.example.player, PID: 6251
+01-29 03:20:47.259  6251  6251 E AndroidRuntime: java.lang.IllegalStateException: Cannot call play() after release()
+01-29 03:20:47.283  6251  6251 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.checkNotReleased(PlayerEngine.kt:314)
+01-29 03:20:47.307  6251  6251 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.play(PlayerEngine.kt:131)
+01-29 03:20:47.326  6251  6251 E AndroidRuntime: 	at org.example.player.service.PlaybackService.onStartCommand(PlaybackService.kt:83)
+01-29 03:20:47.327  6251  6251 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4927)
+01-29 03:20:47.366  6251  6251 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:20:47.378  6251  6251 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:20:47.418  6251  6251 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8628)
+01-29 03:20:47.441  6251  6251 I Process : Sending signal. PID: 6251 SIG: 9
+01-29 03:20:47.448   686   773 I ActivityManager: Process org.example.player (pid 6251) has died: fg  TOP 
+01-29 03:20:52.356   686   724 I NetworkScheduler: Scheduling job uid=10153 for network change
+01-29 03:20:52.381  5955  5955 I art     : Background young concurrent copying GC freed 3006(8371KB) AllocSpace objects
+01-29 03:20:52.406   686   749 I ActivityManager: Background concurrent copying GC freed 535(37352KB) AllocSpace objects
+01-29 03:20:52.445  5955  5955 W System  : A resource failed to call close.
+01-29 03:20:52.464  5955  5965 I Choreographer: Skipped 2835 frames!  The application may be doing too much work
+01-29 03:20:52.478   686   702 D BatteryService: Processing new values: level=43, temperature=405
+01-29 03:20:52.510   686   741 I ActivityManager: Background concurrent copying GC freed 9926(17114KB) AllocSpace objects
+01-29 03:20:52.526   686   759 I ActivityManager: Start proc 6481:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:20:52.529  6481  6481 I Zygote  : Process: zygote64 forked child
+01-29 03:20:52.542   686   709 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.ForecastActivity} from uid 2000
+01-29 03:20:52.698   686   735 I ActivityTaskManager: Displayed org.example.weather/.ForecastActivity: +816ms
+01-29 03:20:52.717   686   723 D PowerManagerService: acquireWakeLockInternal: lock=56ff365, flags=0x1, tag="*alarm*"
+01-29 03:20:52.720   686   778 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:52.726  6481  6495 D OpenGLRenderer: Davey! duration=2881ms; Flags=0, FrameTimelineVsyncId=3090
+01-29 03:20:52.738   686   721 D ConnectivityService: requestNetwork for uid/pid:10119/686 activeRequest: null
+01-29 03:20:52.772   686   746 I chatty  : uid=1000(system) Binder:686_6527 identical 6527 lines
+01-29 03:20:52.776   686   776 V AlarmManager: Triggering alarm #7631: 3 when=2798 type=ELAPSED_WAKEUP
+01-29 03:20:52.800   686   747 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:20:52.823   686   797 V AlarmManager: Triggering alarm #1461: 3 when=3306 type=ELAPSED_WAKEUP
+01-29 03:20:52.855  6481  6481 I art     : Background young concurrent copying GC freed 8196(30793KB) AllocSpace objects
+01-29 03:20:52.862  5955  5968 W System  : A resource failed to call close.
+01-29 03:20:52.878   686   750 I WifiService: getWifiEnabledState uid=10075
+01-29 03:20:52.888   686   792 I ActivityManager: Background concurrent copying GC freed 3819(31693KB) AllocSpace objects
+01-29 03:20:52.910   686   776 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.radar.RadarActivity} from uid 2000
+01-29 03:20:53.229   686   750 I ActivityTaskManager: Displayed org.example.weather/.radar.RadarActivity: +318ms
+01-29 03:20:53.246  6481  6481 D RadarTileLoader: prefetch zoom=6 tiles=204
+01-29 03:20:53.258  6481  6481 I art     : Clamp target GC heap from 270MB to 256MB
+01-29 03:20:53.286  6481  6481 I art     : Clamp target GC heap from 292MB to 256MB
+01-29 03:20:53.313  6481  6507 E AndroidRuntime: FATAL EXCEPTION: RadarLoader-8
+01-29 03:20:53.345  6481  6507 E AndroidRuntime: Process: org.example.weather, PID: 6481
+01-29 03:20:53.348  6481  6507 E AndroidRuntime: java.lang.OutOfMemoryError: Failed to allocate a 33554444 byte allocation with 11600471 free bytes and 3MB until OOM, target footprint 268435456, growth limit 268435456
+01-29 03:20:53.380  6481  6507 E AndroidRuntime: 	at android.graphics.BitmapFactory.nativeDecodeStream(Native Method)
+01-29 03:20:53.398  6481  6507 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStreamInternal(BitmapFactory.java:790)
+01-29 03:20:53.400  6481  6507 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStream(BitmapFactory.java:736)
+01-29 03:20:53.402  6481  6507 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.decodeTile(RadarTileLoader.kt:94)
+01-29 03:20:53.404  6481  6507 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.loadTile(RadarTileLoader.kt:61)
+01-29 03:20:53.439  6481  6507 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader$prefetch$1.run(RadarTileLoader.kt:45)
+01-29 03:20:53.446  6481  6507 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+01-29 03:20:53.460  6481  6507 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+01-29 03:20:53.462  6481  6507 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)
+01-29 03:20:53.502  6481  6481 I Process : Sending signal. PID: 6481 SIG: 9
+01-29 03:20:53.535   686   710 I ActivityManager: Process org.example.weather (pid 6481) has died: fg  TOP 
+01-29 03:20:57.226  5955  5965 W System  : A resource failed to call close.
+01-29 03:20:57.242   686   799 D ConnectivityService: requestNetwork for uid/pid:10207/686 activeRequest: null
+01-29 03:20:57.266   686   736 I InputDispatcher: Focus entering window (channel 51ce919)
+01-29 03:20:57.290   686   726 I chatty  : uid=1000(system) Binder:686_2747 identical 2747 lines
+01-29 03:20:57.296   686   791 I InputDispatcher: Focus entering window (channel 2b85833)
+01-29 03:20:57.333  5955  5955 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:20:57.369  5955  5955 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=179db997-68fe-4fb8-ac25-d5dbba560f1d ]
+01-29 03:20:57.387  5955  5955 I art     : Background young concurrent copying GC freed 4757(16437KB) AllocSpace objects
+01-29 03:20:57.405  5955  5955 I Choreographer: Skipped 7165 frames!  The application may be doing too much work
+01-29 03:20:57.409  5955  5955 W System.err: java.io.FileNotFoundException: /cache/tmp-7984.json (No such file)
+01-29 03:20:57.414   686   723 D PowerManagerService: acquireWakeLockInternal: lock=ebddf07, flags=0x1, tag="*alarm*"
+01-29 03:20:57.448   686   713 W ActivityManager: Slow operation: 276ms so far, now at startProcess: done
+01-29 03:20:57.456   686   700 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:57.467   686   802 D PowerManagerService: acquireWakeLockInternal: lock=3254b8a, flags=0x1, tag="*alarm*"
+01-29 03:20:57.491  5955  5955 W System.err: java.io.FileNotFoundException: /cache/tmp-4102.json (No such file)
+01-29 03:20:57.493  5955  6010 W System.err: java.io.FileNotFoundException: /cache/tmp-5562.json (No such file)
+01-29 03:20:57.495   686   723 I WifiService: getWifiEnabledState uid=10209
+01-29 03:20:57.497  5955  5955 D OpenGLRenderer: Davey! duration=1358ms; Flags=0, FrameTimelineVsyncId=353
+01-29 03:20:57.524   686   802 D ConnectivityService: requestNetwork for uid/pid:10059/686 activeRequest: null
+01-29 03:20:57.546   686   747 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:20:57.561  5955  5955 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:20:57.585  5955  6015 W System  : A resource failed to call close.
+01-29 03:20:57.621  5955  5985 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (1245ms, 20447-byte body)
+01-29 03:20:57.646   686   737 I ActivityManager: Start proc 6597:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:20:57.667  6597  6597 I Zygote  : Process: zygote64 forked child
+01-29 03:20:57.707  6597  6597 I MediaCodecWrapper: configure codec=video/avc 3840x2160
+01-29 03:20:57.708  6597  6653 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x10 in tid 6653 (CodecLooper), pid 6597 (org.example.player)
+01-29 03:20:57.742  6597  6597 I Process : Sending signal. PID: 6597 SIG: 9
+01-29 03:20:57.774   686   753 I ActivityManager: Process org.example.player (pid 6597) has died: fg  TOP 
+01-29 03:21:02.500  5955  5955 W System  : A resource failed to call close.
+01-29 03:21:02.514   686   799 D BatteryService: Processing new values: level=52, temperature=378
+01-29 03:21:02.515   686   690 I ActivityManager: Background concurrent copying GC freed 6704(25571KB) AllocSpace objects
+01-29 03:21:02.542   686   721 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:02.570  5955  6006 W System  : A resource failed to call close.
+01-29 03:21:02.577   686   782 I ActivityManager: Background concurrent copying GC freed 827(3680KB) AllocSpace objects
+01-29 03:21:02.586  5955  5970 D OpenGLRenderer: Davey! duration=2208ms; Flags=0, FrameTimelineVsyncId=6876
+01-29 03:21:02.622  5955  5989 W System.err: java.io.FileNotFoundException: /cache/tmp-3130.json (No such file)
+01-29 03:21:02.636   686   712 I NetworkScheduler: Scheduling job uid=10307 for network change
+01-29 03:21:02.662   686   692 I chatty  : uid=1000(system) Binder:686_1380 identical 1380 lines
+01-29 03:21:02.679  5955  5955 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (1371ms, 3691-byte body)
+01-29 03:21:02.689   686   798 V AlarmManager: Triggering alarm #905: 3 when=3202 type=ELAPSED_WAKEUP
+01-29 03:21:02.692  5955  5955 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:21:02.726   686   779 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:02.744   686   692 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:02.775  5955  5970 I art     : Background young concurrent copying GC freed 2847(25372KB) AllocSpace objects
+01-29 03:21:02.804  5955  5955 I Choreographer: Skipped 561 frames!  The application may be doing too much work
+01-29 03:21:02.836   686   749 W ActivityManager: Slow operation: 2159ms so far, now at startProcess: done
+01-29 03:21:02.848   686   766 D ConnectivityService: requestNetwork for uid/pid:10210/686 activeRequest: null
+01-29 03:21:02.867   686   735 I ActivityManager: Start proc 6614:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:21:02.880  6614  6614 I Zygote  : Process: zygote64 forked child
+01-29 03:21:02.909   686   729 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:21:03.229   686   755 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +1178ms
+01-29 03:21:03.232  6614  6614 D QueueObserver: queue changed size=37
+01-29 03:21:03.262  6614  6614 D PlaybackActivity: onPause isFinishing=true
+01-29 03:21:03.291  6614  6614 D AndroidRuntime: Shutting down VM
+01-29 03:21:03.325  6614  6614 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:21:03.362  6614  6614 E AndroidRuntime: Process: org.example.player, PID: 6614
+01-29 03:21:03.370  6614  6614 E AndroidRuntime: java.lang.IllegalStateException: Fragment PlaybackControlsFragment{0b74f13} (2d7f3939-4831-4c61-b72d-a05626eb99f0) not attached to a context.
+01-29 03:21:03.376  6614  6614 E AndroidRuntime: 	at androidx.fragment.app.Fragment.requireContext(Fragment.java:987)
+01-29 03:21:03.401  6614  6614 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.updateQueueBadge(PlaybackControlsFragment.kt:218)
+01-29 03:21:03.427  6614  6614 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.access$updateQueueBadge(PlaybackControlsFragment.kt:40)
+01-29 03:21:03.464  6614  6614 E AndroidRuntime: 	at org.example.player.queue.QueueObserver$onChanged$1.run(QueueObserver.kt:38)
+01-29 03:21:03.474  6614  6614 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:942)
+01-29 03:21:03.490  6614  6614 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+01-29 03:21:03.514  6614  6614 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+01-29 03:21:03.531  6614  6614 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:21:03.549  6614  6614 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8532)
+01-29 03:21:03.565  6614  6614 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:21:03.579  6614  6614 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+01-29 03:21:03.596  6614  6614 I Process : Sending signal. PID: 6614 SIG: 9
+01-29 03:21:03.633   686   759 I ActivityManager: Process org.example.player (pid 6614) has died: fg  TOP 
+01-29 03:21:06.827  5955  5964 D OpenGLRenderer: Davey! duration=819ms; Flags=0, FrameTimelineVsyncId=388
+01-29 03:21:06.846   686   687 V AlarmManager: Triggering alarm #5091: 3 when=1429 type=ELAPSED_WAKEUP
+01-29 03:21:06.853   686   730 W ActivityManager: Slow operation: 711ms so far, now at startProcess: done
+01-29 03:21:06.886  5955  6000 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=43e2f940-2fcd-4ad1-a354-ecd8688637be ]
+01-29 03:21:06.912  5955  5955 I art     : Background young concurrent copying GC freed 5327(22887KB) AllocSpace objects
+01-29 03:21:06.916  5955  5994 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=286f9ae0-b3c5-4a40-afbf-73eb80233b46 ]
+01-29 03:21:06.941   686   732 D BatteryService: Processing new values: level=83, temperature=388
+01-29 03:21:06.976   686   727 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:21:07.279   686   776 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +1113ms
+01-29 03:21:07.301   686   794 D BatteryService: Processing new values: level=30, temperature=287
+01-29 03:21:07.336   686   714 D BatteryService: Processing new values: level=15, temperature=265
+01-29 03:21:07.339  5955  5955 D OpenGLRenderer: Davey! duration=2992ms; Flags=0, FrameTimelineVsyncId=6909
+01-29 03:21:07.372   686   730 D PowerManagerService: acquireWakeLockInternal: lock=689da5c, flags=0x1, tag="*alarm*"
+01-29 03:21:07.403   686   735 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:07.441   686   787 I InputDispatcher: Focus entering window (channel 216c9a4)
+01-29 03:21:07.452  5955  5955 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=4a404e7c-916f-4e43-aab5-d0cd6f34cf8f ]
+01-29 03:21:07.456   686   739 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:21:07.805   686   746 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +1320ms
+01-29 03:21:07.822  5955  5955 D NotesListAdapter: submitList size=288 filter=pinned
+01-29 03:21:07.862  5955  5955 D AndroidRuntime: Shutting down VM
+01-29 03:21:07.881  5955  5955 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:21:07.920  5955  5955 E AndroidRuntime: Process: org.example.notes, PID: 5955
+01-29 03:21:07.932   686   749 W ActivityManager: Slow operation: 1994ms so far, now at startProcess: done
+01-29 03:21:07.933  5955  5955 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'long org.example.notes.model.Note.getUpdatedAt()' on a null object reference
+01-29 03:21:07.951  5955  5955 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:57)
+01-29 03:21:07.976  5955  5955 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:20)
+01-29 03:21:07.978  5955  5955 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.onBindViewHolder(RecyclerView.java:7286)
+01-29 03:21:08.016  5955  5955 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.bindViewHolder(RecyclerView.java:7337)
+01-29 03:21:08.050  5955  5955 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Recycler.tryBindViewHolderByDeadline(RecyclerView.java:6205)
+01-29 03:21:08.083  5955  5955 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:942)
+01-29 03:21:08.108  5955  5955 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+01-29 03:21:08.120  5955  5955 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:21:08.122  5955  5955 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+01-29 03:21:08.146  5955  5955 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8325)
+01-29 03:21:08.183  5955  5955 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:21:08.220   686   801 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:08.258  5955  5955 I Process : Sending signal. PID: 5955 SIG: 9
+01-29 03:21:08.268   686   710 I ActivityManager: Process org.example.notes (pid 5955) has died: fg  TOP 
+01-29 03:21:08.614   686   712 V AlarmManager: Triggering alarm #8184: 3 when=3325 type=ELAPSED_WAKEUP
+01-29 03:21:08.652   686   799 I NetworkScheduler: Scheduling job uid=10056 for network change
+01-29 03:21:08.658   686   694 I chatty  : uid=1000(system) Binder:686_1093 identical 1093 lines
+01-29 03:21:08.665   686   709 W ActivityManager: Slow operation: 967ms so far, now at startProcess: done
+01-29 03:21:08.701   686   780 I NetworkScheduler: Scheduling job uid=10181 for network change
+01-29 03:21:08.733   686   687 D BatteryService: Processing new values: level=36, temperature=401
+01-29 03:21:08.749   686   707 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:08.763   686   704 D BatteryService: Processing new values: level=20, temperature=368
+01-29 03:21:08.778   686   800 D PowerManagerService: acquireWakeLockInternal: lock=2f22911, flags=0x1, tag="*alarm*"
+01-29 03:21:08.815   686   689 I ActivityManager: Background concurrent copying GC freed 1542(22355KB) AllocSpace objects
+01-29 03:21:08.828   686   716 V AlarmManager: Triggering alarm #9041: 3 when=140 type=ELAPSED_WAKEUP
+01-29 03:21:08.830   686   698 I chatty  : uid=1000(system) Binder:686_8128 identical 8128 lines
+01-29 03:21:08.840   686   698 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:08.860   686   772 V AlarmManager: Triggering alarm #4687: 3 when=3264 type=ELAPSED_WAKEUP
+01-29 03:21:08.891   686   693 W ActivityManager: Slow operation: 2813ms so far, now at startProcess: done
+01-29 03:21:08.912   686   745 W ActivityManager: Slow operation: 52ms so far, now at startProcess: done
+01-29 03:21:08.948   686   763 I NetworkScheduler: Scheduling job uid=10075 for network change
+01-29 03:21:08.967   686   741 W ActivityManager: Slow operation: 1236ms so far, now at startProcess: done
+01-29 03:21:08.975   686   749 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:08.992   686   760 I ActivityManager: Start proc 6656:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:21:09.028  6656  6656 I Zygote  : Process: zygote64 forked child
+01-29 03:21:09.047   686   749 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.ForecastActivity} from uid 2000
+01-29 03:21:09.333   686   709 I ActivityTaskManager: Displayed org.example.weather/.ForecastActivity: +1391ms
+01-29 03:21:09.372  6656  6656 D ForecastActivity: onRefreshClicked city=Lisbon lastSync=365s
+01-29 03:21:09.378  6656  6656 D AndroidRuntime: Shutting down VM
+01-29 03:21:09.402  6656  6656 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:21:09.422  6656  6656 E AndroidRuntime: Process: org.example.weather, PID: 6656
+01-29 03:21:09.455  6656  6656 E AndroidRuntime: android.os.NetworkOnMainThreadException
+01-29 03:21:09.479  6656  6656 E AndroidRuntime: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1675)
+01-29 03:21:09.486  6656  6656 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+01-29 03:21:09.503  6656  6656 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:105)
+01-29 03:21:09.512  6656  6656 E AndroidRuntime: 	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+01-29 03:21:09.518  6656  6656 E AndroidRuntime: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+01-29 03:21:09.530  6656  6656 E AndroidRuntime: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+01-29 03:21:09.556  6656  6656 E AndroidRuntime: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:160)
+01-29 03:21:09.586  6656  6656 E AndroidRuntime: 	at org.example.weather.forecast.ForecastClient.fetchNow(ForecastClient.kt:48)
+01-29 03:21:09.621  6656  6656 E AndroidRuntime: 	at org.example.weather.ui.ForecastActivity.onRefresh(ForecastActivity.kt:130)
+01-29 03:21:09.622  6656  6656 E AndroidRuntime: 	at androidx.swiperefreshlayout.widget.SwipeRefreshLayout.finishSpinner(SwipeRefreshLayout.java:960)
+01-29 03:21:09.633  6656  6656 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:942)
+01-29 03:21:09.655  6656  6656 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+01-29 03:21:09.686  6656  6656 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:21:09.696  6656  6656 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+01-29 03:21:09.731  6656  6656 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8135)
+01-29 03:21:09.771  6656  6656 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:21:09.782  6656  6656 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+01-29 03:21:09.798  6656  6656 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:956)
+01-29 03:21:09.815  6656  6656 I Process : Sending signal. PID: 6656 SIG: 9
+01-29 03:21:09.817   686   757 I ActivityManager: Process org.example.weather (pid 6656) has died: fg  TOP 
+01-29 03:21:14.775   686   699 D ConnectivityService: requestNetwork for uid/pid:10313/686 activeRequest: null
+01-29 03:21:14.776   686   767 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:14.801   686   783 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:14.830   686   737 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:14.836   686   704 I WifiService: getWifiEnabledState uid=10322
+01-29 03:21:14.855   686   787 W ActivityManager: Slow operation: 2062ms so far, now at startProcess: done
+01-29 03:21:14.873   686   700 I ActivityManager: Background concurrent copying GC freed 4107(35355KB) AllocSpace objects
+01-29 03:21:14.893   686   754 I ActivityManager: Start proc 6700:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:21:14.918  6700  6700 I Zygote  : Process: zygote64 forked child
+01-29 03:21:14.944  6700  6700 D SyncService: onStartCommand full resync accounts=2
+01-29 03:21:31.208   686   715 E ActivityManager: ANR in org.example.notes
+01-29 03:21:31.248   686   715 E ActivityManager: PID: 6700
+01-29 03:21:31.286   686   715 E ActivityManager: Reason: executing service org.example.notes/.sync.SyncService
+01-29 03:21:31.303   686   715 E ActivityManager: ErrorId: 6cafe957-d138-48e4-9917-0bfe11a8acfe
+01-29 03:21:31.318   686   715 E ActivityManager: Frozen: false
+01-29 03:21:31.347   686   715 E ActivityManager: Load: 4.42 / 3.81 / 4.95
+01-29 03:21:31.386   686   715 E ActivityManager: CPU usage from 475ms to 21690ms ago:
+01-29 03:21:31.418   686   715 E ActivityManager:   32% 6700/org.example.notes: 22% user + 17% kernel
+01-29 03:21:31.436  6700  6700 I Process : Sending signal. PID: 6700 SIG: 9
+01-29 03:21:31.459   686   727 I ActivityManager: Process org.example.notes (pid 6700) has died: fg  TOP 
+01-29 03:21:33.831   686   795 I NetworkScheduler: Scheduling job uid=10169 for network change
+01-29 03:21:33.842   686   728 I WifiService: getWifiEnabledState uid=10342
+01-29 03:21:33.848   686   767 I NetworkScheduler: Scheduling job uid=10388 for network change
+01-29 03:21:33.879   686   707 D BatteryService: Processing new values: level=56, temperature=342
+01-29 03:21:33.886   686   738 I chatty  : uid=1000(system) Binder:686_8268 identical 8268 lines
+01-29 03:21:33.923   686   704 V AlarmManager: Triggering alarm #6013: 3 when=1175 type=ELAPSED_WAKEUP
+01-29 03:21:33.939   686   801 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:33.953   686   696 I NetworkScheduler: Scheduling job uid=10330 for network change
+01-29 03:21:33.981   686   748 W ActivityManager: Slow operation: 40ms so far, now at startProcess: done
+01-29 03:21:34.021   686   732 D BatteryService: Processing new values: level=36, temperature=381
+01-29 03:21:34.038   686   794 I WifiService: getWifiEnabledState uid=10195
+01-29 03:21:34.060   686   781 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:34.071   686   806 D BatteryService: Processing new values: level=95, temperature=379
+01-29 03:21:34.088   686   735 D BatteryService: Processing new values: level=70, temperature=404
+01-29 03:21:34.116   686   697 D PowerManagerService: acquireWakeLockInternal: lock=d63fdac, flags=0x1, tag="*alarm*"
+01-29 03:21:34.132   686   799 I NetworkScheduler: Scheduling job uid=10370 for network change
+01-29 03:21:34.142   686   791 I NetworkScheduler: Scheduling job uid=10245 for network change
+01-29 03:21:34.164   686   726 I ActivityManager: Start proc 7012:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:21:34.199  7012  7012 I Zygote  : Process: zygote64 forked child
+01-29 03:21:34.200   686   718 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.ForecastActivity} from uid 2000
+01-29 03:21:34.474   686   716 I ActivityTaskManager: Displayed org.example.weather/.ForecastActivity: +792ms
+01-29 03:21:34.507  7012  7012 D ForecastActivity: onRefreshClicked city=Lisbon lastSync=261s
+01-29 03:21:34.516  7012  7012 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:21:34.548  7012  7012 E AndroidRuntime: Process: org.example.weather, PID: 7012
+01-29 03:21:34.557  7012  7012 E AndroidRuntime: android.os.NetworkOnMainThreadException
+01-29 03:21:34.593  7012  7012 E AndroidRuntime: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1605)
+01-29 03:21:34.594  7012  7012 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:117)
+01-29 03:21:34.603  7012  7012 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+01-29 03:21:34.608  7012  7012 E AndroidRuntime: 	at java.net.InetAddress.getAllByName(InetAddress.java:1155)
+01-29 03:21:34.623  7012  7012 E AndroidRuntime: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:50)
+01-29 03:21:34.637  7012  7012 E AndroidRuntime: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:171)
+01-29 03:21:34.649  7012  7012 E AndroidRuntime: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+01-29 03:21:34.672  7012  7012 E AndroidRuntime: 	at org.example.weather.forecast.ForecastClient.fetchNow(ForecastClient.kt:54)
+01-29 03:21:34.692  7012  7012 E AndroidRuntime: 	at org.example.weather.ui.ForecastActivity.onRefreshClicked(ForecastActivity.kt:102)
+01-29 03:21:34.722  7012  7012 E AndroidRuntime: 	at android.view.View.performClick(View.java:7659)
+01-29 03:21:34.747  7012  7012 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7869)
+01-29 03:21:34.787  7012  7012 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+01-29 03:21:34.803  7012  7012 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+01-29 03:21:34.809   686   803 I WifiService: getWifiEnabledState uid=10352
+01-29 03:21:34.820  7012  7012 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+01-29 03:21:34.825  7012  7012 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:294)
+01-29 03:21:34.831  7012  7012 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8576)
+01-29 03:21:34.856  7012  7012 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:21:34.860  7012  7012 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+01-29 03:21:34.869  7012  7012 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:959)
+01-29 03:21:34.881  7012  7012 I Process : Sending signal. PID: 7012 SIG: 9
+01-29 03:21:34.884   686   709 I ActivityManager: Process org.example.weather (pid 7012) has died: fg  TOP 
+01-29 03:21:39.557   686   761 D BatteryService: Processing new values: level=76, temperature=370
+01-29 03:21:39.558   686   775 I chatty  : uid=1000(system) Binder:686_9236 identical 9236 lines
+01-29 03:21:39.568   686   728 I WifiService: getWifiEnabledState uid=10232
+01-29 03:21:39.577   686   701 W ActivityManager: Slow operation: 2760ms so far, now at startProcess: done
+01-29 03:21:39.602   686   794 D BatteryService: Processing new values: level=81, temperature=276
+01-29 03:21:39.606   686   737 I InputDispatcher: Focus entering window (channel c54e75f)
+01-29 03:21:39.611   686   727 D ConnectivityService: requestNetwork for uid/pid:10061/686 activeRequest: null
+01-29 03:21:39.644   686   766 I ActivityManager: Background concurrent copying GC freed 6028(9376KB) AllocSpace objects
+01-29 03:21:39.666   686   771 D ConnectivityService: requestNetwork for uid/pid:10179/686 activeRequest: null
+01-29 03:21:39.691   686   803 V AlarmManager: Triggering alarm #1010: 3 when=703 type=ELAPSED_WAKEUP
+01-29 03:21:39.729   686   743 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:39.757   686   722 V AlarmManager: Triggering alarm #7915: 3 when=2085 type=ELAPSED_WAKEUP
+01-29 03:21:39.767   686   789 I WifiService: getWifiEnabledState uid=10222
+01-29 03:21:39.797   686   746 I ActivityManager: Start proc 7314:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:21:39.831  7314  7314 I Zygote  : Process: zygote64 forked child
+01-29 03:21:39.861   686   740 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:21:40.209   686   753 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +1281ms
+01-29 03:21:40.244  7314  7314 D QueueObserver: queue changed size=1
+01-29 03:21:40.266  7314  7314 D PlaybackActivity: onPause isFinishing=true
+01-29 03:21:40.305  7314  7314 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:21:40.334  7314  7314 E AndroidRuntime: Process: org.example.player, PID: 7314
+01-29 03:21:40.362  7314  7314 E AndroidRuntime: java.lang.IllegalStateException: Fragment PlaybackControlsFragment{b737f2b} (cae54ce0-a13b-4e55-be5b-9b4169994f8e) not attached to a context.
+01-29 03:21:40.381  7314  7314 E AndroidRuntime: 	at androidx.fragment.app.Fragment.requireContext(Fragment.java:978)
+01-29 03:21:40.386  7314  7314 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.updateQueueBadge(PlaybackControlsFragment.kt:209)
+01-29 03:21:40.414  7314  7314 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.access$updateQueueBadge(PlaybackControlsFragment.kt:41)
+01-29 03:21:40.433  7314  7314 E AndroidRuntime: 	at org.example.player.queue.QueueObserver$onChanged$1.run(QueueObserver.kt:36)
+01-29 03:21:40.464  7314  7314 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+01-29 03:21:40.503  7314  7314 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+01-29 03:21:40.506  7314  7314 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:21:40.537  7314  7314 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+01-29 03:21:40.560  7314  7314 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8730)
+01-29 03:21:40.597  7314  7314 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:21:40.599  7314  7314 I Process : Sending signal. PID: 7314 SIG: 9
+01-29 03:21:40.603   686   758 I ActivityManager: Process org.example.player (pid 7314) has died: fg  TOP 
+01-29 03:21:41.072   686   779 I ActivityManager: Background concurrent copying GC freed 283(10485KB) AllocSpace objects
+01-29 03:21:41.096   686   756 W ActivityManager: Slow operation: 2473ms so far, now at startProcess: done
+01-29 03:21:41.097   686   696 V AlarmManager: Triggering alarm #6341: 3 when=394 type=ELAPSED_WAKEUP
+01-29 03:21:41.111   686   709 I WifiService: getWifiEnabledState uid=10082
+01-29 03:21:41.149   686   757 I chatty  : uid=1000(system) Binder:686_7056 identical 7056 lines
+01-29 03:21:41.185   686   700 I InputDispatcher: Focus entering window (channel fd88403)
+01-29 03:21:41.224   686   711 I NetworkScheduler: Scheduling job uid=10338 for network change
+01-29 03:21:41.254   686   786 D ConnectivityService: requestNetwork for uid/pid:10309/686 activeRequest: null
+01-29 03:21:41.286   686   799 D BatteryService: Processing new values: level=63, temperature=266
+01-29 03:21:41.323   686   777 D BatteryService: Processing new values: level=63, temperature=301
+01-29 03:21:41.357   686   719 I NetworkScheduler: Scheduling job uid=10073 for network change
+01-29 03:21:41.387   686   760 D PowerManagerService: acquireWakeLockInternal: lock=69bbc82, flags=0x1, tag="*alarm*"
+01-29 03:21:41.398   686   723 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:41.410   686   774 V AlarmManager: Triggering alarm #7868: 3 when=2900 type=ELAPSED_WAKEUP
+01-29 03:21:41.418   686   735 I chatty  : uid=1000(system) Binder:686_9860 identical 9860 lines
+01-29 03:21:41.425   686   763 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:41.453   686   787 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:41.458   686   720 I ActivityManager: Start proc 7318:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:21:41.472  7318  7318 I Zygote  : Process: zygote64 forked child
+01-29 03:21:41.500   686   718 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:21:41.735   686   768 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +1152ms
+01-29 03:21:41.738  7318  7318 D PlaylistImporter: importing 2117 tracks on main
+01-29 03:21:41.761  7318  7318 I Choreographer: Skipped 286 frames!  The application may be doing too much work on its main thread.
+01-29 03:21:47.680   686   732 E ActivityManager: ANR in org.example.player (org.example.player/.PlaybackActivity)
+01-29 03:21:47.712   686   732 E ActivityManager: PID: 7318
+01-29 03:21:47.721   686   732 E ActivityManager: Reason: Input dispatching timed out (a3ef493 org.example.player/org.example.player.PlaybackActivity (server) is not responding. Waited 5035ms for MotionEvent)
+01-29 03:21:47.734   686   732 E ActivityManager: Parent: org.example.player/.PlaybackActivity
+01-29 03:21:47.743   686   732 E ActivityManager: ErrorId: 009f3fa1-473d-4eae-86ec-bad48c43eb8d
+01-29 03:21:47.748   686   732 E ActivityManager: Frozen: false
+01-29 03:21:47.785   686   732 E ActivityManager: Load: 3.42 / 4.92 / 6.05
+01-29 03:21:47.798   686   805 I NetworkScheduler: Scheduling job uid=10076 for network change
+01-29 03:21:47.809   686   732 E ActivityManager: CPU usage from 282ms to 9333ms ago:
+01-29 03:21:47.823   686   732 E ActivityManager:   73% 7318/org.example.player: 53% user + 5% kernel
+01-29 03:21:47.841   686   732 E ActivityManager:   16% 686/system_server: 18% user + 3% kernel
+01-29 03:21:49.265  7318  7318 D OpenGLRenderer: Davey! duration=1770ms; Flags=0, FrameTimelineVsyncId=361
+01-29 03:21:49.304  7318  7318 D SyncWorker: retrying after IOException, attempt 1
+01-29 03:21:49.329   686   731 I InputDispatcher: Focus entering window (channel 211e656)
+01-29 03:21:49.367  7318  7327 D OkHttp  : <-- 200 https://tiles.example.com/radar/7/42/63.png (940ms, 36601-byte body)
+01-29 03:21:49.393  7318  7318 I art     : Background young concurrent copying GC freed 5565(26395KB) AllocSpace objects
+01-29 03:21:49.425   686   704 D PowerManagerService: acquireWakeLockInternal: lock=a188bc6, flags=0x1, tag="*alarm*"
+01-29 03:21:49.439  7318  7327 D OkHttp  : <-- 200 https://api.example.org/v1/sync (823ms, 16782-byte body)
+01-29 03:21:49.442  7318  7318 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (2055ms, 2385-byte body)
+01-29 03:21:49.471   686   694 I NetworkScheduler: Scheduling job uid=10136 for network change
+01-29 03:21:49.506   686   789 I chatty  : uid=1000(system) Binder:686_2934 identical 2934 lines
+01-29 03:21:49.529  7318  7318 W System.err: java.io.FileNotFoundException: /cache/tmp-8646.json (No such file)
+01-29 03:21:49.566  7318  7318 I art     : Background young concurrent copying GC freed 8321(10263KB) AllocSpace objects
+01-29 03:21:49.600   686   775 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:21:49.975   686   776 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +1104ms
+01-29 03:21:49.995  7318  7318 W System.err: java.io.FileNotFoundException: /cache/tmp-3301.json (No such file)
+01-29 03:21:50.017  7318  7318 I art     : Background young concurrent copying GC freed 3571(35738KB) AllocSpace objects
+01-29 03:21:50.037   686   775 I WifiService: getWifiEnabledState uid=10333
+01-29 03:21:50.046  7318  7346 W System.err: java.io.FileNotFoundException: /cache/tmp-2728.json (No such file)
+01-29 03:21:50.071   686   784 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:50.096  7318  7318 D PlaybackService: onStartCommand action=PLAY startId=24
+01-29 03:21:50.120  7318  7318 D PlayerEngine: release() called from onTaskRemoved
+01-29 03:21:50.144  7318  7318 D AndroidRuntime: Shutting down VM
+01-29 03:21:50.171  7318  7318 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:21:50.192  7318  7318 E AndroidRuntime: Process: org.example.player, PID: 7318
+01-29 03:21:50.220  7318  7318 E AndroidRuntime: java.lang.IllegalStateException: Cannot call play() after release()
+01-29 03:21:50.247  7318  7318 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.checkNotReleased(PlayerEngine.kt:311)
+01-29 03:21:50.272  7318  7318 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.play(PlayerEngine.kt:121)
+01-29 03:21:50.280  7318  7318 E AndroidRuntime: 	at org.example.player.service.PlaybackService.onStartCommand(PlaybackService.kt:87)
+01-29 03:21:50.314  7318  7318 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4992)
+01-29 03:21:50.327   686   703 V AlarmManager: Triggering alarm #1059: 3 when=1375 type=ELAPSED_WAKEUP
+01-29 03:21:50.350  7318  7318 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:21:50.364  7318  7318 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:21:50.397   686   762 D BatteryService: Processing new values: level=49, temperature=404
+01-29 03:21:50.405  7318  7318 I Process : Sending signal. PID: 7318 SIG: 9
+01-29 03:21:50.418   686   709 I ActivityManager: Process org.example.player (pid 7318) has died: fg  TOP 
+01-29 03:21:54.771   686   716 I NetworkScheduler: Scheduling job uid=10154 for network change
+01-29 03:21:54.789   686   706 I InputDispatcher: Focus entering window (channel 489bff9)
+01-29 03:21:54.799   686   797 D PowerManagerService: acquireWakeLockInternal: lock=0fdaffe, flags=0x1, tag="*alarm*"
+01-29 03:21:54.816   686   735 D BatteryService: Processing new values: level=43, temperature=347
+01-29 03:21:54.855   686   787 D ConnectivityService: requestNetwork for uid/pid:10207/686 activeRequest: null
+01-29 03:21:54.863   686   732 I WifiService: getWifiEnabledState uid=10084
+01-29 03:21:54.899   686   704 D PowerManagerService: acquireWakeLockInternal: lock=4a3e469, flags=0x1, tag="*alarm*"
+01-29 03:21:54.930   686   797 I ActivityManager: Background concurrent copying GC freed 829(8917KB) AllocSpace objects
+01-29 03:21:54.955   686   761 V AlarmManager: Triggering alarm #8922: 3 when=2415 type=ELAPSED_WAKEUP
+01-29 03:21:54.990   686   730 D BatteryService: Processing new values: level=12, temperature=395
+01-29 03:21:55.012   686   742 V AlarmManager: Triggering alarm #4594: 3 when=3367 type=ELAPSED_WAKEUP
+01-29 03:21:55.031   686   748 D PowerManagerService: acquireWakeLockInternal: lock=b5a88f7, flags=0x1, tag="*alarm*"
+01-29 03:21:55.042   686   753 I ActivityManager: Start proc 7571:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:21:55.063  7571  7571 I Zygote  : Process: zygote64 forked child
+01-29 03:21:55.090  7571  7571 D PlaybackService: onStartCommand action=PLAY startId=22
+01-29 03:21:55.099  7571  7571 D PlayerEngine: release() called from onTaskRemoved
+01-29 03:21:55.126  7571  7571 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:21:55.141  7571  7571 E AndroidRuntime: Process: org.example.player, PID: 7571
+01-29 03:21:55.175  7571  7571 E AndroidRuntime: java.lang.IllegalStateException: Cannot call play() after release()
+01-29 03:21:55.215  7571  7571 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.checkNotReleased(PlayerEngine.kt:310)
+01-29 03:21:55.217  7571  7571 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.play(PlayerEngine.kt:124)
+01-29 03:21:55.233  7571  7571 E AndroidRuntime: 	at org.example.player.service.PlaybackService.onStartCommand(PlaybackService.kt:82)
+01-29 03:21:55.243  7571  7571 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4915)
+01-29 03:21:55.275  7571  7571 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+01-29 03:21:55.293  7571  7571 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:294)
+01-29 03:21:55.317  7571  7571 I Process : Sending signal. PID: 7571 SIG: 9
+01-29 03:21:55.344   686   737 I ActivityManager: Process org.example.player (pid 7571) has died: fg  TOP 
+01-29 03:21:58.346   686   770 D ConnectivityService: requestNetwork for uid/pid:10205/686 activeRequest: null
+01-29 03:21:58.352   686   756 I InputDispatcher: Focus entering window (channel dc0af55)
+01-29 03:21:58.378   686   733 I chatty  : uid=1000(system) Binder:686_8461 identical 8461 lines
+01-29 03:21:58.417   686   760 I ActivityManager: Start proc 7633:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:21:58.437  7633  7633 I Zygote  : Process: zygote64 forked child
+01-29 03:21:58.453   686   715 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:21:58.792   686   750 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +1309ms
+01-29 03:21:58.820   686   689 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:21:58.832   686   702 D PowerManagerService: acquireWakeLockInternal: lock=2f15301, flags=0x1, tag="*alarm*"
+01-29 03:21:58.862   686   786 I NetworkScheduler: Scheduling job uid=10282 for network change
+01-29 03:21:58.881  7633  7633 I Choreographer: Skipped 7129 frames!  The application may be doing too much work
+01-29 03:21:58.916   686   747 I chatty  : uid=1000(system) Binder:686_5915 identical 5915 lines
+01-29 03:21:58.938   686   752 I ActivityManager: Background concurrent copying GC freed 5508(25473KB) AllocSpace objects
+01-29 03:21:58.971  7633  7664 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:21:58.976   686   805 I NetworkScheduler: Scheduling job uid=10310 for network change
+01-29 03:21:58.992  7633  7633 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=c75263c3-bb47-49ef-af31-0ed0ae73f728 ]
+01-29 03:21:59.017   686   792 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:21:59.055   686   735 I ActivityManager: Start proc 8020:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:21:59.061  8020  8020 I Zygote  : Process: zygote64 forked child
+01-29 03:21:59.079   686   757 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.ForecastActivity} from uid 2000
+01-29 03:21:59.300   686   769 I ActivityTaskManager: Displayed org.example.weather/.ForecastActivity: +1070ms
+01-29 03:21:59.337  8020  8020 D ForecastActivity: onRefreshClicked city=Dublin lastSync=350s
+01-29 03:21:59.346  8020  8020 D AndroidRuntime: Shutting down VM
+01-29 03:21:59.379  8020  8020 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:21:59.392  8020  8020 E AndroidRuntime: Process: org.example.weather, PID: 8020
+01-29 03:21:59.431  8020  8020 E AndroidRuntime: android.os.NetworkOnMainThreadException
+01-29 03:21:59.440  8020  8020 E AndroidRuntime: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1675)
+01-29 03:21:59.442  8020  8020 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:117)
+01-29 03:21:59.454  8020  8020 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:105)
+01-29 03:21:59.475  8020  8020 E AndroidRuntime: 	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+01-29 03:21:59.497  8020  8020 E AndroidRuntime: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:50)
+01-29 03:21:59.523  8020  8020 E AndroidRuntime: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+01-29 03:21:59.549  8020  8020 E AndroidRuntime: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+01-29 03:21:59.579  7633  7633 W System.err: java.io.FileNotFoundException: /cache/tmp-7335.json (No such file)
+01-29 03:21:59.591  8020  8020 E AndroidRuntime: 	at org.example.weather.forecast.ForecastClient.fetchNow(ForecastClient.kt:56)
+01-29 03:21:59.629  8020  8020 E AndroidRuntime: 	at org.example.weather.ui.ForecastActivity.onRefresh(ForecastActivity.kt:122)
+01-29 03:21:59.645  8020  8020 E AndroidRuntime: 	at androidx.swiperefreshlayout.widget.SwipeRefreshLayout.finishSpinner(SwipeRefreshLayout.java:969)
+01-29 03:21:59.669  8020  8020 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+01-29 03:21:59.687  8020  8020 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+01-29 03:21:59.692  8020  8020 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+01-29 03:21:59.721  8020  8020 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+01-29 03:21:59.749  8020  8020 I Process : Sending signal. PID: 8020 SIG: 9
+01-29 03:21:59.756   686   766 I ActivityManager: Process org.example.weather (pid 8020) has died: fg  TOP 
+01-29 03:22:02.226   686   804 I InputDispatcher: Focus entering window (channel 247b4a9)
+01-29 03:22:02.231  7633  7633 I Choreographer: Skipped 1824 frames!  The application may be doing too much work
+01-29 03:22:02.269   686   752 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:02.275   686   704 I WifiService: getWifiEnabledState uid=10178
+01-29 03:22:02.310   686   771 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:02.343   686   691 I InputDispatcher: Focus entering window (channel 01b4f78)
+01-29 03:22:02.355   686   739 V AlarmManager: Triggering alarm #7923: 3 when=3413 type=ELAPSED_WAKEUP
+01-29 03:22:02.395  7633  7633 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:22:02.402  7633  7672 W System  : A resource failed to call close.
+01-29 03:22:02.439  7633  7674 D OkHttp  : <-- 200 https://api.example.org/v1/sync (1641ms, 8029-byte body)
+01-29 03:22:02.441  7633  7633 D OpenGLRenderer: Davey! duration=1232ms; Flags=0, FrameTimelineVsyncId=8027
+01-29 03:22:02.479   686   751 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:22:02.496   686   758 W ActivityManager: Slow operation: 1529ms so far, now at startProcess: done
+01-29 03:22:02.531  7633  7633 I art     : Background young concurrent copying GC freed 5069(28577KB) AllocSpace objects
+01-29 03:22:02.546  7633  7633 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (2749ms, 30448-byte body)
+01-29 03:22:02.561  7633  7633 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (587ms, 6122-byte body)
+01-29 03:22:02.592   686   717 I ActivityManager: Start proc 8213:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:22:02.623  8213  8213 I Zygote  : Process: zygote64 forked child
+01-29 03:22:02.633  8213  8213 D NoteEditor: onSaveClicked id=710 chars=8414
+01-29 03:22:02.658  8213  8253 E NotesRepository: Failed to save note id=710
+01-29 03:22:02.661  8213  8253 E NotesRepository: java.lang.RuntimeException: sync push failed for batch 393
+01-29 03:22:02.694  8213  8253 E NotesRepository: 	at org.example.notes.sync.SyncWorker.pushPending(SyncWorker.kt:67)
+01-29 03:22:02.713  8213  8253 E NotesRepository: 	at org.example.notes.sync.SyncWorker.doWork(SyncWorker.kt:41)
+01-29 03:22:02.717  8213  8253 E NotesRepository: 	at androidx.work.Worker$2.run(Worker.java:86)
+01-29 03:22:02.729   686   704 D PowerManagerService: acquireWakeLockInternal: lock=e735f6e, flags=0x1, tag="*alarm*"
+01-29 03:22:02.757  8213  8253 E NotesRepository: Caused by: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: notes.uuid (code 1555 SQLITE_CONSTRAINT_UNIQUE)
+01-29 03:22:02.777  8213  8253 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+01-29 03:22:02.786  8213  8253 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:938)
+01-29 03:22:02.801  8213  8253 E NotesRepository: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:818)
+01-29 03:22:02.804  8213  8253 E NotesRepository: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+01-29 03:22:02.820  8213  8253 E NotesRepository: 	at org.example.notes.data.NoteDao_Impl.insert(NoteDao_Impl.java:137)
+01-29 03:22:02.834  8213  8253 E NotesRepository: 	at org.example.notes.data.NotesRepository.save(NotesRepository.kt:82)
+01-29 03:22:02.872  8213  8253 E NotesRepository: 	... 14 more
+01-29 03:22:07.007  8213  8228 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:22:07.024   686   768 D PowerManagerService: acquireWakeLockInternal: lock=df3c939, flags=0x1, tag="*alarm*"
+01-29 03:22:07.064   686   711 I ActivityManager: Background concurrent copying GC freed 1123(19686KB) AllocSpace objects
+01-29 03:22:07.099   686   762 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:07.111  8213  8234 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (2624ms, 35794-byte body)
+01-29 03:22:07.144   686   799 D ConnectivityService: requestNetwork for uid/pid:10232/686 activeRequest: null
+01-29 03:22:07.173   686   805 W ActivityManager: Slow operation: 2366ms so far, now at startProcess: done
+01-29 03:22:07.208  7633  7682 W System  : A resource failed to call close.
+01-29 03:22:07.215   686   695 D ConnectivityService: requestNetwork for uid/pid:10390/686 activeRequest: null
+01-29 03:22:07.245  7633  7633 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=edcb89a1-fe04-434f-ae30-415d025ac719 ]
+01-29 03:22:07.246   686   756 I InputDispatcher: Focus entering window (channel 1de9754)
+01-29 03:22:07.258  7633  7642 W System  : A resource failed to call close.
+01-29 03:22:07.286  7633  7693 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=59f6741f-f58b-474d-a406-e44a333fac94 ]
+01-29 03:22:07.316  7633  7688 I Choreographer: Skipped 4781 frames!  The application may be doing too much work
+01-29 03:22:07.321   686   746 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:22:07.570   686   776 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +827ms
+01-29 03:22:07.573  8213  8213 D NotesListAdapter: submitList size=281 filter=all
+01-29 03:22:07.610  8213  8213 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:22:07.644  8213  8213 E AndroidRuntime: Process: org.example.notes, PID: 8213
+01-29 03:22:07.670  8213  8213 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'long org.example.notes.model.Note.getUpdatedAt()' on a null object reference
+01-29 03:22:07.684  8213  8213 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:60)
+01-29 03:22:07.711  8213  8213 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:23)
+01-29 03:22:07.744  8213  8213 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.onBindViewHolder(RecyclerView.java:7273)
+01-29 03:22:07.748  8213  8213 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.bindViewHolder(RecyclerView.java:7377)
+01-29 03:22:07.780  8213  8213 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Recycler.tryBindViewHolderByDeadline(RecyclerView.java:6208)
+01-29 03:22:07.815  8213  8213 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+01-29 03:22:07.849  8213  8213 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+01-29 03:22:07.853  8213  8213 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:22:07.877  8213  8213 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:22:07.885  8213  8213 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7869)
+01-29 03:22:07.898  8213  8213 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:22:07.922  8213  8213 I Process : Sending signal. PID: 8213 SIG: 9
+01-29 03:22:07.939   686   765 I ActivityManager: Process org.example.notes (pid 8213) has died: fg  TOP 
+01-29 03:22:11.630  7633  7636 D OpenGLRenderer: Davey! duration=2405ms; Flags=0, FrameTimelineVsyncId=3821
+01-29 03:22:11.665   686   688 D BatteryService: Processing new values: level=28, temperature=401
+01-29 03:22:11.668   686   795 W ActivityManager: Slow operation: 2748ms so far, now at startProcess: done
+01-29 03:22:11.691   686   739 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:11.708  7633  7681 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (635ms, 9954-byte body)
+01-29 03:22:11.720   686   724 I ActivityManager: Start proc 8242:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:22:11.741  8242  8242 I Zygote  : Process: zygote64 forked child
+01-29 03:22:11.751   686   730 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.ForecastActivity} from uid 2000
+01-29 03:22:11.892   686   772 I ActivityTaskManager: Displayed org.example.weather/.ForecastActivity: +874ms
+01-29 03:22:11.929   686   753 I InputDispatcher: Focus entering window (channel 9a4c67b)
+01-29 03:22:11.954  8242  8242 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (787ms, 34452-byte body)
+01-29 03:22:11.962  7633  7633 D OpenGLRenderer: Davey! duration=1236ms; Flags=0, FrameTimelineVsyncId=5783
+01-29 03:22:11.989   686   779 D PowerManagerService: acquireWakeLockInternal: lock=47dcdac, flags=0x1, tag="*alarm*"
+01-29 03:22:12.006  7633  7633 D OpenGLRenderer: Davey! duration=103ms; Flags=0, FrameTimelineVsyncId=4143
+01-29 03:22:12.020   686   747 D BatteryService: Processing new values: level=50, temperature=315
+01-29 03:22:12.050  8242  8242 W System.err: java.io.FileNotFoundException: /cache/tmp-2855.json (No such file)
+01-29 03:22:12.083  7633  7655 W System  : A resource failed to call close.
+01-29 03:22:12.104  8242  8277 D ProfileInstaller: Installing profile for org.example.weather
+01-29 03:22:12.118   686   694 D BatteryService: Processing new values: level=6, temperature=349
+01-29 03:22:12.157   686   756 I ActivityManager: Start proc 8486:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:22:12.183  8486  8486 I Zygote  : Process: zygote64 forked child
+01-29 03:22:12.195  8486  8486 D NoteEditor: onSaveClicked id=2224 chars=6000
+01-29 03:22:12.224  8486  8559 E NotesRepository: Failed to save note id=2224
+01-29 03:22:12.262  8486  8559 E NotesRepository: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: notes.uuid (code 1555 SQLITE_CONSTRAINT_UNIQUE)
+01-29 03:22:12.272  8486  8559 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+01-29 03:22:12.308  8486  8559 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+01-29 03:22:12.347  8486  8559 E NotesRepository: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:818)
+01-29 03:22:12.350  8486  8559 E NotesRepository: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:90)
+01-29 03:22:12.387  8486  8559 E NotesRepository: 	at org.example.notes.data.NoteDao_Impl.insert(NoteDao_Impl.java:121)
+01-29 03:22:12.401  8486  8559 E NotesRepository: 	at org.example.notes.data.NotesRepository.save(NotesRepository.kt:87)
+01-29 03:22:12.414  8486  8559 E NotesRepository: 	at org.example.notes.sync.SyncWorker.pushPending(SyncWorker.kt:64)
+01-29 03:22:12.420  8486  8559 E NotesRepository: 	... 11 more
+01-29 03:22:13.115  8242  8242 W System.err: java.io.FileNotFoundException: /cache/tmp-8119.json (No such file)
+01-29 03:22:13.117   686   710 D PowerManagerService: acquireWakeLockInternal: lock=1f4cc93, flags=0x1, tag="*alarm*"
+01-29 03:22:13.139   686   769 D ConnectivityService: requestNetwork for uid/pid:10356/686 activeRequest: null
+01-29 03:22:13.141  8242  8242 D SyncWorker: retrying after IOException, attempt 3
+01-29 03:22:13.145   686   708 V AlarmManager: Triggering alarm #7265: 3 when=1479 type=ELAPSED_WAKEUP
+01-29 03:22:13.165   686   721 W ActivityManager: Slow operation: 2150ms so far, now at startProcess: done
+01-29 03:22:13.177  8486  8486 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=579e2263-a226-4430-a2eb-0ee68a746132 ]
+01-29 03:22:13.188  8242  8242 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=2c769756-9194-4701-a32f-30ca2f71ef31 ]
+01-29 03:22:13.199   686   713 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:13.204  7633  7674 W System.err: java.io.FileNotFoundException: /cache/tmp-2248.json (No such file)
+01-29 03:22:13.210  8486  8486 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:22:13.247  8242  8244 I Choreographer: Skipped 4879 frames!  The application may be doing too much work
+01-29 03:22:13.260   686   776 I InputDispatcher: Focus entering window (channel 0b185d3)
+01-29 03:22:13.273   686   787 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:13.287   686   773 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.editor.NoteEditorActivity} from uid 2000
+01-29 03:22:13.492   686   747 I ActivityTaskManager: Displayed org.example.notes/.editor.NoteEditorActivity: +467ms
+01-29 03:22:13.498  8486  8486 D NoteEditor: openNote id=4751 fromWidget=True
+01-29 03:22:13.509  8486  8486 W NotesRepository: note 4751 not found in cache, deleted remotely?
+01-29 03:22:13.510  8486  8486 D AndroidRuntime: Shutting down VM
+01-29 03:22:13.549  8486  8486 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:22:13.571  8486  8486 E AndroidRuntime: Process: org.example.notes, PID: 8486
+01-29 03:22:13.609   686   714 W ActivityManager: Slow operation: 893ms so far, now at startProcess: done
+01-29 03:22:13.647  8486  8486 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String org.example.notes.model.Note.getTitle()' on a null object reference
+01-29 03:22:13.675  8486  8486 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.bindNote(NoteEditorFragment.kt:151)
+01-29 03:22:13.699  8486  8486 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.onViewCreated(NoteEditorFragment.kt:70)
+01-29 03:22:13.716  8486  8486 E AndroidRuntime: 	at androidx.fragment.app.Fragment.performViewCreated(Fragment.java:3087)
+01-29 03:22:13.724  8486  8486 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+01-29 03:22:13.740  8486  8486 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+01-29 03:22:13.751  8486  8486 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:22:13.788  8486  8486 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+01-29 03:22:13.818  8486  8486 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8534)
+01-29 03:22:13.837  8486  8486 I Process : Sending signal. PID: 8486 SIG: 9
+01-29 03:22:13.857   686   773 I ActivityManager: Process org.example.notes (pid 8486) has died: fg  TOP 
+01-29 03:22:15.703   686   773 I chatty  : uid=1000(system) Binder:686_304 identical 304 lines
+01-29 03:22:15.725  8242  8242 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=14981123-dab7-44b6-ad0b-c4663f7f17d3 ]
+01-29 03:22:15.741  7633  7633 I Choreographer: Skipped 2264 frames!  The application may be doing too much work
+01-29 03:22:15.776  8242  8242 W System  : A resource failed to call close.
+01-29 03:22:15.781   686   720 I NetworkScheduler: Scheduling job uid=10093 for network change
+01-29 03:22:15.818   686   718 V AlarmManager: Triggering alarm #9815: 3 when=1076 type=ELAPSED_WAKEUP
+01-29 03:22:15.841   686   764 D ConnectivityService: requestNetwork for uid/pid:10055/686 activeRequest: null
+01-29 03:22:15.858   686   696 I ActivityManager: Background concurrent copying GC freed 4877(20285KB) AllocSpace objects
+01-29 03:22:15.868   686   745 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:22:15.897  8242  8242 D SyncWorker: retrying after IOException, attempt 4
+01-29 03:22:15.934  7633  7633 W System.err: java.io.FileNotFoundException: /cache/tmp-6928.json (No such file)
+01-29 03:22:15.940  7633  7633 I Choreographer: Skipped 6217 frames!  The application may be doing too much work
+01-29 03:22:15.960  7633  7633 I Choreographer: Skipped 2307 frames!  The application may be doing too much work
+01-29 03:22:15.978   686   744 D ConnectivityService: requestNetwork for uid/pid:10261/686 activeRequest: null
+01-29 03:22:15.992  7633  7633 D ProfileInstaller: Installing profile for org.example.player
+01-29 03:22:16.016   686   692 D PowerManagerService: acquireWakeLockInternal: lock=c281f2e, flags=0x1, tag="*alarm*"
+01-29 03:22:16.018   686   784 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:16.028   686   796 W ActivityManager: Slow operation: 2093ms so far, now at startProcess: done
+01-29 03:22:16.061   686   781 I ActivityManager: Background concurrent copying GC freed 5418(21914KB) AllocSpace objects
+01-29 03:22:16.093  7633  7633 D PlaybackService: onStartCommand action=PLAY startId=26
+01-29 03:22:16.124  7633  7633 D PlayerEngine: release() called from onTaskRemoved
+01-29 03:22:16.126  7633  7633 D AndroidRuntime: Shutting down VM
+01-29 03:22:16.145  7633  7633 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:22:16.185  7633  7633 E AndroidRuntime: Process: org.example.player, PID: 7633
+01-29 03:22:16.198  7633  7633 E AndroidRuntime: java.lang.IllegalStateException: Cannot call play() after release()
+01-29 03:22:16.202  7633  7633 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.checkNotReleased(PlayerEngine.kt:312)
+01-29 03:22:16.224  7633  7633 E AndroidRuntime: 	at org.example.player.engine.PlayerEngine.play(PlayerEngine.kt:133)
+01-29 03:22:16.238  7633  7633 E AndroidRuntime: 	at org.example.player.service.PlaybackService.onStartCommand(PlaybackService.kt:82)
+01-29 03:22:16.248  7633  7633 E AndroidRuntime: 	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:4975)
+01-29 03:22:16.283  7633  7633 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:22:16.303  7633  7633 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:294)
+01-29 03:22:16.325  8242  8242 W System  : A resource failed to call close.
+01-29 03:22:16.347  7633  7633 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8229)
+01-29 03:22:16.350  7633  7633 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:22:16.360  7633  7633 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:569)
+01-29 03:22:16.367  7633  7633 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:994)
+01-29 03:22:16.391  7633  7633 I Process : Sending signal. PID: 7633 SIG: 9
+01-29 03:22:16.424   686   710 I ActivityManager: Process org.example.player (pid 7633) has died: fg  TOP 
+01-29 03:22:19.066   686   802 I WifiService: getWifiEnabledState uid=10268
+01-29 03:22:19.073  8242  8242 W System.err: java.io.FileNotFoundException: /cache/tmp-5495.json (No such file)
+01-29 03:22:19.101   686   747 I NetworkScheduler: Scheduling job uid=10385 for network change
+01-29 03:22:19.120   686   738 I NetworkScheduler: Scheduling job uid=10369 for network change
+01-29 03:22:19.152  8242  8247 D OpenGLRenderer: Davey! duration=2173ms; Flags=0, FrameTimelineVsyncId=2309
+01-29 03:22:19.183   686   793 D PowerManagerService: acquireWakeLockInternal: lock=3f8e6a7, flags=0x1, tag="*alarm*"
+01-29 03:22:19.209   686   777 I NetworkScheduler: Scheduling job uid=10097 for network change
+01-29 03:22:19.234  8242  8262 D ProfileInstaller: Installing profile for org.example.weather
+01-29 03:22:19.249  8242  8270 W System.err: java.io.FileNotFoundException: /cache/tmp-7984.json (No such file)
+01-29 03:22:19.259   686   749 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.radar.RadarActivity} from uid 2000
+01-29 03:22:19.673   686   734 I ActivityTaskManager: Displayed org.example.weather/.radar.RadarActivity: +906ms
+01-29 03:22:19.694  8242  8242 D RadarTileLoader: prefetch zoom=8 tiles=240
+01-29 03:22:19.719  8242  8242 I art     : Clamp target GC heap from 292MB to 256MB
+01-29 03:22:19.724  8242  8261 E AndroidRuntime: FATAL EXCEPTION: RadarLoader-8
+01-29 03:22:19.751  8242  8261 E AndroidRuntime: Process: org.example.weather, PID: 8242
+01-29 03:22:19.766  8242  8261 E AndroidRuntime: java.lang.OutOfMemoryError: Failed to allocate a 52428816 byte allocation with 10802583 free bytes and 1MB until OOM, target footprint 268435456, growth limit 268435456
+01-29 03:22:19.779  8242  8261 E AndroidRuntime: 	at android.graphics.BitmapFactory.nativeDecodeStream(Native Method)
+01-29 03:22:19.780  8242  8261 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStreamInternal(BitmapFactory.java:790)
+01-29 03:22:19.781  8242  8261 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStream(BitmapFactory.java:736)
+01-29 03:22:19.805  8242  8261 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.decodeTile(RadarTileLoader.kt:93)
+01-29 03:22:19.827  8242  8261 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.loadTile(RadarTileLoader.kt:69)
+01-29 03:22:19.859  8242  8261 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader$prefetch$1.run(RadarTileLoader.kt:42)
+01-29 03:22:19.891  8242  8261 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+01-29 03:22:19.927  8242  8261 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+01-29 03:22:19.952  8242  8261 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1012)
+01-29 03:22:19.981  8242  8242 I Process : Sending signal. PID: 8242 SIG: 9
+01-29 03:22:19.988   686   740 I ActivityManager: Process org.example.weather (pid 8242) has died: fg  TOP 
+01-29 03:22:22.071   686   703 I ActivityManager: Background concurrent copying GC freed 7425(3477KB) AllocSpace objects
+01-29 03:22:22.075   686   716 V AlarmManager: Triggering alarm #6527: 3 when=74 type=ELAPSED_WAKEUP
+01-29 03:22:22.102   686   772 V AlarmManager: Triggering alarm #5221: 3 when=3336 type=ELAPSED_WAKEUP
+01-29 03:22:22.115   686   718 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:22:22.146   686   744 I ActivityManager: Start proc 8745:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:22:22.157  8745  8745 I Zygote  : Process: zygote64 forked child
+01-29 03:22:22.181   686   728 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:22:22.557   686   718 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +1368ms
+01-29 03:22:22.578  8745  8745 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=454bb319-da87-4a30-a29a-69460f216c85 ]
+01-29 03:22:22.614  8745  8780 I Choreographer: Skipped 3093 frames!  The application may be doing too much work
+01-29 03:22:22.631  8745  8745 W System  : A resource failed to call close.
+01-29 03:22:22.652   686   763 I InputDispatcher: Focus entering window (channel 6acf5f4)
+01-29 03:22:22.671  8745  8760 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=1234c2dd-90b7-4c10-ae25-403627c998a5 ]
+01-29 03:22:22.703   686   736 D ConnectivityService: requestNetwork for uid/pid:10115/686 activeRequest: null
+01-29 03:22:22.706   686   796 D ConnectivityService: requestNetwork for uid/pid:10301/686 activeRequest: null
+01-29 03:22:22.731   686   802 I WifiService: getWifiEnabledState uid=10267
+01-29 03:22:22.769  8745  8791 W System  : A resource failed to call close.
+01-29 03:22:22.771   686   731 I ActivityManager: Start proc 8814:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:22:22.799  8814  8814 I Zygote  : Process: zygote64 forked child
+01-29 03:22:22.837   686   724 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:22:23.151   686   732 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +680ms
+01-29 03:22:23.172  8814  8814 D PlaylistImporter: importing 2603 tracks on main
+01-29 03:22:23.211  8814  8814 I Choreographer: Skipped 357 frames!  The application may be doing too much work on its main thread.
+01-29 03:22:27.445   686   709 E ActivityManager: ANR in org.example.player (org.example.player/.PlaybackActivity)
+01-29 03:22:27.453   686   709 E ActivityManager: PID: 8814
+01-29 03:22:27.461   686   709 E ActivityManager: Reason: Input dispatching timed out (520a29e org.example.player/org.example.player.PlaybackActivity (server) is not responding. Waited 5036ms for MotionEvent)
+01-29 03:22:27.489   686   709 E ActivityManager: Parent: org.example.player/.PlaybackActivity
+01-29 03:22:27.495   686   709 E ActivityManager: ErrorId: ed84dc2f-01d5-4a08-89b3-11b8522d0f76
+01-29 03:22:27.515   686   709 E ActivityManager: Frozen: false
+01-29 03:22:27.551   686   709 E ActivityManager: Load: 6.47 / 3.05 / 4.19
+01-29 03:22:27.589   686   709 E ActivityManager: CPU usage from 767ms to 9971ms ago:
+01-29 03:22:27.603   686   709 E ActivityManager:   68% 8814/org.example.player: 63% user + 16% kernel
+01-29 03:22:27.610   686   797 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:27.627   686   709 E ActivityManager:   7% 686/system_server: 3% user + 7% kernel
+01-29 03:22:29.267  8814  8817 W System.err: java.io.FileNotFoundException: /cache/tmp-1464.json (No such file)
+01-29 03:22:29.293   686   746 I InputDispatcher: Focus entering window (channel c5ccb34)
+01-29 03:22:29.307   686   772 V AlarmManager: Triggering alarm #5702: 3 when=3037 type=ELAPSED_WAKEUP
+01-29 03:22:29.327  8814  8814 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=f194e04d-1692-4ade-a217-84cdad4a87f2 ]
+01-29 03:22:29.347  8814  8814 W System.err: java.io.FileNotFoundException: /cache/tmp-8515.json (No such file)
+01-29 03:22:29.350   686   756 D ConnectivityService: requestNetwork for uid/pid:10071/686 activeRequest: null
+01-29 03:22:29.356   686   757 I ActivityManager: Background concurrent copying GC freed 9992(3337KB) AllocSpace objects
+01-29 03:22:29.393   686   693 D PowerManagerService: acquireWakeLockInternal: lock=04c5a26, flags=0x1, tag="*alarm*"
+01-29 03:22:29.428   686   700 I WifiService: getWifiEnabledState uid=10281
+01-29 03:22:29.458   686   697 D BatteryService: Processing new values: level=35, temperature=338
+01-29 03:22:29.459  8814  8836 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=03325cdf-3f21-4b71-aec9-9742cb12b23f ]
+01-29 03:22:29.463  8745  8745 W System  : A resource failed to call close.
+01-29 03:22:29.496   686   772 D ConnectivityService: requestNetwork for uid/pid:10255/686 activeRequest: null
+01-29 03:22:29.523  8814  8814 I MediaCodecWrapper: configure codec=video/avc 3840x2160
+01-29 03:22:29.558  8814  8997 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x2fbcac883 in tid 8997 (DecoderThread-2), pid 8814 (org.example.player)
+01-29 03:22:29.578  9366  9366 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+01-29 03:22:29.610  9366  9366 F DEBUG   : Build fingerprint: 'example/sdk_gphone64/emu64a:15/AE3A.242678/9229152:userdebug/dev-keys'
+01-29 03:22:29.640  9366  9366 F DEBUG   : Revision: '2'
+01-29 03:22:29.648  9366  9366 F DEBUG   : ABI: 'arm64'
+01-29 03:22:29.650  9366  9366 F DEBUG   : pid: 8814, tid: 8997, name: DecoderThread-2  >>> org.example.player <<<
+01-29 03:22:29.669   686   798 I chatty  : uid=1000(system) Binder:686_4310 identical 4310 lines
+01-29 03:22:29.696  9366  9366 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x2fbcac883
+01-29 03:22:29.718  9366  9366 F DEBUG   :     x0  d44f368f843dd4fc  x1  9b3edfd7e37ce436
+01-29 03:22:29.749  9366  9366 F DEBUG   : backtrace:
+01-29 03:22:29.762  9366  9366 F DEBUG   :       #00 pc 0000000006f5d76e  /data/app/~~6f5a05216fd57546==/org.example.player-9f29f470bb53b710==/lib/arm64/libplayercore.so (decode_frame+222) (BuildId: e9161d3532edcd96)
+01-29 03:22:29.798  9366  9366 F DEBUG   :       #01 pc 00000000232ff04d  /data/app/~~6f5a05216fd57546==/org.example.player-9f29f470bb53b710==/lib/arm64/libplayercore.so (VideoDecoder::submit(Packet const&)+99) (BuildId: e9161d3532edcd96)
+01-29 03:22:29.803  9366  9366 F DEBUG   :       #02 pc 000000004074014b  /data/app/~~6f5a05216fd57546==/org.example.player-9f29f470bb53b710==/lib/arm64/libplayercore.so (decoder_loop+177) (BuildId: e9161d3532edcd96)
+01-29 03:22:29.824  9366  9366 F DEBUG   :       #03 pc 00000000cb8aa7ab  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+196)
+01-29 03:22:29.846  9366  9366 F DEBUG   :       #04 pc 00000000f4f57a9c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68)
+01-29 03:22:29.880  8814  8814 I Process : Sending signal. PID: 8814 SIG: 9
+01-29 03:22:29.888   686   743 I ActivityManager: Process org.example.player (pid 8814) has died: fg  TOP 
+01-29 03:22:33.876  8745  8745 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=eb41d1f5-95b3-40f3-a76e-cf79ab6d65c7 ]
+01-29 03:22:33.905   686   729 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:33.927   686   759 V AlarmManager: Triggering alarm #4563: 3 when=2431 type=ELAPSED_WAKEUP
+01-29 03:22:33.952   686   795 D PowerManagerService: acquireWakeLockInternal: lock=23cb918, flags=0x1, tag="*alarm*"
+01-29 03:22:33.977  8745  8745 D SyncWorker: retrying after IOException, attempt 2
+01-29 03:22:33.984  8745  8782 I Choreographer: Skipped 2692 frames!  The application may be doing too much work
+01-29 03:22:33.997   686   715 W ActivityManager: Slow operation: 1113ms so far, now at startProcess: done
+01-29 03:22:34.004   686   698 W ActivityManager: Slow operation: 660ms so far, now at startProcess: done
+01-29 03:22:34.006   686   757 D ConnectivityService: requestNetwork for uid/pid:10217/686 activeRequest: null
+01-29 03:22:34.024  8745  8745 I art     : Background young concurrent copying GC freed 6952(9501KB) AllocSpace objects
+01-29 03:22:34.040  8745  8745 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=903c84a4-5b77-44a3-a204-904374921841 ]
+01-29 03:22:34.065   686   699 I InputDispatcher: Focus entering window (channel 27b74c4)
+01-29 03:22:34.105   686   723 I NetworkScheduler: Scheduling job uid=10129 for network change
+01-29 03:22:34.141   686   737 I NetworkScheduler: Scheduling job uid=10335 for network change
+01-29 03:22:34.155  8745  8745 I Choreographer: Skipped 549 frames!  The application may be doing too much work
+01-29 03:22:34.181  8745  8746 D OkHttp  : <-- 200 https://tiles.example.com/radar/7/42/63.png (1100ms, 30072-byte body)
+01-29 03:22:34.189   686   691 W ActivityManager: Slow operation: 1405ms so far, now at startProcess: done
+01-29 03:22:34.206   686   726 V AlarmManager: Triggering alarm #6169: 3 when=3019 type=ELAPSED_WAKEUP
+01-29 03:22:34.243  8745  8755 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=b101505c-7164-43f4-a5ec-0b20f5da5ea4 ]
+01-29 03:22:34.248   686   769 D BatteryService: Processing new values: level=70, temperature=248
+01-29 03:22:34.282  8745  8745 W System.err: java.io.FileNotFoundException: /cache/tmp-2191.json (No such file)
+01-29 03:22:34.292   686   761 I ActivityManager: Start proc 9055:org.example.weather/u0a119 for pre-top-activity {org.example.weather/org.example.weather.ForecastActivity}
+01-29 03:22:34.312  9055  9055 I Zygote  : Process: zygote64 forked child
+01-29 03:22:34.319   686   723 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.weather/.radar.RadarActivity} from uid 2000
+01-29 03:22:34.489   686   747 I ActivityTaskManager: Displayed org.example.weather/.radar.RadarActivity: +847ms
+01-29 03:22:34.527  9055  9055 D RadarTileLoader: prefetch zoom=7 tiles=298
+01-29 03:22:34.553  9055  9055 I art     : Clamp target GC heap from 275MB to 256MB
+01-29 03:22:34.565  9055  9055 I art     : Clamp target GC heap from 294MB to 256MB
+01-29 03:22:34.569  9055  9055 I art     : Clamp target GC heap from 262MB to 256MB
+01-29 03:22:34.602  9055  9120 E AndroidRuntime: FATAL EXCEPTION: RadarLoader-2
+01-29 03:22:34.619  9055  9120 E AndroidRuntime: Process: org.example.weather, PID: 9055
+01-29 03:22:34.648  9055  9120 E AndroidRuntime: java.lang.OutOfMemoryError: Failed to allocate a 8388620 byte allocation with 7873887 free bytes and 4MB until OOM, target footprint 268435456, growth limit 268435456
+01-29 03:22:34.660  9055  9120 E AndroidRuntime: 	at android.graphics.BitmapFactory.nativeDecodeStream(Native Method)
+01-29 03:22:34.691  9055  9120 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStreamInternal(BitmapFactory.java:790)
+01-29 03:22:34.692  9055  9120 E AndroidRuntime: 	at android.graphics.BitmapFactory.decodeStream(BitmapFactory.java:765)
+01-29 03:22:34.732  9055  9120 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.decodeTile(RadarTileLoader.kt:92)
+01-29 03:22:34.735  9055  9120 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader.loadTile(RadarTileLoader.kt:60)
+01-29 03:22:34.741  9055  9120 E AndroidRuntime: 	at org.example.weather.radar.RadarTileLoader$prefetch$1.run(RadarTileLoader.kt:45)
+01-29 03:22:34.745  9055  9120 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+01-29 03:22:34.754  9055  9120 E AndroidRuntime: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+01-29 03:22:34.770  9055  9120 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)
+01-29 03:22:34.777  9055  9055 I Process : Sending signal. PID: 9055 SIG: 9
+01-29 03:22:34.797   686   738 I ActivityManager: Process org.example.weather (pid 9055) has died: fg  TOP 
+01-29 03:22:36.486   686   723 W ActivityManager: Slow operation: 2406ms so far, now at startProcess: done
+01-29 03:22:36.499  8745  8745 I Choreographer: Skipped 1502 frames!  The application may be doing too much work
+01-29 03:22:36.501  8745  8746 D SyncWorker: retrying after IOException, attempt 4
+01-29 03:22:36.515  8745  8745 I Choreographer: Skipped 5325 frames!  The application may be doing too much work
+01-29 03:22:36.542  8745  8745 D SyncWorker: retrying after IOException, attempt 5
+01-29 03:22:36.549   686   740 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:36.560   686   694 W ActivityManager: Slow operation: 2639ms so far, now at startProcess: done
+01-29 03:22:36.600  8745  8792 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=bb3104ed-5609-46d8-a825-c8f26aeda825 ]
+01-29 03:22:36.610   686   728 I WifiService: getWifiEnabledState uid=10174
+01-29 03:22:36.634   686   801 D ConnectivityService: requestNetwork for uid/pid:10112/686 activeRequest: null
+01-29 03:22:36.662  8745  8745 D OpenGLRenderer: Davey! duration=1856ms; Flags=0, FrameTimelineVsyncId=7024
+01-29 03:22:36.693   686   767 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:22:36.851   686   762 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +825ms
+01-29 03:22:36.888  8745  8745 D OkHttp  : <-- 200 https://tiles.example.com/radar/7/42/63.png (616ms, 21392-byte body)
+01-29 03:22:36.920   686   753 I WifiService: getWifiEnabledState uid=10254
+01-29 03:22:36.943   686   747 I ActivityManager: Background concurrent copying GC freed 7068(3305KB) AllocSpace objects
+01-29 03:22:36.946  8745  8745 I Choreographer: Skipped 286 frames!  The application may be doing too much work
+01-29 03:22:36.973  8745  8745 D OkHttp  : <-- 200 https://tiles.example.com/radar/7/42/63.png (363ms, 19743-byte body)
+01-29 03:22:36.980   686   734 W ActivityManager: Slow operation: 2345ms so far, now at startProcess: done
+01-29 03:22:37.000   686   729 I NetworkScheduler: Scheduling job uid=10359 for network change
+01-29 03:22:37.024   686   722 I InputDispatcher: Focus entering window (channel 7456345)
+01-29 03:22:37.033   686   782 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:22:37.048  8745  8745 D SyncWorker: retrying after IOException, attempt 4
+01-29 03:22:37.063   686   697 I InputDispatcher: Focus entering window (channel 58cf0c8)
+01-29 03:22:37.074  8745  8745 D NoteEditor: onSaveClicked id=4767 chars=2545
+01-29 03:22:37.098  8745  8759 E NotesRepository: Failed to save note id=4767
+01-29 03:22:37.114  8745  8759 E NotesRepository: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: notes.uuid (code 1555 SQLITE_CONSTRAINT_UNIQUE)
+01-29 03:22:37.137  8745  8759 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+01-29 03:22:37.160  8745  8759 E NotesRepository: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:938)
+01-29 03:22:37.173  8745  8759 E NotesRepository: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:818)
+01-29 03:22:37.181  8745  8759 E NotesRepository: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+01-29 03:22:37.207  8745  8759 E NotesRepository: 	at org.example.notes.data.NoteDao_Impl.insert(NoteDao_Impl.java:140)
+01-29 03:22:37.219  8745  8759 E NotesRepository: 	at org.example.notes.data.NotesRepository.save(NotesRepository.kt:89)
+01-29 03:22:37.221  8745  8759 E NotesRepository: 	at org.example.notes.editor.NoteEditorViewModel$save$1.invokeSuspend(NoteEditorViewModel.kt:74)
+01-29 03:22:37.257  8745  8759 E NotesRepository: 	... 7 more
+01-29 03:22:37.261   686   730 I InputDispatcher: Focus entering window (channel 98a1e7c)
+01-29 03:22:39.492   686   754 D ConnectivityService: requestNetwork for uid/pid:10066/686 activeRequest: null
+01-29 03:22:39.501   686   746 I WifiService: getWifiEnabledState uid=10229
+01-29 03:22:39.539  8745  8745 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:22:39.552  8745  8745 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=eb277048-cc7f-471b-afea-38cc95dedb69 ]
+01-29 03:22:39.567  8745  8745 W System.err: java.io.FileNotFoundException: /cache/tmp-7682.json (No such file)
+01-29 03:22:39.599   686   788 D PowerManagerService: acquireWakeLockInternal: lock=3553669, flags=0x1, tag="*alarm*"
+01-29 03:22:39.633  8745  8782 W System  : A resource failed to call close.
+01-29 03:22:39.656  8745  8745 D OkHttp  : <-- 200 https://api.example.org/v1/sync (1216ms, 31861-byte body)
+01-29 03:22:39.666  8745  8784 I art     : Background young concurrent copying GC freed 306(8048KB) AllocSpace objects
+01-29 03:22:39.688  8745  8745 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=7442be83-f6ce-4464-a4ab-4b3a7ece234d ]
+01-29 03:22:39.702   686   753 V AlarmManager: Triggering alarm #3756: 3 when=1383 type=ELAPSED_WAKEUP
+01-29 03:22:39.730  8745  8786 W System.err: java.io.FileNotFoundException: /cache/tmp-3549.json (No such file)
+01-29 03:22:39.758   686   731 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:22:39.794  8745  8745 D SyncWorker: retrying after IOException, attempt 5
+01-29 03:22:39.799  8745  8745 I Choreographer: Skipped 6168 frames!  The application may be doing too much work
+01-29 03:22:39.815  8745  8745 D OkHttp  : <-- 200 https://cdn.example.net/assets/manifest.json (3396ms, 33152-byte body)
+01-29 03:22:39.845   686   712 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:22:39.864   686   799 D PowerManagerService: acquireWakeLockInternal: lock=6d867bb, flags=0x1, tag="*alarm*"
+01-29 03:22:39.893  8745  8745 D SyncWorker: retrying after IOException, attempt 5
+01-29 03:22:39.898   686   731 I InputDispatcher: Focus entering window (channel fb10d2d)
+01-29 03:22:39.904  8745  8791 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:22:39.929   686   769 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:22:40.306   686   771 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +581ms
+01-29 03:22:40.330  8745  8745 D NotesListAdapter: submitList size=286 filter=all
+01-29 03:22:40.362  8745  8745 D AndroidRuntime: Shutting down VM
+01-29 03:22:40.384  8745  8745 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:22:40.388  8745  8745 E AndroidRuntime: Process: org.example.notes, PID: 8745
+01-29 03:22:40.391  8745  8745 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'long org.example.notes.model.Note.getUpdatedAt()' on a null object reference
+01-29 03:22:40.394  8745  8745 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:59)
+01-29 03:22:40.415  8745  8745 E AndroidRuntime: 	at org.example.notes.list.NotesListAdapter.onBindViewHolder(NotesListAdapter.kt:24)
+01-29 03:22:40.436  8745  8745 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.onBindViewHolder(RecyclerView.java:7266)
+01-29 03:22:40.476  8745  8745 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Adapter.bindViewHolder(RecyclerView.java:7380)
+01-29 03:22:40.503  8745  8745 E AndroidRuntime: 	at androidx.recyclerview.widget.RecyclerView$Recycler.tryBindViewHolderByDeadline(RecyclerView.java:6196)
+01-29 03:22:40.514  8745  8745 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+01-29 03:22:40.518  8745  8745 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+01-29 03:22:40.544  8745  8745 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:205)
+01-29 03:22:40.563  8745  8745 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+01-29 03:22:40.567  8745  8745 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7899)
+01-29 03:22:40.595  8745  8745 I Process : Sending signal. PID: 8745 SIG: 9
+01-29 03:22:40.598   686   726 I ActivityManager: Process org.example.notes (pid 8745) has died: fg  TOP 
+01-29 03:22:42.627   686   753 I ActivityManager: Background concurrent copying GC freed 1816(31049KB) AllocSpace objects
+01-29 03:22:42.665   686   772 I ActivityManager: Background concurrent copying GC freed 7897(13312KB) AllocSpace objects
+01-29 03:22:42.666   686   710 V AlarmManager: Triggering alarm #4766: 3 when=2698 type=ELAPSED_WAKEUP
+01-29 03:22:42.678   686   784 D ConnectivityService: requestNetwork for uid/pid:10184/686 activeRequest: null
+01-29 03:22:42.707   686   710 W ActivityManager: Slow operation: 2013ms so far, now at startProcess: done
+01-29 03:22:42.744   686   696 I chatty  : uid=1000(system) Binder:686_2849 identical 2849 lines
+01-29 03:22:42.773   686   796 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:22:42.774   686   762 D ConnectivityService: requestNetwork for uid/pid:10213/686 activeRequest: null
+01-29 03:22:42.783   686   798 I ActivityManager: Background concurrent copying GC freed 8533(26460KB) AllocSpace objects
+01-29 03:22:42.797   686   702 V AlarmManager: Triggering alarm #2778: 3 when=1164 type=ELAPSED_WAKEUP
+01-29 03:22:42.799   686   770 W PackageManager: Not granting permission android.permission.QUERY_ALL_PACKAGES
+01-29 03:22:42.805   686   758 D PowerManagerService: acquireWakeLockInternal: lock=e91ec71, flags=0x1, tag="*alarm*"
+01-29 03:22:42.808   686   707 I ActivityManager: Start proc 9115:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:22:42.840  9115  9115 I Zygote  : Process: zygote64 forked child
+01-29 03:22:42.845   686   716 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.editor.NoteEditorActivity} from uid 2000
+01-29 03:22:43.205   686   755 I ActivityTaskManager: Displayed org.example.notes/.editor.NoteEditorActivity: +367ms
+01-29 03:22:43.216  9115  9115 D NoteEditor: openNote id=4420 fromWidget=True
+01-29 03:22:43.256  9115  9115 W NotesRepository: note 4420 not found in cache, deleted remotely?
+01-29 03:22:43.265  9115  9115 D AndroidRuntime: Shutting down VM
+01-29 03:22:43.298  9115  9115 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:22:43.327  9115  9115 E AndroidRuntime: Process: org.example.notes, PID: 9115
+01-29 03:22:43.362  9115  9115 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String org.example.notes.model.Note.getTitle()' on a null object reference
+01-29 03:22:43.363  9115  9115 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.bindNote(NoteEditorFragment.kt:147)
+01-29 03:22:43.381  9115  9115 E AndroidRuntime: 	at org.example.notes.editor.NoteEditorFragment.onViewCreated(NoteEditorFragment.kt:73)
+01-29 03:22:43.408  9115  9115 E AndroidRuntime: 	at androidx.fragment.app.Fragment.performViewCreated(Fragment.java:3108)
+01-29 03:22:43.430  9115  9115 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+01-29 03:22:43.448  9115  9115 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+01-29 03:22:43.451  9115  9115 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:22:43.463  9115  9115 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+01-29 03:22:43.469  9115  9115 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7902)
+01-29 03:22:43.492  9115  9115 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:22:43.493   686   748 I ActivityManager: Background concurrent copying GC freed 7891(39164KB) AllocSpace objects
+01-29 03:22:43.498  9115  9115 I Process : Sending signal. PID: 9115 SIG: 9
+01-29 03:22:43.501   686   738 I ActivityManager: Process org.example.notes (pid 9115) has died: fg  TOP 
+01-29 03:22:46.106   686   701 D BatteryService: Processing new values: level=48, temperature=402
+01-29 03:22:46.113   686   690 I InputDispatcher: Focus entering window (channel cf064b6)
+01-29 03:22:46.122   686   726 I ActivityManager: Background concurrent copying GC freed 5170(19827KB) AllocSpace objects
+01-29 03:22:46.154   686   722 I ActivityManager: Background concurrent copying GC freed 4896(32640KB) AllocSpace objects
+01-29 03:22:46.180   686   710 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:46.211   686   693 I WifiService: getWifiEnabledState uid=10191
+01-29 03:22:46.222   686   741 D BatteryService: Processing new values: level=80, temperature=382
+01-29 03:22:46.247   686   709 I ActivityManager: Start proc 9439:org.example.notes/u0a101 for pre-top-activity {org.example.notes/org.example.notes.NotesListActivity}
+01-29 03:22:46.278  9439  9439 I Zygote  : Process: zygote64 forked child
+01-29 03:22:46.287   686   762 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.notes/.NotesListActivity} from uid 2000
+01-29 03:22:46.434   686   750 I ActivityTaskManager: Displayed org.example.notes/.NotesListActivity: +1211ms
+01-29 03:22:46.466  9439  9439 D OkHttp  : <-- 200 https://tiles.example.com/radar/7/42/63.png (2757ms, 34680-byte body)
+01-29 03:22:46.489   686   789 D PowerManagerService: acquireWakeLockInternal: lock=34ebe43, flags=0x1, tag="*alarm*"
+01-29 03:22:46.490  9439  9439 W System.err: java.io.FileNotFoundException: /cache/tmp-7145.json (No such file)
+01-29 03:22:46.508  9439  9439 D ProfileInstaller: Installing profile for org.example.notes
+01-29 03:22:46.525   686   719 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:46.528   686   696 D PowerManagerService: acquireWakeLockInternal: lock=684526d, flags=0x1, tag="*alarm*"
+01-29 03:22:46.548   686   722 D BatteryService: Processing new values: level=18, temperature=358
+01-29 03:22:46.559   686   790 I WifiService: getWifiEnabledState uid=10297
+01-29 03:22:46.599   686   759 I ActivityManager: Start proc 9628:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:22:46.627  9628  9628 I Zygote  : Process: zygote64 forked child
+01-29 03:22:46.647   686   767 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:22:46.814   686   731 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +1039ms
+01-29 03:22:46.849  9628  9628 D QueueObserver: queue changed size=60
+01-29 03:22:46.878  9628  9628 D PlaybackActivity: onPause isFinishing=true
+01-29 03:22:46.917  9628  9628 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:22:46.920  9628  9628 E AndroidRuntime: Process: org.example.player, PID: 9628
+01-29 03:22:46.947   686   800 D ConnectivityService: requestNetwork for uid/pid:10181/686 activeRequest: null
+01-29 03:22:46.972  9628  9628 E AndroidRuntime: java.lang.IllegalStateException: Fragment PlaybackControlsFragment{0989218} (835b5f94-d017-4f43-b10e-d15178343a52) not attached to a context.
+01-29 03:22:46.993  9628  9628 E AndroidRuntime: 	at androidx.fragment.app.Fragment.requireContext(Fragment.java:981)
+01-29 03:22:46.999  9439  9439 I Choreographer: Skipped 5894 frames!  The application may be doing too much work
+01-29 03:22:47.008  9628  9628 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.updateQueueBadge(PlaybackControlsFragment.kt:219)
+01-29 03:22:47.047  9628  9628 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.access$updateQueueBadge(PlaybackControlsFragment.kt:42)
+01-29 03:22:47.065  9628  9628 E AndroidRuntime: 	at org.example.player.queue.QueueObserver$onChanged$1.run(QueueObserver.kt:36)
+01-29 03:22:47.090  9628  9628 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:942)
+01-29 03:22:47.113  9628  9628 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+01-29 03:22:47.146  9628  9628 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+01-29 03:22:47.150  9628  9628 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:22:47.184  9628  9628 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8657)
+01-29 03:22:47.205  9628  9628 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:22:47.231  9628  9628 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+01-29 03:22:47.260  9628  9628 I Process : Sending signal. PID: 9628 SIG: 9
+01-29 03:22:47.272   686   720 I ActivityManager: Process org.example.player (pid 9628) has died: fg  TOP 
+01-29 03:22:50.288   686   714 D BatteryService: Processing new values: level=17, temperature=303
+01-29 03:22:50.305   686   692 I chatty  : uid=1000(system) Binder:686_8850 identical 8850 lines
+01-29 03:22:50.308   686   693 D ConnectivityService: requestNetwork for uid/pid:10261/686 activeRequest: null
+01-29 03:22:50.321  9439  9496 I Choreographer: Skipped 1554 frames!  The application may be doing too much work
+01-29 03:22:50.323   686   788 I InputDispatcher: Focus entering window (channel abc58a5)
+01-29 03:22:50.341   686   713 I ActivityManager: Start proc 9962:org.example.player/u0a112 for pre-top-activity {org.example.player/org.example.player.PlaybackActivity}
+01-29 03:22:50.344  9962  9962 I Zygote  : Process: zygote64 forked child
+01-29 03:22:50.348   686   774 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:22:50.753   686   711 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +190ms
+01-29 03:22:50.775   686   797 W ActivityManager: Slow operation: 1488ms so far, now at startProcess: done
+01-29 03:22:50.792   686   771 I ActivityManager: Background concurrent copying GC freed 3716(13683KB) AllocSpace objects
+01-29 03:22:50.822  9962  9962 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=24de0337-9341-47d0-aafd-85fd26e331b0 ]
+01-29 03:22:50.846   686   726 I ActivityManager: Background concurrent copying GC freed 6229(21713KB) AllocSpace objects
+01-29 03:22:50.885   686   731 I ActivityManager: Background concurrent copying GC freed 2821(35621KB) AllocSpace objects
+01-29 03:22:50.911   686   747 D ConnectivityService: requestNetwork for uid/pid:10179/686 activeRequest: null
+01-29 03:22:50.923   686   755 I InputDispatcher: Focus entering window (channel 4fe672e)
+01-29 03:22:50.959   686   728 I InputDispatcher: Focus entering window (channel 1c021e0)
+01-29 03:22:50.982  9962  9962 D OpenGLRenderer: Davey! duration=838ms; Flags=0, FrameTimelineVsyncId=1804
+01-29 03:22:51.001   686   765 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=org.example.player/.PlaybackActivity} from uid 2000
+01-29 03:22:51.242   686   761 I ActivityTaskManager: Displayed org.example.player/.PlaybackActivity: +1364ms
+01-29 03:22:51.245  9962  9962 D QueueObserver: queue changed size=47
+01-29 03:22:51.254  9962  9962 D PlaybackActivity: onPause isFinishing=true
+01-29 03:22:51.283  9962  9962 D AndroidRuntime: Shutting down VM
+01-29 03:22:51.314  9962  9962 E AndroidRuntime: FATAL EXCEPTION: main
+01-29 03:22:51.333  9962  9962 E AndroidRuntime: Process: org.example.player, PID: 9962
+01-29 03:22:51.361  9962  9962 E AndroidRuntime: java.lang.IllegalStateException: Fragment PlaybackControlsFragment{1912630} (60522b0f-c98f-4425-bbb7-bda1018f5a35) not attached to a context.
+01-29 03:22:51.374  9962  9962 E AndroidRuntime: 	at androidx.fragment.app.Fragment.requireContext(Fragment.java:975)
+01-29 03:22:51.383  9962  9962 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.updateQueueBadge(PlaybackControlsFragment.kt:210)
+01-29 03:22:51.411  9962  9962 E AndroidRuntime: 	at org.example.player.ui.PlaybackControlsFragment.access$updateQueueBadge(PlaybackControlsFragment.kt:40)
+01-29 03:22:51.415  9962  9962 E AndroidRuntime: 	at org.example.player.queue.QueueObserver$onChanged$1.run(QueueObserver.kt:30)
+01-29 03:22:51.423  9962  9962 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:958)
+01-29 03:22:51.430  9962  9962 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+01-29 03:22:51.453  9962  9962 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+01-29 03:22:51.469  9962  9962 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+01-29 03:22:51.490  9962  9962 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7931)
+01-29 03:22:51.521  9962  9962 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+01-29 03:22:51.538  9962  9962 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+01-29 03:22:51.560  9962  9962 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:982)
+01-29 03:22:51.565  9962  9962 I Process : Sending signal. PID: 9962 SIG: 9
+01-29 03:22:51.579   686   726 I ActivityManager: Process org.example.player (pid 9962) has died: fg  TOP 
+01-29 03:22:53.501   686   713 W ActivityManager: Slow operation: 2189ms so far, now at startProcess: done
+01-29 03:22:53.533   686   730 V AlarmManager: Triggering alarm #4347: 3 when=1318 type=ELAPSED_WAKEUP
+01-29 03:22:53.551   686   795 D PowerManagerService: acquireWakeLockInternal: lock=ea9db90, flags=0x1, tag="*alarm*"
+01-29 03:22:53.564   686   745 D BluetoothAdapter: isLeEnabled(): ON
+01-29 03:22:53.569   686   724 D ConnectivityService: requestNetwork for uid/pid:10070/686 activeRequest: null
+01-29 03:22:53.572   686   772 V AlarmManager: Triggering alarm #1156: 3 when=1749 type=ELAPSED_WAKEUP
+01-29 03:22:53.576   686   802 D BatteryService: Processing new values: level=49, temperature=317
+01-29 03:22:53.612  9439  9444 D OpenGLRenderer: Davey! duration=3295ms; Flags=0, FrameTimelineVsyncId=5757
+01-29 03:22:53.646   686   765 I InputDispatcher: Focus entering window (channel 7ed2dbb)
+01-29 03:22:53.656  9439  9439 D SyncWorker: retrying after IOException, attempt 2

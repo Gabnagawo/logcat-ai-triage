@@ -1,0 +1,259 @@
+{
+  "generator": "logcat_triage.synth",
+  "seed": 2,
+  "log": "device-002.logcat",
+  "families": [
+    "anr_notes_service",
+    "anr_player_main",
+    "ise_player_fragment",
+    "ise_player_released",
+    "native_sigsegv_player",
+    "network_main_weather",
+    "npe_note_editor",
+    "npe_notes_list",
+    "oom_weather_bitmap",
+    "sqlite_notes_logged"
+  ],
+  "failures": [
+    {
+      "line": 33,
+      "family": "npe_notes_list",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 65,
+      "family": "sqlite_notes_logged",
+      "kind": "logged_exception",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 96,
+      "family": "npe_note_editor",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 132,
+      "family": "npe_notes_list",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 160,
+      "family": "network_main_weather",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 213,
+      "family": "npe_note_editor",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 251,
+      "family": "npe_notes_list",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 286,
+      "family": "sqlite_notes_logged",
+      "kind": "logged_exception",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 319,
+      "family": "sqlite_notes_logged",
+      "kind": "logged_exception",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 352,
+      "family": "oom_weather_bitmap",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 390,
+      "family": "network_main_weather",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 436,
+      "family": "npe_note_editor",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 473,
+      "family": "ise_player_fragment",
+      "kind": "crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 502,
+      "family": "ise_player_released",
+      "kind": "crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 542,
+      "family": "oom_weather_bitmap",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 582,
+      "family": "native_sigsegv_player",
+      "kind": "native_crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 611,
+      "family": "ise_player_fragment",
+      "kind": "crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 647,
+      "family": "npe_notes_list",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 690,
+      "family": "network_main_weather",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 723,
+      "family": "anr_notes_service",
+      "kind": "anr",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 755,
+      "family": "network_main_weather",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 799,
+      "family": "ise_player_fragment",
+      "kind": "crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 837,
+      "family": "anr_player_main",
+      "kind": "anr",
+      "package": "org.example.player"
+    },
+    {
+      "line": 870,
+      "family": "ise_player_released",
+      "kind": "crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 899,
+      "family": "ise_player_released",
+      "kind": "crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 933,
+      "family": "network_main_weather",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 973,
+      "family": "sqlite_notes_logged",
+      "kind": "logged_exception",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 1003,
+      "family": "npe_notes_list",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 1042,
+      "family": "sqlite_notes_logged",
+      "kind": "logged_exception",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 1070,
+      "family": "npe_note_editor",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 1106,
+      "family": "ise_player_released",
+      "kind": "crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 1135,
+      "family": "oom_weather_bitmap",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 1172,
+      "family": "anr_player_main",
+      "kind": "anr",
+      "package": "org.example.player"
+    },
+    {
+      "line": 1197,
+      "family": "native_sigsegv_player",
+      "kind": "native_crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 1243,
+      "family": "oom_weather_bitmap",
+      "kind": "crash",
+      "package": "org.example.weather"
+    },
+    {
+      "line": 1283,
+      "family": "sqlite_notes_logged",
+      "kind": "logged_exception",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 1318,
+      "family": "npe_notes_list",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 1352,
+      "family": "npe_note_editor",
+      "kind": "crash",
+      "package": "org.example.notes"
+    },
+    {
+      "line": 1392,
+      "family": "ise_player_fragment",
+      "kind": "crash",
+      "package": "org.example.player"
+    },
+    {
+      "line": 1433,
+      "family": "ise_player_fragment",
+      "kind": "crash",
+      "package": "org.example.player"
+    }
+  ]
+}
