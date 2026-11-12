@@ -1,0 +1,40 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Local triage output (curated evidence lives in docs/results/)
+out/
+runs/
+data/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
