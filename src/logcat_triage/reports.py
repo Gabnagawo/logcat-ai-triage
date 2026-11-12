@@ -161,11 +161,12 @@ def heuristic_draft(cluster: Cluster, representative: FailureEvent) -> ReportDra
         FailureKind.NATIVE_CRASH: "critical",
         FailureKind.LOGGED_EXCEPTION: "medium",
     }[cluster.kind]
-    header = f"{cluster.exception_type}: {normalize_message(representative.message)}".strip(": ")
+    exception = cluster.exception_type or cluster.kind.value
+    header = f"{exception}: {normalize_message(representative.message)}".rstrip(": ")
     return ReportDraft(
         title=title[:160],
         steps_to_reproduce=steps,
-        severity=severity,  # type: ignore[arg-type]
+        severity=severity,
         severity_rationale=f"{cluster.kind.value} observed {cluster.size} time(s); rule-based.",
         stack_summary="\n".join([header, *app_frames[:3]]),
         root_cause_hypothesis="Not generated: the LLM was unavailable for this cluster.",
