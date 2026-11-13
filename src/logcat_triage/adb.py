@@ -18,7 +18,8 @@ from typing import Protocol
 
 LOGCAT_BUFFERS = frozenset({"main", "system", "crash", "events", "radio", "default", "all"})
 MAX_TAIL = 200_000
-_SERIAL = re.compile(r"^[A-Za-z0-9._:\-]{1,64}$")
+# Starts with a letter or digit, so a serial can never be read by adb as an option.
+_SERIAL = re.compile(r"[A-Za-z0-9][A-Za-z0-9._:\-]{0,63}")
 
 
 class AdbError(RuntimeError):
@@ -47,9 +48,11 @@ def validate_args(args: Sequence[str]) -> list[str]:
         raise AdbError("empty adb command")
     position = 0
     if items[0] == "-s":
-        if len(items) < 2 or not _SERIAL.match(items[1]):
+        if len(items) < 2 or not _SERIAL.fullmatch(items[1]):
             raise AdbError("invalid device serial")
         position = 2
+    if len(items) <= position:
+        raise AdbError("missing adb command")
     command, rest = items[position], items[position + 1 :]
     if command == "devices":
         if rest not in ([], ["-l"]):
@@ -66,7 +69,7 @@ def validate_args(args: Sequence[str]) -> list[str]:
         if flag == "-d":
             index += 1
             continue
-        if flag == "-t" and value.isdigit():
+        if flag == "-t" and value.isascii() and value.isdigit():
             if not 0 < int(value) <= MAX_TAIL:
                 raise AdbError(f"-t must be between 1 and {MAX_TAIL}")
         elif not (
@@ -132,7 +135,7 @@ class AdbClient:
     """High-level, read-only operations used by the CLI."""
 
     def __init__(self, transport: Transport, serial: str | None = None, timeout: float = 60.0):
-        if serial is not None and not _SERIAL.match(serial):
+        if serial is not None and not _SERIAL.fullmatch(serial):
             raise AdbError("invalid device serial")
         self.transport = transport
         self.serial = serial

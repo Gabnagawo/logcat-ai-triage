@@ -101,6 +101,13 @@ def test_allowed_commands(args: list[str]) -> None:
         ["devices", "; reboot"],
         ["-s", "bad serial;", "devices"],
         ["-s"],
+        ["-s", "emulator-5554"],
+        ["-s", "-e", "devices"],
+        ["-s", "--help", "devices"],
+        ["-s", "emulator-5554\n", "devices"],
+        ["-s", "", "devices"],
+        ["-s", "x" * 65, "devices"],
+        ["logcat", "-d", "-t", "00b2"],
     ],
 )
 def test_rejected_commands(args: list[str]) -> None:
@@ -109,9 +116,9 @@ def test_rejected_commands(args: list[str]) -> None:
 
 
 def test_client_with_fake_transport(mixed_log_text: str) -> None:
-    transport = FakeTransport(logcat_text=mixed_log_text, devices=("emulator-5554", "R5CT"))
+    transport = FakeTransport(logcat_text=mixed_log_text, devices=("emulator-5554", "FAKE-0001"))
     client = AdbClient(transport, serial="emulator-5554")
-    assert client.list_devices() == ["emulator-5554", "R5CT"]
+    assert client.list_devices() == ["emulator-5554", "FAKE-0001"]
     assert client.dump_logcat(tail=1000) == mixed_log_text
     assert transport.calls[-1] == [
         "-s", "emulator-5554", "logcat", "-d", "-v", "threadtime",
@@ -122,6 +129,11 @@ def test_client_with_fake_transport(mixed_log_text: str) -> None:
 def test_client_rejects_bad_serial_and_reports_failures() -> None:
     with pytest.raises(AdbError, match="serial"):
         AdbClient(FakeTransport(), serial="x; reboot")
+    for serial in ("-e", "--help", "emulator-5554\n", ""):
+        with pytest.raises(AdbError, match="serial"):
+            AdbClient(FakeTransport(), serial=serial)
+    with pytest.raises(AdbError, match="missing adb command"):
+        validate_args(["-s", "emulator-5554"])
     failing = FakeTransport(handler=lambda _args: CommandResult(1, "", "device offline"))
     with pytest.raises(AdbError, match="device offline"):
         AdbClient(failing).dump_logcat()
