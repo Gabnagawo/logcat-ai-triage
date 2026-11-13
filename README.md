@@ -202,7 +202,7 @@ make stability    # uv run python scripts/embedding_stability.py samples
 make demo         # uv run logcat-triage triage samples -o out/demo  (latency is in triage.json -> summary.llm_latency)
 ```
 
-Unit tests: 109 passed, coverage 99% (`uv run pytest`); live Ollama smoke tests: `uv run pytest -m live --no-cov`.
+Unit tests: 116 passed, 2 live tests deselected, line + branch coverage 98.91% (`uv run pytest` -> [pytest.txt](docs/results/pytest.txt)); ruff and mypy clean ([lint.txt](docs/results/lint.txt)); live Ollama smoke tests: `uv run pytest -m live --no-cov`.
 
 ## Limitations
 

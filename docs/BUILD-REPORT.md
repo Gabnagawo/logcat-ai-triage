@@ -45,7 +45,7 @@ logcat-ai-triage/
 | `uv run ruff check .` | All checks passed |
 | `uv run ruff format --check .` | 43 files already formatted |
 | `uv run mypy` (strict) | no issues in 29 source files |
-| `uv run pytest` | 109 passed, 2 live deselected, coverage 98.91% (gate 80%) |
+| `uv run pytest` | 116 passed, 2 live deselected, coverage 98.91% (gate 80%); raw output in `docs/results/pytest.txt` |
 | `uv run pytest -m live --no-cov` | 2 passed against the local Ollama |
 
 ## Demo

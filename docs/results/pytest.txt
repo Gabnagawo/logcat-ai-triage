@@ -1,0 +1,35 @@
+$ uv run pytest
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0
+rootdir: C:\dev\ai-portfolio\logcat-ai-triage
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0, cov-7.1.0
+collected 118 items / 2 deselected / 116 selected
+
+tests\test_cli.py ............                                           [ 10%]
+tests\test_llm.py ...................                                    [ 26%]
+tests\test_normalize.py .......                                          [ 32%]
+tests\test_outputs_adb.py ...................................            [ 62%]
+tests\test_parse_extract.py ................                             [ 76%]
+tests\test_reports.py ................                                   [ 90%]
+tests\test_synth_cluster_eval.py ...........                             [100%]
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.10-final-0 _______________
+
+Name                                  Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------------------------
+src\logcat_triage\cli.py                135      1     38      3    98%   170, 226->exit, 254->exit
+src\logcat_triage\embeddings.py          86      1     16      1    98%   132
+src\logcat_triage\evaluate.py            81      0     14      1    99%   100->99
+src\logcat_triage\extract.py            238      3    104      7    97%   131, 145, 147->146, 189->191, 239->241, 270, 328->323
+src\logcat_triage\normalize.py           61      0     10      1    99%   75->77
+src\logcat_triage\reporting\html.py      27      0      6      1    97%   59->64
+src\logcat_triage\synth\context.py       72      1     12      1    98%   119
+---------------------------------------------------------------------------------
+TOTAL                                  1567      6    362     15    99%
+
+22 files skipped due to complete coverage.
+Required test coverage of 80% reached. Total coverage: 98.91%
+====================== 116 passed, 2 deselected in 8.82s ======================

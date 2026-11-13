@@ -31,4 +31,10 @@ All notable changes to this project are documented here. The format follows
   extraction precision/recall) and threshold sweeps; measured results in `docs/results/`.
 - CI (ruff, mypy, pytest with coverage gate, offline demo, hadolint), Dockerfile and Makefile.
 
+### Fixed (before release, from the pre-publication review)
+- The adb serial check needs an alphanumeric first character and a full match, so a
+  serial such as `-e` or one ending in a newline is rejected.
+- `validate_args(["-s", serial])` raises `AdbError` instead of `IndexError`.
+- Raw test and lint output saved in `docs/results/pytest.txt` and `lint.txt`.
+
 [0.1.0]: https://github.com/Gabnagawo/logcat-ai-triage/releases/tag/v0.1.0
